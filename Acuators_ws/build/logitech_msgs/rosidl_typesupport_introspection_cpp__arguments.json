@@ -1,0 +1,19 @@
+{
+  "package_name": "logitech_msgs",
+  "output_dir": "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs/rosidl_typesupport_introspection_cpp/logitech_msgs",
+  "template_dir": "/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs/rosidl_adapter/logitech_msgs:msg/Controller.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/jazzy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs/rosidl_adapter/logitech_msgs/msg/Controller.idl"
+  ]
+}

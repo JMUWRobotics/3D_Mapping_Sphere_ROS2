@@ -1,0 +1,1091 @@
+[0.000000] (-) TimerEvent: {}
+[0.000481] (logitech_msgs) JobQueued: {'identifier': 'logitech_msgs', 'dependencies': OrderedDict()}
+[0.001685] (logitech_controller) JobQueued: {'identifier': 'logitech_controller', 'dependencies': OrderedDict({'logitech_msgs': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs'})}
+[0.002673] (servo_pwm_node) JobQueued: {'identifier': 'servo_pwm_node', 'dependencies': OrderedDict({'logitech_msgs': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs'})}
+[0.002749] (waveshare_servo) JobQueued: {'identifier': 'waveshare_servo', 'dependencies': OrderedDict({'logitech_msgs': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs'})}
+[0.002782] (khonsu) JobQueued: {'identifier': 'khonsu', 'dependencies': OrderedDict({'logitech_msgs': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs', 'logitech_controller': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller', 'servo_pwm_node': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node', 'waveshare_servo': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo'})}
+[0.002870] (logitech_msgs) JobStarted: {'identifier': 'logitech_msgs'}
+[0.019147] (logitech_msgs) JobProgress: {'identifier': 'logitech_msgs', 'progress': 'cmake'}
+[0.020086] (logitech_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_msgs', '-DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.101566] (-) TimerEvent: {}
+[0.201976] (-) TimerEvent: {}
+[0.216550] (logitech_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.302130] (-) TimerEvent: {}
+[0.385577] (logitech_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.402256] (-) TimerEvent: {}
+[0.427640] (logitech_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.502425] (-) TimerEvent: {}
+[0.602856] (-) TimerEvent: {}
+[0.686940] (logitech_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.701318] (logitech_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.701692] (logitech_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.702294] (logitech_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.702915] (-) TimerEvent: {}
+[0.739678] (logitech_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.803084] (-) TimerEvent: {}
+[0.907716] (-) TimerEvent: {}
+[1.009913] (-) TimerEvent: {}
+[1.028682] (logitech_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.055891] (logitech_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.056991] (logitech_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.058320] (logitech_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.062762] (logitech_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.110007] (-) TimerEvent: {}
+[1.210555] (-) TimerEvent: {}
+[1.311549] (-) TimerEvent: {}
+[1.412129] (-) TimerEvent: {}
+[1.484703] (logitech_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.513700] (-) TimerEvent: {}
+[1.614341] (-) TimerEvent: {}
+[1.714685] (-) TimerEvent: {}
+[1.753192] (logitech_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.768207] (logitech_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.814812] (-) TimerEvent: {}
+[1.859115] (logitech_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.914934] (-) TimerEvent: {}
+[1.959262] (logitech_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.968123] (logitech_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[2.015044] (-) TimerEvent: {}
+[2.116523] (-) TimerEvent: {}
+[2.220069] (-) TimerEvent: {}
+[2.324685] (-) TimerEvent: {}
+[2.426646] (-) TimerEvent: {}
+[2.526994] (-) TimerEvent: {}
+[2.627368] (-) TimerEvent: {}
+[2.729582] (-) TimerEvent: {}
+[2.830106] (-) TimerEvent: {}
+[2.930626] (-) TimerEvent: {}
+[3.031047] (-) TimerEvent: {}
+[3.131377] (-) TimerEvent: {}
+[3.231730] (-) TimerEvent: {}
+[3.334660] (-) TimerEvent: {}
+[3.440171] (-) TimerEvent: {}
+[3.540611] (-) TimerEvent: {}
+[3.595355] (logitech_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[3.640732] (-) TimerEvent: {}
+[3.742524] (-) TimerEvent: {}
+[3.843907] (-) TimerEvent: {}
+[3.946512] (-) TimerEvent: {}
+[4.046912] (-) TimerEvent: {}
+[4.149813] (-) TimerEvent: {}
+[4.250162] (-) TimerEvent: {}
+[4.350513] (-) TimerEvent: {}
+[4.454473] (-) TimerEvent: {}
+[4.554853] (-) TimerEvent: {}
+[4.655308] (-) TimerEvent: {}
+[4.756601] (-) TimerEvent: {}
+[4.766889] (logitech_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.859542] (-) TimerEvent: {}
+[4.960148] (-) TimerEvent: {}
+[5.061178] (-) TimerEvent: {}
+[5.163597] (-) TimerEvent: {}
+[5.264483] (-) TimerEvent: {}
+[5.367670] (-) TimerEvent: {}
+[5.471554] (-) TimerEvent: {}
+[5.571896] (-) TimerEvent: {}
+[5.672315] (-) TimerEvent: {}
+[5.773546] (-) TimerEvent: {}
+[5.875097] (-) TimerEvent: {}
+[5.975523] (-) TimerEvent: {}
+[6.075917] (-) TimerEvent: {}
+[6.176519] (-) TimerEvent: {}
+[6.277327] (-) TimerEvent: {}
+[6.305082] (logitech_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.320557] (logitech_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[6.377507] (-) TimerEvent: {}
+[6.482861] (-) TimerEvent: {}
+[6.587046] (-) TimerEvent: {}
+[6.683846] (logitech_msgs) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[6.687154] (-) TimerEvent: {}
+[6.787612] (-) TimerEvent: {}
+[6.891038] (-) TimerEvent: {}
+[6.991980] (-) TimerEvent: {}
+[7.093550] (-) TimerEvent: {}
+[7.193915] (-) TimerEvent: {}
+[7.294229] (-) TimerEvent: {}
+[7.394581] (-) TimerEvent: {}
+[7.494899] (-) TimerEvent: {}
+[7.596743] (-) TimerEvent: {}
+[7.697562] (-) TimerEvent: {}
+[7.797997] (-) TimerEvent: {}
+[7.902071] (-) TimerEvent: {}
+[8.004940] (-) TimerEvent: {}
+[8.052357] (logitech_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[8.105466] (-) TimerEvent: {}
+[8.142572] (logitech_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[8.161123] (logitech_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[8.174514] (logitech_msgs) StdoutLine: {'line': b'-- Configuring done (8.1s)\n'}
+[8.208615] (-) TimerEvent: {}
+[8.302906] (logitech_msgs) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[8.308808] (-) TimerEvent: {}
+[8.332661] (logitech_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs\n'}
+[8.355268] (logitech_msgs) CommandEnded: {'returncode': 0}
+[8.359045] (logitech_msgs) JobProgress: {'identifier': 'logitech_msgs', 'progress': 'build'}
+[8.359150] (logitech_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs', '--', '-j4', '-l4'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[8.410700] (-) TimerEvent: {}
+[8.511161] (-) TimerEvent: {}
+[8.540304] (logitech_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[8.609672] (logitech_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_logitech_msgs\n'}
+[8.616706] (-) TimerEvent: {}
+[8.717631] (-) TimerEvent: {}
+[8.818513] (-) TimerEvent: {}
+[8.924547] (-) TimerEvent: {}
+[9.027520] (-) TimerEvent: {}
+[9.135532] (-) TimerEvent: {}
+[9.159612] (logitech_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[9.159888] (logitech_msgs) StdoutLine: {'line': b'creating logitech_msgs.egg-info\n'}
+[9.212614] (logitech_msgs) StdoutLine: {'line': b'writing logitech_msgs.egg-info/PKG-INFO\n'}
+[9.213174] (logitech_msgs) StdoutLine: {'line': b'writing dependency_links to logitech_msgs.egg-info/dependency_links.txt\n'}
+[9.213405] (logitech_msgs) StdoutLine: {'line': b'writing top-level names to logitech_msgs.egg-info/top_level.txt\n'}
+[9.213569] (logitech_msgs) StdoutLine: {'line': b"writing manifest file 'logitech_msgs.egg-info/SOURCES.txt'\n"}
+[9.235638] (-) TimerEvent: {}
+[9.341745] (-) TimerEvent: {}
+[9.364075] (logitech_msgs) StdoutLine: {'line': b"reading manifest file 'logitech_msgs.egg-info/SOURCES.txt'\n"}
+[9.364402] (logitech_msgs) StdoutLine: {'line': b"writing manifest file 'logitech_msgs.egg-info/SOURCES.txt'\n"}
+[9.442374] (-) TimerEvent: {}
+[9.507552] (logitech_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_logitech_msgs_egg\n'}
+[9.531656] (logitech_msgs) StdoutLine: {'line': b'[  2%] Built target logitech_msgs__rosidl_generator_type_description\n'}
+[9.544557] (-) TimerEvent: {}
+[9.564399] (logitech_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[9.635618] (logitech_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[9.646570] (-) TimerEvent: {}
+[9.747566] (-) TimerEvent: {}
+[9.848005] (-) TimerEvent: {}
+[9.948490] (-) TimerEvent: {}
+[10.049060] (-) TimerEvent: {}
+[10.149457] (-) TimerEvent: {}
+[10.249981] (-) TimerEvent: {}
+[10.352798] (-) TimerEvent: {}
+[10.453482] (-) TimerEvent: {}
+[10.556769] (-) TimerEvent: {}
+[10.657380] (-) TimerEvent: {}
+[10.758087] (-) TimerEvent: {}
+[10.758512] (logitech_msgs) StdoutLine: {'line': b'[  8%] Built target logitech_msgs__cpp\n'}
+[10.859560] (-) TimerEvent: {}
+[10.962545] (-) TimerEvent: {}
+[11.066568] (-) TimerEvent: {}
+[11.156453] (logitech_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/logitech_msgs__rosidl_generator_c.dir/rosidl_generator_c/logitech_msgs/msg/detail/controller__functions.c.o\x1b[0m\n'}
+[11.169576] (-) TimerEvent: {}
+[11.176193] (logitech_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/logitech_msgs__rosidl_generator_c.dir/rosidl_generator_c/logitech_msgs/msg/detail/controller__description.c.o\x1b[0m\n'}
+[11.272532] (-) TimerEvent: {}
+[11.361714] (logitech_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/logitech_msgs__rosidl_generator_c.dir/rosidl_generator_c/logitech_msgs/msg/detail/controller__type_support.c.o\x1b[0m\n'}
+[11.372642] (-) TimerEvent: {}
+[11.442415] (logitech_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library liblogitech_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[11.473941] (-) TimerEvent: {}
+[11.552631] (logitech_msgs) StdoutLine: {'line': b'[ 20%] Built target logitech_msgs__rosidl_generator_c\n'}
+[11.574009] (-) TimerEvent: {}
+[11.593589] (logitech_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[11.605622] (logitech_msgs) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[11.674127] (-) TimerEvent: {}
+[11.776784] (-) TimerEvent: {}
+[11.877766] (-) TimerEvent: {}
+[11.981101] (-) TimerEvent: {}
+[12.081521] (-) TimerEvent: {}
+[12.181990] (-) TimerEvent: {}
+[12.285580] (-) TimerEvent: {}
+[12.388514] (-) TimerEvent: {}
+[12.488886] (-) TimerEvent: {}
+[12.555535] (logitech_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/logitech_msgs/msg/detail/controller__type_support_c.cpp.o\x1b[0m\n'}
+[12.589002] (-) TimerEvent: {}
+[12.692538] (-) TimerEvent: {}
+[12.794549] (-) TimerEvent: {}
+[12.894982] (-) TimerEvent: {}
+[12.995466] (-) TimerEvent: {}
+[13.074496] (logitech_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/logitech_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/logitech_msgs/msg/detail/controller__type_support.c.o\x1b[0m\n'}
+[13.097557] (-) TimerEvent: {}
+[13.198152] (-) TimerEvent: {}
+[13.202548] (logitech_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking C shared library liblogitech_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[13.300542] (-) TimerEvent: {}
+[13.318009] (logitech_msgs) StdoutLine: {'line': b'[ 35%] Built target logitech_msgs__rosidl_typesupport_introspection_c\n'}
+[13.400676] (-) TimerEvent: {}
+[13.502761] (-) TimerEvent: {}
+[13.604129] (-) TimerEvent: {}
+[13.706163] (-) TimerEvent: {}
+[13.811531] (-) TimerEvent: {}
+[13.919743] (-) TimerEvent: {}
+[14.031545] (-) TimerEvent: {}
+[14.134526] (-) TimerEvent: {}
+[14.238551] (-) TimerEvent: {}
+[14.340541] (-) TimerEvent: {}
+[14.441066] (-) TimerEvent: {}
+[14.474986] (logitech_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[14.545114] (-) TimerEvent: {}
+[14.648465] (-) TimerEvent: {}
+[14.681570] (logitech_msgs) StdoutLine: {'line': b'[ 38%] Built target logitech_msgs__rosidl_typesupport_fastrtps_c\n'}
+[14.715744] (logitech_msgs) StdoutLine: {'line': b'[ 41%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[14.748585] (-) TimerEvent: {}
+[14.849478] (-) TimerEvent: {}
+[14.956677] (-) TimerEvent: {}
+[15.057234] (-) TimerEvent: {}
+[15.158667] (-) TimerEvent: {}
+[15.259263] (-) TimerEvent: {}
+[15.359754] (-) TimerEvent: {}
+[15.463548] (-) TimerEvent: {}
+[15.568556] (-) TimerEvent: {}
+[15.674765] (-) TimerEvent: {}
+[15.780905] (-) TimerEvent: {}
+[15.884582] (-) TimerEvent: {}
+[15.988577] (-) TimerEvent: {}
+[16.089122] (-) TimerEvent: {}
+[16.106851] (logitech_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/logitech_msgs/msg/detail/dds_fastrtps/controller__type_support.cpp.o\x1b[0m\n'}
+[16.189265] (-) TimerEvent: {}
+[16.297557] (-) TimerEvent: {}
+[16.399531] (-) TimerEvent: {}
+[16.499993] (-) TimerEvent: {}
+[16.604832] (-) TimerEvent: {}
+[16.716530] (-) TimerEvent: {}
+[16.820550] (-) TimerEvent: {}
+[16.923521] (-) TimerEvent: {}
+[17.023943] (-) TimerEvent: {}
+[17.124471] (-) TimerEvent: {}
+[17.227547] (-) TimerEvent: {}
+[17.328163] (-) TimerEvent: {}
+[17.428750] (-) TimerEvent: {}
+[17.530882] (-) TimerEvent: {}
+[17.634705] (-) TimerEvent: {}
+[17.738547] (-) TimerEvent: {}
+[17.839604] (-) TimerEvent: {}
+[17.948849] (-) TimerEvent: {}
+[18.049323] (-) TimerEvent: {}
+[18.149942] (-) TimerEvent: {}
+[18.256155] (-) TimerEvent: {}
+[18.288644] (logitech_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[18.360358] (-) TimerEvent: {}
+[18.460943] (-) TimerEvent: {}
+[18.555749] (logitech_msgs) StdoutLine: {'line': b'[ 47%] Built target logitech_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[18.565619] (-) TimerEvent: {}
+[18.586032] (logitech_msgs) StdoutLine: {'line': b'[ 50%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[18.667222] (-) TimerEvent: {}
+[18.770528] (-) TimerEvent: {}
+[18.877917] (-) TimerEvent: {}
+[18.979808] (-) TimerEvent: {}
+[19.080370] (-) TimerEvent: {}
+[19.180936] (-) TimerEvent: {}
+[19.286564] (-) TimerEvent: {}
+[19.387013] (-) TimerEvent: {}
+[19.487594] (-) TimerEvent: {}
+[19.588093] (-) TimerEvent: {}
+[19.619652] (logitech_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/logitech_msgs/msg/detail/controller__type_support.cpp.o\x1b[0m\n'}
+[19.690720] (-) TimerEvent: {}
+[19.794955] (-) TimerEvent: {}
+[19.898348] (-) TimerEvent: {}
+[19.998853] (-) TimerEvent: {}
+[20.101525] (-) TimerEvent: {}
+[20.201914] (-) TimerEvent: {}
+[20.306542] (-) TimerEvent: {}
+[20.407012] (-) TimerEvent: {}
+[20.507558] (-) TimerEvent: {}
+[20.608072] (-) TimerEvent: {}
+[20.708541] (-) TimerEvent: {}
+[20.810539] (-) TimerEvent: {}
+[20.917794] (-) TimerEvent: {}
+[21.023021] (-) TimerEvent: {}
+[21.127748] (-) TimerEvent: {}
+[21.236638] (-) TimerEvent: {}
+[21.337128] (-) TimerEvent: {}
+[21.443698] (-) TimerEvent: {}
+[21.546566] (-) TimerEvent: {}
+[21.579537] (logitech_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[21.647947] (-) TimerEvent: {}
+[21.751916] (-) TimerEvent: {}
+[21.806651] (logitech_msgs) StdoutLine: {'line': b'[ 55%] Built target logitech_msgs__rosidl_typesupport_introspection_cpp\n'}
+[21.847639] (logitech_msgs) StdoutLine: {'line': b'[ 58%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[21.852064] (-) TimerEvent: {}
+[21.956964] (-) TimerEvent: {}
+[22.057527] (-) TimerEvent: {}
+[22.157923] (-) TimerEvent: {}
+[22.260522] (-) TimerEvent: {}
+[22.367733] (-) TimerEvent: {}
+[22.471538] (-) TimerEvent: {}
+[22.571968] (-) TimerEvent: {}
+[22.677326] (-) TimerEvent: {}
+[22.765834] (logitech_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/logitech_msgs/msg/controller__type_support.cpp.o\x1b[0m\n'}
+[22.777506] (-) TimerEvent: {}
+[22.878549] (-) TimerEvent: {}
+[22.978997] (-) TimerEvent: {}
+[23.082511] (-) TimerEvent: {}
+[23.184547] (-) TimerEvent: {}
+[23.289559] (-) TimerEvent: {}
+[23.391567] (-) TimerEvent: {}
+[23.496528] (-) TimerEvent: {}
+[23.596986] (-) TimerEvent: {}
+[23.698195] (-) TimerEvent: {}
+[23.799170] (-) TimerEvent: {}
+[23.900508] (-) TimerEvent: {}
+[24.003791] (-) TimerEvent: {}
+[24.104595] (-) TimerEvent: {}
+[24.192780] (logitech_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[24.204730] (-) TimerEvent: {}
+[24.307101] (-) TimerEvent: {}
+[24.407653] (-) TimerEvent: {}
+[24.437800] (logitech_msgs) StdoutLine: {'line': b'[ 64%] Built target logitech_msgs__rosidl_typesupport_cpp\n'}
+[24.500612] (logitech_msgs) StdoutLine: {'line': b'[ 67%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[24.507801] (-) TimerEvent: {}
+[24.610763] (-) TimerEvent: {}
+[24.712901] (-) TimerEvent: {}
+[24.821534] (-) TimerEvent: {}
+[24.924545] (-) TimerEvent: {}
+[25.025046] (-) TimerEvent: {}
+[25.125538] (-) TimerEvent: {}
+[25.225941] (-) TimerEvent: {}
+[25.327611] (-) TimerEvent: {}
+[25.428227] (-) TimerEvent: {}
+[25.528799] (-) TimerEvent: {}
+[25.630707] (-) TimerEvent: {}
+[25.733831] (-) TimerEvent: {}
+[25.796854] (logitech_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/logitech_msgs/msg/controller__type_support.cpp.o\x1b[0m\n'}
+[25.834529] (-) TimerEvent: {}
+[25.940565] (-) TimerEvent: {}
+[26.036767] (logitech_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[26.047658] (-) TimerEvent: {}
+[26.151778] (-) TimerEvent: {}
+[26.204640] (logitech_msgs) StdoutLine: {'line': b'[ 73%] Built target logitech_msgs__rosidl_typesupport_c\n'}
+[26.252556] (-) TimerEvent: {}
+[26.302683] (logitech_msgs) StdoutLine: {'line': b'[ 73%] Built target logitech_msgs\n'}
+[26.352719] (-) TimerEvent: {}
+[26.457545] (-) TimerEvent: {}
+[26.458420] (logitech_msgs) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[26.559699] (-) TimerEvent: {}
+[26.664316] (-) TimerEvent: {}
+[26.767989] (-) TimerEvent: {}
+[26.868641] (-) TimerEvent: {}
+[26.972531] (-) TimerEvent: {}
+[27.072998] (-) TimerEvent: {}
+[27.173553] (-) TimerEvent: {}
+[27.276033] (-) TimerEvent: {}
+[27.377536] (-) TimerEvent: {}
+[27.482775] (-) TimerEvent: {}
+[27.533009] (logitech_msgs) StdoutLine: {'line': b'[ 76%] Built target logitech_msgs__py\n'}
+[27.582901] (-) TimerEvent: {}
+[27.590999] (logitech_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/logitech_msgs__rosidl_generator_py.dir/rosidl_generator_py/logitech_msgs/msg/_controller_s.c.o\x1b[0m\n'}
+[27.684517] (-) TimerEvent: {}
+[27.784884] (-) TimerEvent: {}
+[27.885274] (-) TimerEvent: {}
+[27.946357] (logitech_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library liblogitech_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[27.985426] (-) TimerEvent: {}
+[28.046390] (logitech_msgs) StdoutLine: {'line': b'[ 82%] Built target logitech_msgs__rosidl_generator_py\n'}
+[28.087617] (-) TimerEvent: {}
+[28.098948] (logitech_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/logitech_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[28.187721] (-) TimerEvent: {}
+[28.290738] (-) TimerEvent: {}
+[28.343515] (logitech_msgs) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/logitech_msgs/logitech_msgs_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[28.390904] (-) TimerEvent: {}
+[28.413701] (logitech_msgs) StdoutLine: {'line': b'[ 88%] Built target logitech_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[28.488523] (logitech_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/logitech_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[28.491194] (-) TimerEvent: {}
+[28.591635] (-) TimerEvent: {}
+[28.698677] (-) TimerEvent: {}
+[28.746675] (logitech_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/logitech_msgs/logitech_msgs_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[28.799130] (-) TimerEvent: {}
+[28.828577] (logitech_msgs) StdoutLine: {'line': b'[ 94%] Built target logitech_msgs_s__rosidl_typesupport_c\n'}
+[28.885411] (logitech_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/logitech_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[28.899262] (-) TimerEvent: {}
+[28.999672] (-) TimerEvent: {}
+[29.098310] (logitech_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/logitech_msgs/logitech_msgs_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[29.099953] (-) TimerEvent: {}
+[29.173862] (logitech_msgs) StdoutLine: {'line': b'[100%] Built target logitech_msgs_s__rosidl_typesupport_introspection_c\n'}
+[29.198970] (logitech_msgs) CommandEnded: {'returncode': 0}
+[29.200082] (logitech_msgs) JobProgress: {'identifier': 'logitech_msgs', 'progress': 'install'}
+[29.200189] (-) TimerEvent: {}
+[29.223638] (logitech_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[29.256492] (logitech_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.256793] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/ament_index/resource_index/rosidl_interfaces/logitech_msgs\n'}
+[29.257621] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/msg/Controller.json\n'}
+[29.258675] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs\n'}
+[29.259347] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg\n'}
+[29.259553] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[29.260579] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail\n'}
+[29.260738] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__description.c\n'}
+[29.260834] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__functions.h\n'}
+[29.260919] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__functions.c\n'}
+[29.262693] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.h\n'}
+[29.263194] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.c\n'}
+[29.263667] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__struct.h\n'}
+[29.263786] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/controller.h\n'}
+[29.263884] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/library_path.sh\n'}
+[29.263972] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/library_path.dsv\n'}
+[29.264056] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_generator_c.so\n'}
+[29.266158] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_generator_c.so" to ""\n'}
+[29.267285] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs\n'}
+[29.267509] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg\n'}
+[29.267632] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[29.267724] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail\n'}
+[29.267809] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__rosidl_typesupport_fastrtps_c.h\n'}
+[29.269719] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[29.269878] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[29.269988] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs\n'}
+[29.270079] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg\n'}
+[29.270816] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail\n'}
+[29.271376] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__rosidl_typesupport_introspection_c.h\n'}
+[29.272350] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.c\n'}
+[29.272911] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[29.273052] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_introspection_c.so\n'}
+[29.274776] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[29.274906] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_c.so\n'}
+[29.274998] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_c.so" to ""\n'}
+[29.275123] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs\n'}
+[29.275204] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg\n'}
+[29.275294] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail\n'}
+[29.275402] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__struct.hpp\n'}
+[29.275557] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.hpp\n'}
+[29.275664] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__traits.hpp\n'}
+[29.275757] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__builder.hpp\n'}
+[29.275851] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[29.275960] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/controller.hpp\n'}
+[29.276055] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs\n'}
+[29.276144] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg\n'}
+[29.276234] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail\n'}
+[29.276320] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/dds_fastrtps\n'}
+[29.276406] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[29.277598] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[29.280136] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[29.281012] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[29.282131] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs\n'}
+[29.283100] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg\n'}
+[29.283499] (logitech_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail\n'}
+[29.283862] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__rosidl_typesupport_introspection_cpp.hpp\n'}
+[29.284145] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.cpp\n'}
+[29.284416] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[29.284843] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[29.285237] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_cpp.so\n'}
+[29.285461] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[29.285630] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/pythonpath.sh\n'}
+[29.285733] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/pythonpath.dsv\n'}
+[29.285850] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info\n'}
+[29.285949] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[29.286049] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[29.286150] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[29.286261] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[29.286407] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs\n'}
+[29.286602] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[29.286757] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[29.287051] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_c.so\n'}
+[29.287155] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[29.287239] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/__init__.py\n'}
+[29.287320] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[29.287402] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[29.287529] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg\n'}
+[29.287617] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/_controller.py\n'}
+[29.287700] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/_controller_s.c\n'}
+[29.287805] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/__init__.py\n'}
+[29.300314] (-) TimerEvent: {}
+[29.379881] (logitech_msgs) StdoutLine: {'line': b"Listing '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs'...\n"}
+[29.380301] (logitech_msgs) StdoutLine: {'line': b"Compiling '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/__init__.py'...\n"}
+[29.380576] (logitech_msgs) StdoutLine: {'line': b"Listing '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg'...\n"}
+[29.380806] (logitech_msgs) StdoutLine: {'line': b"Compiling '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/__init__.py'...\n"}
+[29.381022] (logitech_msgs) StdoutLine: {'line': b"Compiling '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/_controller.py'...\n"}
+[29.398594] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[29.399321] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[29.399806] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[29.400415] (-) TimerEvent: {}
+[29.404577] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[29.416543] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_c.so\n'}
+[29.416859] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_c.so" to ""\n'}
+[29.416991] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_generator_py.so\n'}
+[29.417124] (logitech_msgs) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_generator_py.so" to ""\n'}
+[29.417246] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/msg/Controller.idl\n'}
+[29.417359] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/msg/Controller.msg\n'}
+[29.417800] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/ament_index/resource_index/package_run_dependencies/logitech_msgs\n'}
+[29.418049] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/ament_index/resource_index/parent_prefix_path/logitech_msgs\n'}
+[29.418198] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/ament_prefix_path.sh\n'}
+[29.418501] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/ament_prefix_path.dsv\n'}
+[29.418651] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/path.sh\n'}
+[29.418839] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/path.dsv\n'}
+[29.419016] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/local_setup.bash\n'}
+[29.419150] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/local_setup.sh\n'}
+[29.419350] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/local_setup.zsh\n'}
+[29.419553] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/local_setup.dsv\n'}
+[29.419675] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.dsv\n'}
+[29.419845] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/ament_index/resource_index/packages/logitech_msgs\n'}
+[29.420027] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_cExport.cmake\n'}
+[29.420159] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[29.420317] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[29.420509] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[29.420689] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[29.420854] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[29.420969] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_cExport.cmake\n'}
+[29.421146] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[29.421269] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_cppExport.cmake\n'}
+[29.421403] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[29.421562] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[29.421707] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[29.421820] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[29.421924] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[29.422031] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[29.422125] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_pyExport.cmake\n'}
+[29.422212] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[29.422313] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[29.422413] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[29.422590] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[29.422703] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[29.422801] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[29.422906] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[29.423015] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[29.423133] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgsConfig.cmake\n'}
+[29.423248] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgsConfig-version.cmake\n'}
+[29.423357] (logitech_msgs) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.xml\n'}
+[29.426516] (logitech_msgs) CommandEnded: {'returncode': 0}
+[29.480637] (logitech_msgs) JobEnded: {'identifier': 'logitech_msgs', 'rc': 0}
+[29.482980] (logitech_controller) JobStarted: {'identifier': 'logitech_controller'}
+[29.497586] (servo_pwm_node) JobStarted: {'identifier': 'servo_pwm_node'}
+[29.502614] (-) TimerEvent: {}
+[29.509519] (waveshare_servo) JobStarted: {'identifier': 'waveshare_servo'}
+[29.527340] (logitech_controller) JobProgress: {'identifier': 'logitech_controller', 'progress': 'cmake'}
+[29.527512] (logitech_controller) Command: {'cmd': ['/usr/bin/cmake', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_controller', '-DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[29.535015] (servo_pwm_node) JobProgress: {'identifier': 'servo_pwm_node', 'progress': 'cmake'}
+[29.535133] (servo_pwm_node) Command: {'cmd': ['/usr/bin/cmake', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/servo_pwm_node', '-DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[29.602824] (-) TimerEvent: {}
+[29.705550] (-) TimerEvent: {}
+[29.807270] (-) TimerEvent: {}
+[29.807789] (logitech_controller) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[29.907385] (-) TimerEvent: {}
+[29.959165] (logitech_controller) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[29.980524] (servo_pwm_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[30.007526] (-) TimerEvent: {}
+[30.037519] (logitech_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[30.107688] (-) TimerEvent: {}
+[30.176215] (servo_pwm_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[30.209184] (-) TimerEvent: {}
+[30.251734] (servo_pwm_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[30.313593] (-) TimerEvent: {}
+[30.416791] (-) TimerEvent: {}
+[30.474797] (logitech_controller) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[30.516902] (-) TimerEvent: {}
+[30.518683] (logitech_controller) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[30.520226] (logitech_controller) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[30.527648] (logitech_controller) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[30.574525] (logitech_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[30.598013] (servo_pwm_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[30.618592] (-) TimerEvent: {}
+[30.640716] (servo_pwm_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[30.643660] (servo_pwm_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[30.648528] (servo_pwm_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[30.696537] (servo_pwm_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[30.718681] (-) TimerEvent: {}
+[30.819607] (-) TimerEvent: {}
+[30.938543] (-) TimerEvent: {}
+[31.032914] (logitech_controller) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[31.041536] (-) TimerEvent: {}
+[31.087279] (servo_pwm_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[31.104354] (servo_pwm_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[31.104815] (servo_pwm_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[31.108607] (servo_pwm_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[31.109675] (logitech_controller) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[31.110052] (servo_pwm_node) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[31.110298] (logitech_controller) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[31.110935] (logitech_controller) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[31.115774] (logitech_controller) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[31.141642] (-) TimerEvent: {}
+[31.247180] (-) TimerEvent: {}
+[31.349642] (-) TimerEvent: {}
+[31.450561] (-) TimerEvent: {}
+[31.554510] (-) TimerEvent: {}
+[31.654913] (-) TimerEvent: {}
+[31.755326] (-) TimerEvent: {}
+[31.774792] (logitech_controller) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[31.857543] (-) TimerEvent: {}
+[31.889150] (servo_pwm_node) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[31.957671] (-) TimerEvent: {}
+[32.058282] (-) TimerEvent: {}
+[32.121536] (logitech_controller) StdoutLine: {'line': b'-- Found rclcpp: 28.1.10 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[32.137537] (waveshare_servo) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/waveshare_servo', 'build', '--build-base', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build', 'install', '--record', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/waveshare_servo', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[32.159609] (-) TimerEvent: {}
+[32.260000] (-) TimerEvent: {}
+[32.274571] (logitech_controller) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[32.300516] (logitech_controller) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[32.348312] (logitech_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[32.362535] (-) TimerEvent: {}
+[32.397178] (logitech_controller) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[32.462644] (-) TimerEvent: {}
+[32.513857] (servo_pwm_node) StdoutLine: {'line': b'-- Found rclcpp: 28.1.10 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[32.562762] (-) TimerEvent: {}
+[32.626529] (logitech_controller) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[32.626927] (logitech_controller) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[32.664510] (-) TimerEvent: {}
+[32.674587] (servo_pwm_node) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[32.737117] (servo_pwm_node) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[32.758197] (waveshare_servo) StdoutLine: {'line': b'running egg_info\n'}
+[32.758888] (waveshare_servo) StdoutLine: {'line': b'creating ../../build/waveshare_servo/waveshare_servo.egg-info\n'}
+[32.766085] (-) TimerEvent: {}
+[32.793601] (servo_pwm_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[32.808796] (waveshare_servo) StdoutLine: {'line': b'writing ../../build/waveshare_servo/waveshare_servo.egg-info/PKG-INFO\n'}
+[32.809167] (waveshare_servo) StdoutLine: {'line': b'writing dependency_links to ../../build/waveshare_servo/waveshare_servo.egg-info/dependency_links.txt\n'}
+[32.809350] (waveshare_servo) StdoutLine: {'line': b'writing entry points to ../../build/waveshare_servo/waveshare_servo.egg-info/entry_points.txt\n'}
+[32.809871] (waveshare_servo) StdoutLine: {'line': b'writing requirements to ../../build/waveshare_servo/waveshare_servo.egg-info/requires.txt\n'}
+[32.809992] (waveshare_servo) StdoutLine: {'line': b'writing top-level names to ../../build/waveshare_servo/waveshare_servo.egg-info/top_level.txt\n'}
+[32.812560] (waveshare_servo) StdoutLine: {'line': b"writing manifest file '../../build/waveshare_servo/waveshare_servo.egg-info/SOURCES.txt'\n"}
+[32.844811] (servo_pwm_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[32.866199] (-) TimerEvent: {}
+[32.913022] (waveshare_servo) StdoutLine: {'line': b"reading manifest file '../../build/waveshare_servo/waveshare_servo.egg-info/SOURCES.txt'\n"}
+[32.913313] (waveshare_servo) StdoutLine: {'line': b"writing manifest file '../../build/waveshare_servo/waveshare_servo.egg-info/SOURCES.txt'\n"}
+[32.913462] (waveshare_servo) StdoutLine: {'line': b'running build\n'}
+[32.913576] (waveshare_servo) StdoutLine: {'line': b'running build_py\n'}
+[32.914479] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build\n'}
+[32.914680] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib\n'}
+[32.914772] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.914858] (waveshare_servo) StdoutLine: {'line': b'copying STservo_sdk/scscl.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.923068] (waveshare_servo) StdoutLine: {'line': b'copying STservo_sdk/stservo_def.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.923499] (waveshare_servo) StdoutLine: {'line': b'copying STservo_sdk/group_sync_write.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.923915] (waveshare_servo) StdoutLine: {'line': b'copying STservo_sdk/group_sync_read.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.924343] (waveshare_servo) StdoutLine: {'line': b'copying STservo_sdk/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.924709] (waveshare_servo) StdoutLine: {'line': b'copying STservo_sdk/port_handler.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.925627] (waveshare_servo) StdoutLine: {'line': b'copying STservo_sdk/protocol_packet_handler.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.925822] (waveshare_servo) StdoutLine: {'line': b'copying STservo_sdk/sts.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk\n'}
+[32.927892] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/waveshare_servo\n'}
+[32.929512] (waveshare_servo) StdoutLine: {'line': b'copying waveshare_servo/waveshare_servo_node.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/waveshare_servo\n'}
+[32.938688] (waveshare_servo) StdoutLine: {'line': b'copying waveshare_servo/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/waveshare_servo\n'}
+[32.938971] (waveshare_servo) StdoutLine: {'line': b'running install\n'}
+[32.944851] (waveshare_servo) StdoutLine: {'line': b'running install_lib\n'}
+[32.950864] (logitech_controller) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[32.966511] (-) TimerEvent: {}
+[32.987009] (logitech_controller) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[32.989416] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.989802] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk/scscl.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.989927] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk/stservo_def.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.990097] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk/group_sync_write.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.990260] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk/group_sync_read.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.990441] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.990632] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk/port_handler.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.990831] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk/protocol_packet_handler.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.991076] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/STservo_sdk/sts.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk\n'}
+[32.991341] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/waveshare_servo\n'}
+[32.991835] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/waveshare_servo/waveshare_servo_node.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/waveshare_servo\n'}
+[32.991967] (waveshare_servo) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build/lib/waveshare_servo/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/waveshare_servo\n'}
+[32.994622] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk/scscl.py to scscl.cpython-312.pyc\n'}
+[32.995079] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk/stservo_def.py to stservo_def.cpython-312.pyc\n'}
+[32.995650] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk/group_sync_write.py to group_sync_write.cpython-312.pyc\n'}
+[32.996720] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk/group_sync_read.py to group_sync_read.cpython-312.pyc\n'}
+[32.999116] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk/__init__.py to __init__.cpython-312.pyc\n'}
+[32.999520] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk/port_handler.py to port_handler.cpython-312.pyc\n'}
+[33.001207] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk/protocol_packet_handler.py to protocol_packet_handler.cpython-312.pyc\n'}
+[33.020814] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/STservo_sdk/sts.py to sts.cpython-312.pyc\n'}
+[33.021608] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/waveshare_servo/waveshare_servo_node.py to waveshare_servo_node.cpython-312.pyc\n'}
+[33.027735] (waveshare_servo) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/waveshare_servo/__init__.py to __init__.cpython-312.pyc\n'}
+[33.028021] (waveshare_servo) StdoutLine: {'line': b'running install_data\n'}
+[33.028125] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/ament_index\n'}
+[33.028214] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/ament_index/resource_index\n'}
+[33.028299] (waveshare_servo) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/ament_index/resource_index/packages\n'}
+[33.028389] (waveshare_servo) StdoutLine: {'line': b'copying resource/waveshare_servo -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/ament_index/resource_index/packages\n'}
+[33.028510] (waveshare_servo) StdoutLine: {'line': b'copying package.xml -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo\n'}
+[33.028635] (waveshare_servo) StdoutLine: {'line': b'running install_egg_info\n'}
+[33.059500] (logitech_controller) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[33.066627] (-) TimerEvent: {}
+[33.066992] (waveshare_servo) StdoutLine: {'line': b'Copying ../../build/waveshare_servo/waveshare_servo.egg-info to /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages/waveshare_servo-0.0.0-py3.12.egg-info\n'}
+[33.074642] (waveshare_servo) StdoutLine: {'line': b'running install_scripts\n'}
+[33.127988] (servo_pwm_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[33.136237] (servo_pwm_node) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[33.168138] (-) TimerEvent: {}
+[33.268536] (-) TimerEvent: {}
+[33.279525] (logitech_controller) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[33.371495] (-) TimerEvent: {}
+[33.390600] (logitech_controller) StdoutLine: {'line': b'-- Found logitech_msgs: 0.0.0 (/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake)\n'}
+[33.407587] (logitech_controller) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[33.415797] (servo_pwm_node) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[33.463516] (servo_pwm_node) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[33.473163] (-) TimerEvent: {}
+[33.488174] (waveshare_servo) StdoutLine: {'line': b'Installing waveshare_servo_node script to /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/waveshare_servo\n'}
+[33.495006] (waveshare_servo) StdoutLine: {'line': b"writing list of installed files to '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/install.log'\n"}
+[33.524611] (servo_pwm_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[33.573278] (-) TimerEvent: {}
+[33.674659] (-) TimerEvent: {}
+[33.711759] (servo_pwm_node) StdoutLine: {'line': b'-- Found logitech_msgs: 0.0.0 (/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake)\n'}
+[33.728959] (logitech_controller) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[33.730737] (logitech_controller) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[33.731158] (logitech_controller) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[33.737528] (logitech_controller) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[33.738493] (logitech_controller) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[33.738716] (logitech_controller) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[33.742850] (logitech_controller) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[33.748888] (logitech_controller) StdoutLine: {'line': b'-- Configuring done (4.2s)\n'}
+[33.751750] (servo_pwm_node) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[33.774791] (-) TimerEvent: {}
+[33.789703] (waveshare_servo) CommandEnded: {'returncode': 0}
+[33.790319] (logitech_controller) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[33.797704] (logitech_controller) StdoutLine: {'line': b'-- Build files have been written to: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller\n'}
+[33.803549] (waveshare_servo) JobEnded: {'identifier': 'waveshare_servo', 'rc': 0}
+[33.837784] (logitech_controller) CommandEnded: {'returncode': 0}
+[33.845128] (logitech_controller) JobProgress: {'identifier': 'logitech_controller', 'progress': 'build'}
+[33.845415] (logitech_controller) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller', '--', '-j4', '-l4'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[33.876833] (-) TimerEvent: {}
+[33.981509] (-) TimerEvent: {}
+[34.030559] (logitech_controller) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o\x1b[0m\n'}
+[34.087576] (-) TimerEvent: {}
+[34.148262] (servo_pwm_node) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[34.148806] (servo_pwm_node) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[34.149533] (servo_pwm_node) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[34.151356] (servo_pwm_node) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[34.158327] (servo_pwm_node) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[34.158823] (servo_pwm_node) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[34.159496] (servo_pwm_node) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[34.165107] (servo_pwm_node) StdoutLine: {'line': b'-- Configuring done (4.6s)\n'}
+[34.186219] (servo_pwm_node) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[34.187681] (-) TimerEvent: {}
+[34.193407] (servo_pwm_node) StdoutLine: {'line': b'-- Build files have been written to: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node\n'}
+[34.229547] (servo_pwm_node) CommandEnded: {'returncode': 0}
+[34.230144] (servo_pwm_node) JobProgress: {'identifier': 'servo_pwm_node', 'progress': 'build'}
+[34.230181] (servo_pwm_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node', '--', '-j4', '-l4'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[34.287803] (-) TimerEvent: {}
+[34.371186] (servo_pwm_node) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/servo_pwm_node.dir/src/servo_pwm_node.cpp.o\x1b[0m\n'}
+[34.388950] (-) TimerEvent: {}
+[34.489416] (-) TimerEvent: {}
+[34.591510] (-) TimerEvent: {}
+[34.696680] (-) TimerEvent: {}
+[34.797241] (-) TimerEvent: {}
+[34.906671] (-) TimerEvent: {}
+[35.008557] (-) TimerEvent: {}
+[35.109139] (-) TimerEvent: {}
+[35.209705] (-) TimerEvent: {}
+[35.312071] (-) TimerEvent: {}
+[35.412553] (-) TimerEvent: {}
+[35.514541] (-) TimerEvent: {}
+[35.615039] (-) TimerEvent: {}
+[35.716943] (-) TimerEvent: {}
+[35.817475] (-) TimerEvent: {}
+[35.917882] (-) TimerEvent: {}
+[36.023656] (-) TimerEvent: {}
+[36.124291] (-) TimerEvent: {}
+[36.224782] (-) TimerEvent: {}
+[36.325183] (-) TimerEvent: {}
+[36.425841] (-) TimerEvent: {}
+[36.529484] (-) TimerEvent: {}
+[36.634577] (-) TimerEvent: {}
+[36.735118] (-) TimerEvent: {}
+[36.835618] (-) TimerEvent: {}
+[36.936594] (-) TimerEvent: {}
+[37.039650] (-) TimerEvent: {}
+[37.140529] (-) TimerEvent: {}
+[37.241387] (-) TimerEvent: {}
+[37.341851] (-) TimerEvent: {}
+[37.444565] (-) TimerEvent: {}
+[37.545333] (-) TimerEvent: {}
+[37.647680] (-) TimerEvent: {}
+[37.748985] (-) TimerEvent: {}
+[37.849447] (-) TimerEvent: {}
+[37.951692] (-) TimerEvent: {}
+[38.052140] (-) TimerEvent: {}
+[38.152773] (-) TimerEvent: {}
+[38.253131] (-) TimerEvent: {}
+[38.354722] (-) TimerEvent: {}
+[38.461366] (-) TimerEvent: {}
+[38.563138] (-) TimerEvent: {}
+[38.665570] (-) TimerEvent: {}
+[38.766071] (-) TimerEvent: {}
+[38.866490] (-) TimerEvent: {}
+[38.969721] (-) TimerEvent: {}
+[39.070957] (-) TimerEvent: {}
+[39.171883] (-) TimerEvent: {}
+[39.273196] (-) TimerEvent: {}
+[39.374657] (-) TimerEvent: {}
+[39.476538] (-) TimerEvent: {}
+[39.582064] (-) TimerEvent: {}
+[39.682765] (-) TimerEvent: {}
+[39.783522] (-) TimerEvent: {}
+[39.888781] (-) TimerEvent: {}
+[39.989234] (-) TimerEvent: {}
+[40.089714] (-) TimerEvent: {}
+[40.192996] (-) TimerEvent: {}
+[40.303649] (-) TimerEvent: {}
+[40.410858] (-) TimerEvent: {}
+[40.515669] (-) TimerEvent: {}
+[40.617538] (-) TimerEvent: {}
+[40.718230] (-) TimerEvent: {}
+[40.821880] (-) TimerEvent: {}
+[40.922373] (-) TimerEvent: {}
+[41.025656] (-) TimerEvent: {}
+[41.126277] (-) TimerEvent: {}
+[41.226935] (-) TimerEvent: {}
+[41.327458] (-) TimerEvent: {}
+[41.429543] (-) TimerEvent: {}
+[41.534424] (-) TimerEvent: {}
+[41.635046] (-) TimerEvent: {}
+[41.736100] (-) TimerEvent: {}
+[41.841538] (-) TimerEvent: {}
+[41.943755] (-) TimerEvent: {}
+[42.044205] (-) TimerEvent: {}
+[42.145758] (-) TimerEvent: {}
+[42.251996] (-) TimerEvent: {}
+[42.352593] (-) TimerEvent: {}
+[42.454086] (-) TimerEvent: {}
+[42.564191] (-) TimerEvent: {}
+[42.664800] (-) TimerEvent: {}
+[42.765601] (-) TimerEvent: {}
+[42.866069] (-) TimerEvent: {}
+[42.967765] (-) TimerEvent: {}
+[43.068296] (-) TimerEvent: {}
+[43.169050] (-) TimerEvent: {}
+[43.269530] (-) TimerEvent: {}
+[43.375559] (-) TimerEvent: {}
+[43.475984] (-) TimerEvent: {}
+[43.576448] (-) TimerEvent: {}
+[43.679704] (-) TimerEvent: {}
+[43.780532] (-) TimerEvent: {}
+[43.884753] (-) TimerEvent: {}
+[43.985655] (-) TimerEvent: {}
+[44.086336] (-) TimerEvent: {}
+[44.188495] (-) TimerEvent: {}
+[44.289544] (-) TimerEvent: {}
+[44.395733] (-) TimerEvent: {}
+[44.496172] (-) TimerEvent: {}
+[44.597549] (-) TimerEvent: {}
+[44.697990] (-) TimerEvent: {}
+[44.802753] (-) TimerEvent: {}
+[44.913346] (-) TimerEvent: {}
+[45.013941] (-) TimerEvent: {}
+[45.118349] (-) TimerEvent: {}
+[45.221531] (-) TimerEvent: {}
+[45.329558] (-) TimerEvent: {}
+[45.429988] (-) TimerEvent: {}
+[45.530504] (-) TimerEvent: {}
+[45.630942] (-) TimerEvent: {}
+[45.733531] (-) TimerEvent: {}
+[45.835534] (-) TimerEvent: {}
+[45.938693] (-) TimerEvent: {}
+[46.043674] (-) TimerEvent: {}
+[46.144351] (-) TimerEvent: {}
+[46.248546] (-) TimerEvent: {}
+[46.350148] (-) TimerEvent: {}
+[46.451222] (-) TimerEvent: {}
+[46.552768] (-) TimerEvent: {}
+[46.653205] (-) TimerEvent: {}
+[46.757995] (-) TimerEvent: {}
+[46.859360] (-) TimerEvent: {}
+[46.962698] (-) TimerEvent: {}
+[47.065516] (-) TimerEvent: {}
+[47.166540] (-) TimerEvent: {}
+[47.268734] (-) TimerEvent: {}
+[47.369552] (-) TimerEvent: {}
+[47.472530] (-) TimerEvent: {}
+[47.573408] (-) TimerEvent: {}
+[47.674351] (-) TimerEvent: {}
+[47.774801] (-) TimerEvent: {}
+[47.875279] (-) TimerEvent: {}
+[47.978863] (-) TimerEvent: {}
+[48.079383] (-) TimerEvent: {}
+[48.180057] (-) TimerEvent: {}
+[48.280570] (-) TimerEvent: {}
+[48.381035] (-) TimerEvent: {}
+[48.482703] (-) TimerEvent: {}
+[48.586844] (-) TimerEvent: {}
+[48.687691] (-) TimerEvent: {}
+[48.789048] (-) TimerEvent: {}
+[48.889554] (-) TimerEvent: {}
+[48.990856] (-) TimerEvent: {}
+[49.091299] (-) TimerEvent: {}
+[49.193592] (-) TimerEvent: {}
+[49.294093] (-) TimerEvent: {}
+[49.394538] (-) TimerEvent: {}
+[49.495062] (-) TimerEvent: {}
+[49.595932] (-) TimerEvent: {}
+[49.698544] (-) TimerEvent: {}
+[49.799678] (-) TimerEvent: {}
+[49.900594] (-) TimerEvent: {}
+[50.004542] (-) TimerEvent: {}
+[50.104971] (-) TimerEvent: {}
+[50.205394] (-) TimerEvent: {}
+[50.305839] (-) TimerEvent: {}
+[50.406767] (-) TimerEvent: {}
+[50.509574] (-) TimerEvent: {}
+[50.611465] (-) TimerEvent: {}
+[50.711937] (-) TimerEvent: {}
+[50.812390] (-) TimerEvent: {}
+[50.915619] (-) TimerEvent: {}
+[51.016712] (-) TimerEvent: {}
+[51.117150] (-) TimerEvent: {}
+[51.217614] (-) TimerEvent: {}
+[51.318013] (-) TimerEvent: {}
+[51.419541] (-) TimerEvent: {}
+[51.519971] (-) TimerEvent: {}
+[51.620451] (-) TimerEvent: {}
+[51.722536] (-) TimerEvent: {}
+[51.823156] (-) TimerEvent: {}
+[51.924426] (-) TimerEvent: {}
+[52.026603] (-) TimerEvent: {}
+[52.127689] (-) TimerEvent: {}
+[52.228682] (-) TimerEvent: {}
+[52.331205] (-) TimerEvent: {}
+[52.431739] (-) TimerEvent: {}
+[52.532342] (-) TimerEvent: {}
+[52.634530] (-) TimerEvent: {}
+[52.734941] (-) TimerEvent: {}
+[52.835399] (-) TimerEvent: {}
+[52.935873] (-) TimerEvent: {}
+[53.037554] (-) TimerEvent: {}
+[53.138149] (-) TimerEvent: {}
+[53.238625] (-) TimerEvent: {}
+[53.344727] (-) TimerEvent: {}
+[53.450541] (-) TimerEvent: {}
+[53.550993] (-) TimerEvent: {}
+[53.652926] (-) TimerEvent: {}
+[53.753500] (-) TimerEvent: {}
+[53.858678] (-) TimerEvent: {}
+[53.961743] (-) TimerEvent: {}
+[54.065741] (-) TimerEvent: {}
+[54.166684] (-) TimerEvent: {}
+[54.268769] (-) TimerEvent: {}
+[54.370995] (-) TimerEvent: {}
+[54.477533] (-) TimerEvent: {}
+[54.580669] (-) TimerEvent: {}
+[54.681242] (-) TimerEvent: {}
+[54.783288] (-) TimerEvent: {}
+[54.885528] (-) TimerEvent: {}
+[54.992704] (-) TimerEvent: {}
+[55.082576] (servo_pwm_node) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable servo_pwm_node\x1b[0m\n'}
+[55.092792] (-) TimerEvent: {}
+[55.198135] (-) TimerEvent: {}
+[55.299249] (-) TimerEvent: {}
+[55.399993] (-) TimerEvent: {}
+[55.502740] (-) TimerEvent: {}
+[55.604589] (-) TimerEvent: {}
+[55.709164] (-) TimerEvent: {}
+[55.816112] (-) TimerEvent: {}
+[55.918661] (-) TimerEvent: {}
+[56.023971] (-) TimerEvent: {}
+[56.124488] (-) TimerEvent: {}
+[56.226264] (-) TimerEvent: {}
+[56.324056] (servo_pwm_node) StdoutLine: {'line': b'[100%] Built target servo_pwm_node\n'}
+[56.326402] (-) TimerEvent: {}
+[56.366619] (servo_pwm_node) CommandEnded: {'returncode': 0}
+[56.369535] (servo_pwm_node) JobProgress: {'identifier': 'servo_pwm_node', 'progress': 'install'}
+[56.369639] (servo_pwm_node) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[56.389354] (servo_pwm_node) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[56.390394] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/lib/servo_pwm_node/servo_pwm_node\n'}
+[56.400603] (servo_pwm_node) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/lib/servo_pwm_node/servo_pwm_node" to ""\n'}
+[56.400944] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/ament_index/resource_index/package_run_dependencies/servo_pwm_node\n'}
+[56.402405] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/ament_index/resource_index/parent_prefix_path/servo_pwm_node\n'}
+[56.402766] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/environment/ament_prefix_path.sh\n'}
+[56.403975] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/environment/ament_prefix_path.dsv\n'}
+[56.404283] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/environment/path.sh\n'}
+[56.405522] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/environment/path.dsv\n'}
+[56.405819] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/local_setup.bash\n'}
+[56.407851] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/local_setup.sh\n'}
+[56.408155] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/local_setup.zsh\n'}
+[56.408301] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/local_setup.dsv\n'}
+[56.408476] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.dsv\n'}
+[56.408675] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/ament_index/resource_index/packages/servo_pwm_node\n'}
+[56.410166] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/cmake/servo_pwm_nodeConfig.cmake\n'}
+[56.411478] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/cmake/servo_pwm_nodeConfig-version.cmake\n'}
+[56.411799] (servo_pwm_node) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.xml\n'}
+[56.433939] (servo_pwm_node) CommandEnded: {'returncode': 0}
+[56.434742] (-) TimerEvent: {}
+[56.459781] (servo_pwm_node) JobEnded: {'identifier': 'servo_pwm_node', 'rc': 0}
+[56.534928] (-) TimerEvent: {}
+[56.637329] (-) TimerEvent: {}
+[56.741258] (-) TimerEvent: {}
+[56.841905] (-) TimerEvent: {}
+[56.942937] (-) TimerEvent: {}
+[57.044541] (-) TimerEvent: {}
+[57.144985] (-) TimerEvent: {}
+[57.248350] (-) TimerEvent: {}
+[57.351532] (-) TimerEvent: {}
+[57.457934] (-) TimerEvent: {}
+[57.560645] (-) TimerEvent: {}
+[57.663549] (-) TimerEvent: {}
+[57.764090] (-) TimerEvent: {}
+[57.867566] (-) TimerEvent: {}
+[57.969942] (-) TimerEvent: {}
+[58.029957] (logitech_controller) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable controller_node\x1b[0m\n'}
+[58.071562] (-) TimerEvent: {}
+[58.172064] (-) TimerEvent: {}
+[58.275101] (-) TimerEvent: {}
+[58.377534] (-) TimerEvent: {}
+[58.477972] (-) TimerEvent: {}
+[58.580693] (-) TimerEvent: {}
+[58.681373] (-) TimerEvent: {}
+[58.781978] (-) TimerEvent: {}
+[58.883749] (-) TimerEvent: {}
+[58.986762] (-) TimerEvent: {}
+[59.095538] (-) TimerEvent: {}
+[59.196017] (-) TimerEvent: {}
+[59.296603] (-) TimerEvent: {}
+[59.393821] (logitech_controller) StdoutLine: {'line': b'[100%] Built target controller_node\n'}
+[59.396699] (-) TimerEvent: {}
+[59.433019] (logitech_controller) CommandEnded: {'returncode': 0}
+[59.436882] (logitech_controller) JobProgress: {'identifier': 'logitech_controller', 'progress': 'install'}
+[59.437016] (logitech_controller) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[59.457638] (logitech_controller) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[59.458022] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib/logitech_controller/controller_node\n'}
+[59.479254] (logitech_controller) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib/logitech_controller/controller_node" to ""\n'}
+[59.481497] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/ament_index/resource_index/package_run_dependencies/logitech_controller\n'}
+[59.481807] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/ament_index/resource_index/parent_prefix_path/logitech_controller\n'}
+[59.481926] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/environment/ament_prefix_path.sh\n'}
+[59.482041] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/environment/ament_prefix_path.dsv\n'}
+[59.482137] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/environment/path.sh\n'}
+[59.482284] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/environment/path.dsv\n'}
+[59.482394] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/local_setup.bash\n'}
+[59.482693] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/local_setup.sh\n'}
+[59.482826] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/local_setup.zsh\n'}
+[59.485533] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/local_setup.dsv\n'}
+[59.485817] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.dsv\n'}
+[59.485923] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/ament_index/resource_index/packages/logitech_controller\n'}
+[59.486047] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/cmake/logitech_controllerConfig.cmake\n'}
+[59.486134] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/cmake/logitech_controllerConfig-version.cmake\n'}
+[59.486215] (logitech_controller) StdoutLine: {'line': b'-- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.xml\n'}
+[59.488490] (logitech_controller) CommandEnded: {'returncode': 0}
+[59.496866] (-) TimerEvent: {}
+[59.524552] (logitech_controller) JobEnded: {'identifier': 'logitech_controller', 'rc': 0}
+[59.526481] (khonsu) JobStarted: {'identifier': 'khonsu'}
+[59.597048] (-) TimerEvent: {}
+[59.697487] (-) TimerEvent: {}
+[59.799706] (-) TimerEvent: {}
+[59.900096] (-) TimerEvent: {}
+[60.000673] (-) TimerEvent: {}
+[60.101098] (-) TimerEvent: {}
+[60.204352] (-) TimerEvent: {}
+[60.306565] (-) TimerEvent: {}
+[60.406996] (-) TimerEvent: {}
+[60.507482] (-) TimerEvent: {}
+[60.608601] (-) TimerEvent: {}
+[60.709205] (-) TimerEvent: {}
+[60.809777] (-) TimerEvent: {}
+[60.911496] (-) TimerEvent: {}
+[61.018679] (-) TimerEvent: {}
+[61.119190] (-) TimerEvent: {}
+[61.220098] (-) TimerEvent: {}
+[61.320611] (-) TimerEvent: {}
+[61.425541] (-) TimerEvent: {}
+[61.527523] (-) TimerEvent: {}
+[61.602035] (khonsu) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/khonsu', 'build', '--build-base', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build', 'install', '--record', '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/khonsu', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'maro', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/maro', 'OLDPWD': '/home/maro/3D_Mapping_Sphere_ROS2', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3870', 'IM_CONFIG_CHECK_ENV': '1', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'maro', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1002.slice/user@1002.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'maro', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/maro-desktop:@/tmp/.ICE-unix/3841,unix/maro-desktop:/tmp/.ICE-unix/3841', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/bfad19ea_005a_4b85_8d3b_7338db79256b', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1002/.mutter-Xwaylandauth.1IR082', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.106', 'SSH_AUTH_SOCK': '/run/user/1002/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[61.628651] (-) TimerEvent: {}
+[61.728978] (-) TimerEvent: {}
+[61.833749] (-) TimerEvent: {}
+[61.934511] (-) TimerEvent: {}
+[62.034883] (-) TimerEvent: {}
+[62.136976] (-) TimerEvent: {}
+[62.204765] (khonsu) StdoutLine: {'line': b'running egg_info\n'}
+[62.205349] (khonsu) StdoutLine: {'line': b'creating ../../build/khonsu/khonsu.egg-info\n'}
+[62.237155] (-) TimerEvent: {}
+[62.249336] (khonsu) StdoutLine: {'line': b'writing ../../build/khonsu/khonsu.egg-info/PKG-INFO\n'}
+[62.249691] (khonsu) StdoutLine: {'line': b'writing dependency_links to ../../build/khonsu/khonsu.egg-info/dependency_links.txt\n'}
+[62.249865] (khonsu) StdoutLine: {'line': b'writing requirements to ../../build/khonsu/khonsu.egg-info/requires.txt\n'}
+[62.249967] (khonsu) StdoutLine: {'line': b'writing top-level names to ../../build/khonsu/khonsu.egg-info/top_level.txt\n'}
+[62.250107] (khonsu) StdoutLine: {'line': b"writing manifest file '../../build/khonsu/khonsu.egg-info/SOURCES.txt'\n"}
+[62.332652] (khonsu) StdoutLine: {'line': b"reading manifest file '../../build/khonsu/khonsu.egg-info/SOURCES.txt'\n"}
+[62.333019] (khonsu) StdoutLine: {'line': b"writing manifest file '../../build/khonsu/khonsu.egg-info/SOURCES.txt'\n"}
+[62.333451] (khonsu) StdoutLine: {'line': b'running build\n'}
+[62.334791] (khonsu) StdoutLine: {'line': b'running build_py\n'}
+[62.334901] (khonsu) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build\n'}
+[62.335007] (khonsu) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build/lib\n'}
+[62.335103] (khonsu) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build/lib/khonsu\n'}
+[62.335200] (khonsu) StdoutLine: {'line': b'copying khonsu/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build/lib/khonsu\n'}
+[62.335295] (khonsu) StdoutLine: {'line': b'running install\n'}
+[62.338778] (-) TimerEvent: {}
+[62.351890] (khonsu) StdoutLine: {'line': b'running install_lib\n'}
+[62.395985] (khonsu) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages/khonsu\n'}
+[62.400601] (khonsu) StdoutLine: {'line': b'copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build/lib/khonsu/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages/khonsu\n'}
+[62.402113] (khonsu) StdoutLine: {'line': b'byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages/khonsu/__init__.py to __init__.cpython-312.pyc\n'}
+[62.404157] (khonsu) StdoutLine: {'line': b'running install_data\n'}
+[62.404980] (khonsu) StdoutLine: {'line': b'copying package.xml -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu\n'}
+[62.405760] (khonsu) StdoutLine: {'line': b'creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/launch\n'}
+[62.406388] (khonsu) StdoutLine: {'line': b'copying launch/movingNodes.launch.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/launch\n'}
+[62.407136] (khonsu) StdoutLine: {'line': b'running install_egg_info\n'}
+[62.438898] (-) TimerEvent: {}
+[62.455089] (khonsu) StdoutLine: {'line': b'Copying ../../build/khonsu/khonsu.egg-info to /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages/khonsu-0.0.0-py3.12.egg-info\n'}
+[62.458783] (khonsu) StdoutLine: {'line': b'running install_scripts\n'}
+[62.539015] (-) TimerEvent: {}
+[62.639401] (-) TimerEvent: {}
+[62.740593] (-) TimerEvent: {}
+[62.757141] (khonsu) StdoutLine: {'line': b"writing list of installed files to '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/install.log'\n"}
+[62.840848] (-) TimerEvent: {}
+[62.884455] (khonsu) CommandEnded: {'returncode': 0}
+[62.895532] (khonsu) JobEnded: {'identifier': 'khonsu', 'rc': 0}
+[62.899753] (-) EventReactorShutdown: {}

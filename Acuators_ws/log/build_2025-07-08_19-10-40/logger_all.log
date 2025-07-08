@@ -1,0 +1,398 @@
+[0.408s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.408s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, meson_args=[], ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa1520680>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa16dce00>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa16dce00>>, mixin_verb=('build',))
+[0.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.497s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.497s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws'
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.505s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'meson', 'python']
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'meson'
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.599s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'meson', 'python']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'meson'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extensions ['ignore', 'ignore_ament_install']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extension 'ignore'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extension 'ignore_ament_install'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extensions ['colcon_pkg']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extension 'colcon_pkg'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extensions ['colcon_meta']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extension 'colcon_meta'
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extensions ['ros']
+[0.601s] Level 1:colcon.colcon_core.package_identification:_identify(src/khonsu) by extension 'ros'
+[0.605s] DEBUG:colcon.colcon_core.package_identification:Package 'src/khonsu' with type 'ros.ament_python' and name 'khonsu'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extension 'ignore'
+[0.605s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extension 'ignore_ament_install'
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extensions ['colcon_pkg']
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extension 'colcon_pkg'
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extensions ['colcon_meta']
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extension 'colcon_meta'
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extensions ['ros']
+[0.606s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_controller) by extension 'ros'
+[0.607s] DEBUG:colcon.colcon_core.package_identification:Package 'src/logitech_controller' with type 'ros.ament_cmake' and name 'logitech_controller'
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extension 'ignore'
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extension 'ignore_ament_install'
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extensions ['colcon_pkg']
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extension 'colcon_pkg'
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extensions ['colcon_meta']
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extension 'colcon_meta'
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extensions ['ros']
+[0.607s] Level 1:colcon.colcon_core.package_identification:_identify(src/logitech_msgs) by extension 'ros'
+[0.608s] DEBUG:colcon.colcon_core.package_identification:Package 'src/logitech_msgs' with type 'ros.ament_cmake' and name 'logitech_msgs'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extensions ['ignore', 'ignore_ament_install']
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extension 'ignore'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extension 'ignore_ament_install'
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extensions ['colcon_pkg']
+[0.608s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extension 'colcon_pkg'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extensions ['colcon_meta']
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extension 'colcon_meta'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extensions ['ros']
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(src/servo_pwm_node) by extension 'ros'
+[0.609s] DEBUG:colcon.colcon_core.package_identification:Package 'src/servo_pwm_node' with type 'ros.ament_cmake' and name 'servo_pwm_node'
+[0.609s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extensions ['ignore', 'ignore_ament_install']
+[0.610s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extension 'ignore'
+[0.610s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extension 'ignore_ament_install'
+[0.610s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extensions ['colcon_pkg']
+[0.610s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extension 'colcon_pkg'
+[0.610s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extensions ['colcon_meta']
+[0.610s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extension 'colcon_meta'
+[0.610s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extensions ['ros']
+[0.610s] Level 1:colcon.colcon_core.package_identification:_identify(src/waveshare_servo) by extension 'ros'
+[0.611s] DEBUG:colcon.colcon_core.package_identification:Package 'src/waveshare_servo' with type 'ros.ament_python' and name 'waveshare_servo'
+[0.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.611s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.635s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.635s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.641s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 309 installed packages in /opt/ros/jazzy
+[0.644s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.731s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'cmake_args' from command line to 'None'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'cmake_target' from command line to 'None'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'meson_args' from command line to '[]'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.732s] Level 5:colcon.colcon_core.verb:set package 'logitech_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.732s] DEBUG:colcon.colcon_core.verb:Building package 'logitech_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs', 'merge_install': False, 'meson_args': [], 'path': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'cmake_args' from command line to 'None'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'cmake_target' from command line to 'None'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'meson_args' from command line to '[]'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.751s] Level 5:colcon.colcon_core.verb:set package 'logitech_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.751s] DEBUG:colcon.colcon_core.verb:Building package 'logitech_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller', 'merge_install': False, 'meson_args': [], 'path': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_controller', 'symlink_install': False, 'test_result_base': None}
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'cmake_args' from command line to 'None'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'cmake_target' from command line to 'None'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'cmake_clean_cache' from command line to 'False'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'cmake_clean_first' from command line to 'False'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'cmake_force_configure' from command line to 'False'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'meson_args' from command line to '[]'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'ament_cmake_args' from command line to 'None'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'catkin_cmake_args' from command line to 'None'
+[0.768s] Level 5:colcon.colcon_core.verb:set package 'servo_pwm_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.768s] DEBUG:colcon.colcon_core.verb:Building package 'servo_pwm_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node', 'merge_install': False, 'meson_args': [], 'path': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/servo_pwm_node', 'symlink_install': False, 'test_result_base': None}
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'cmake_args' from command line to 'None'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'cmake_target' from command line to 'None'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'cmake_clean_first' from command line to 'False'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'cmake_force_configure' from command line to 'False'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'meson_args' from command line to '[]'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'ament_cmake_args' from command line to 'None'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.786s] Level 5:colcon.colcon_core.verb:set package 'waveshare_servo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.786s] DEBUG:colcon.colcon_core.verb:Building package 'waveshare_servo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo', 'merge_install': False, 'meson_args': [], 'path': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/waveshare_servo', 'symlink_install': False, 'test_result_base': None}
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'cmake_args' from command line to 'None'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'cmake_target' from command line to 'None'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'cmake_clean_cache' from command line to 'False'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'cmake_clean_first' from command line to 'False'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'cmake_force_configure' from command line to 'False'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'meson_args' from command line to '[]'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'ament_cmake_args' from command line to 'None'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'catkin_cmake_args' from command line to 'None'
+[0.802s] Level 5:colcon.colcon_core.verb:set package 'khonsu' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.802s] DEBUG:colcon.colcon_core.verb:Building package 'khonsu' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu', 'merge_install': False, 'meson_args': [], 'path': '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/khonsu', 'symlink_install': False, 'test_result_base': None}
+[0.803s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.804s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.805s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_msgs' with build type 'ament_cmake'
+[0.806s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_msgs'
+[0.811s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.812s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.812s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.827s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_msgs -DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs
+[9.160s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_msgs -DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs
+[9.164s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs -- -j4 -l4
+[30.003s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs -- -j4 -l4
+[30.030s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs
+[30.229s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(logitech_msgs)
+[30.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs
+[30.234s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs' for CMake module files
+[30.235s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs' for CMake config files
+[30.236s] Level 1:colcon.colcon_core.shell:create_environment_hook('logitech_msgs', 'cmake_prefix_path')
+[30.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/cmake_prefix_path.ps1'
+[30.238s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/cmake_prefix_path.dsv'
+[30.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/cmake_prefix_path.sh'
+[30.240s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib'
+[30.240s] Level 1:colcon.colcon_core.shell:create_environment_hook('logitech_msgs', 'ld_library_path_lib')
+[30.241s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/ld_library_path_lib.ps1'
+[30.242s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/ld_library_path_lib.dsv'
+[30.242s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/ld_library_path_lib.sh'
+[30.243s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/bin'
+[30.243s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/pkgconfig/logitech_msgs.pc'
+[30.244s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages'
+[30.245s] Level 1:colcon.colcon_core.shell:create_environment_hook('logitech_msgs', 'pythonpath')
+[30.246s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/pythonpath.ps1'
+[30.246s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/pythonpath.dsv'
+[30.247s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/pythonpath.sh'
+[30.248s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/bin'
+[30.248s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.ps1'
+[30.250s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.dsv'
+[30.252s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.sh'
+[30.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.bash'
+[30.263s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.zsh'
+[30.265s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/colcon-core/packages/logitech_msgs)
+[30.266s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(logitech_msgs)
+[30.267s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs' for CMake module files
+[30.268s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs' for CMake config files
+[30.268s] Level 1:colcon.colcon_core.shell:create_environment_hook('logitech_msgs', 'cmake_prefix_path')
+[30.269s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/cmake_prefix_path.ps1'
+[30.269s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/cmake_prefix_path.dsv'
+[30.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/cmake_prefix_path.sh'
+[30.271s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib'
+[30.272s] Level 1:colcon.colcon_core.shell:create_environment_hook('logitech_msgs', 'ld_library_path_lib')
+[30.272s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/ld_library_path_lib.ps1'
+[30.273s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/ld_library_path_lib.dsv'
+[30.274s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/ld_library_path_lib.sh'
+[30.274s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/bin'
+[30.274s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/pkgconfig/logitech_msgs.pc'
+[30.275s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages'
+[30.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('logitech_msgs', 'pythonpath')
+[30.276s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/pythonpath.ps1'
+[30.277s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/pythonpath.dsv'
+[30.277s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/hook/pythonpath.sh'
+[30.278s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/bin'
+[30.279s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.ps1'
+[30.280s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.dsv'
+[30.282s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.sh'
+[30.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.bash'
+[30.283s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.zsh'
+[30.284s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/colcon-core/packages/logitech_msgs)
+[30.286s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_controller' with build type 'ament_cmake'
+[30.288s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_controller'
+[30.289s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[30.289s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.297s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/servo_pwm_node' with build type 'ament_cmake'
+[30.298s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/servo_pwm_node'
+[30.301s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[30.303s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.311s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/waveshare_servo' with build type 'ament_python'
+[30.311s] Level 1:colcon.colcon_core.shell:create_environment_hook('waveshare_servo', 'ament_prefix_path')
+[30.311s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/hook/ament_prefix_path.ps1'
+[30.313s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/hook/ament_prefix_path.dsv'
+[30.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/hook/ament_prefix_path.sh'
+[30.317s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[30.317s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[30.333s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_controller -DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller
+[30.340s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/servo_pwm_node -DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node
+[31.240s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/waveshare_servo'
+[31.244s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[31.244s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[32.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/waveshare_servo': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/waveshare_servo build --build-base /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build install --record /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/install.log --single-version-externally-managed install_data
+[34.591s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo' for CMake module files
+[34.594s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/waveshare_servo' returned '0': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/waveshare_servo build --build-base /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/build install --record /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/waveshare_servo/install.log --single-version-externally-managed install_data
+[34.595s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo' for CMake config files
+[34.597s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib'
+[34.597s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/bin'
+[34.597s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/pkgconfig/waveshare_servo.pc'
+[34.597s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages'
+[34.598s] Level 1:colcon.colcon_core.shell:create_environment_hook('waveshare_servo', 'pythonpath')
+[34.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/hook/pythonpath.ps1'
+[34.600s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/hook/pythonpath.dsv'
+[34.600s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/hook/pythonpath.sh'
+[34.601s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/bin'
+[34.602s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(waveshare_servo)
+[34.603s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/package.ps1'
+[34.604s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/package.dsv'
+[34.605s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/package.sh'
+[34.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/package.bash'
+[34.606s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/waveshare_servo/package.zsh'
+[34.607s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/share/colcon-core/packages/waveshare_servo)
+[34.643s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller' returned '0': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_controller -DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller
+[34.650s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller -- -j4 -l4
+[35.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node' returned '0': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/servo_pwm_node -DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node
+[35.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node -- -j4 -l4
+[57.171s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node' returned '0': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node -- -j4 -l4
+[57.174s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node
+[57.235s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(servo_pwm_node)
+[57.236s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node' for CMake module files
+[57.237s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node' for CMake config files
+[57.237s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo_pwm_node', 'cmake_prefix_path')
+[57.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/hook/cmake_prefix_path.ps1'
+[57.238s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node' returned '0': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/servo_pwm_node
+[57.240s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/hook/cmake_prefix_path.dsv'
+[57.241s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/hook/cmake_prefix_path.sh'
+[57.242s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/lib'
+[57.243s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/bin'
+[57.243s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/lib/pkgconfig/servo_pwm_node.pc'
+[57.243s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/lib/python3.12/site-packages'
+[57.244s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/bin'
+[57.244s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.ps1'
+[57.245s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.dsv'
+[57.246s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.sh'
+[57.247s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.bash'
+[57.248s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.zsh'
+[57.249s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/colcon-core/packages/servo_pwm_node)
+[57.250s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(servo_pwm_node)
+[57.250s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node' for CMake module files
+[57.251s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node' for CMake config files
+[57.252s] Level 1:colcon.colcon_core.shell:create_environment_hook('servo_pwm_node', 'cmake_prefix_path')
+[57.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/hook/cmake_prefix_path.ps1'
+[57.253s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/hook/cmake_prefix_path.dsv'
+[57.254s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/hook/cmake_prefix_path.sh'
+[57.256s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/lib'
+[57.256s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/bin'
+[57.256s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/lib/pkgconfig/servo_pwm_node.pc'
+[57.257s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/lib/python3.12/site-packages'
+[57.257s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/bin'
+[57.258s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.ps1'
+[57.259s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.dsv'
+[57.260s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.sh'
+[57.261s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.bash'
+[57.262s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/servo_pwm_node/package.zsh'
+[57.263s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node/share/colcon-core/packages/servo_pwm_node)
+[60.238s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller' returned '0': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller -- -j4 -l4
+[60.244s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller
+[60.292s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(logitech_controller)
+[60.293s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller' returned '0': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller
+[60.293s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller' for CMake module files
+[60.294s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller' for CMake config files
+[60.295s] Level 1:colcon.colcon_core.shell:create_environment_hook('logitech_controller', 'cmake_prefix_path')
+[60.295s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/hook/cmake_prefix_path.ps1'
+[60.296s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/hook/cmake_prefix_path.dsv'
+[60.297s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/hook/cmake_prefix_path.sh'
+[60.298s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib'
+[60.298s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/bin'
+[60.299s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib/pkgconfig/logitech_controller.pc'
+[60.299s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib/python3.12/site-packages'
+[60.299s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/bin'
+[60.300s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.ps1'
+[60.301s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.dsv'
+[60.302s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.sh'
+[60.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.bash'
+[60.303s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.zsh'
+[60.304s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/colcon-core/packages/logitech_controller)
+[60.305s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(logitech_controller)
+[60.305s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller' for CMake module files
+[60.306s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller' for CMake config files
+[60.306s] Level 1:colcon.colcon_core.shell:create_environment_hook('logitech_controller', 'cmake_prefix_path')
+[60.307s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/hook/cmake_prefix_path.ps1'
+[60.308s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/hook/cmake_prefix_path.dsv'
+[60.309s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/hook/cmake_prefix_path.sh'
+[60.314s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib'
+[60.314s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/bin'
+[60.314s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib/pkgconfig/logitech_controller.pc'
+[60.315s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib/python3.12/site-packages'
+[60.317s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/bin'
+[60.318s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.ps1'
+[60.323s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.dsv'
+[60.325s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.sh'
+[60.326s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.bash'
+[60.327s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.zsh'
+[60.328s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/colcon-core/packages/logitech_controller)
+[60.330s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/khonsu' with build type 'ament_python'
+[60.330s] Level 1:colcon.colcon_core.shell:create_environment_hook('khonsu', 'ament_prefix_path')
+[60.330s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/hook/ament_prefix_path.ps1'
+[60.331s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/hook/ament_prefix_path.dsv'
+[60.332s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/hook/ament_prefix_path.sh'
+[60.333s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[60.333s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[60.943s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'khonsu' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[60.944s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/khonsu'
+[60.944s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[60.944s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[62.407s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/khonsu': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/khonsu build --build-base /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build install --record /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/install.log --single-version-externally-managed install_data
+[63.688s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu' for CMake module files
+[63.689s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/khonsu' returned '0': AMENT_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/servo_pwm_node:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/waveshare_servo/lib/python3.12/site-packages:/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/khonsu build --build-base /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build install --record /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/install.log --single-version-externally-managed install_data
+[63.690s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu' for CMake config files
+[63.691s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib'
+[63.691s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/bin'
+[63.691s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/pkgconfig/khonsu.pc'
+[63.691s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages'
+[63.692s] Level 1:colcon.colcon_core.shell:create_environment_hook('khonsu', 'pythonpath')
+[63.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/hook/pythonpath.ps1'
+[63.693s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/hook/pythonpath.dsv'
+[63.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/hook/pythonpath.sh'
+[63.694s] Level 1:colcon.colcon_core.environment:checking '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/bin'
+[63.694s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(khonsu)
+[63.695s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/package.ps1'
+[63.696s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/package.dsv'
+[63.696s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/package.sh'
+[63.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/package.bash'
+[63.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/package.zsh'
+[63.698s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/colcon-core/packages/khonsu)
+[63.702s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[63.703s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[63.703s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[63.704s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[63.714s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[63.714s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[63.714s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[63.776s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[63.777s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/local_setup.ps1'
+[63.778s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/_local_setup_util_ps1.py'
+[63.780s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/setup.ps1'
+[63.782s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/local_setup.sh'
+[63.783s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/_local_setup_util_sh.py'
+[63.784s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/setup.sh'
+[63.786s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/local_setup.bash'
+[63.787s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/setup.bash'
+[63.791s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/local_setup.zsh'
+[63.791s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/setup.zsh'

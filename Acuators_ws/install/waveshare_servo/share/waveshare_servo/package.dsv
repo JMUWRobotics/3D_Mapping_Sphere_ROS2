@@ -1,0 +1,6 @@
+source;share/waveshare_servo/hook/pythonpath.ps1
+source;share/waveshare_servo/hook/pythonpath.dsv
+source;share/waveshare_servo/hook/pythonpath.sh
+source;share/waveshare_servo/hook/ament_prefix_path.ps1
+source;share/waveshare_servo/hook/ament_prefix_path.dsv
+source;share/waveshare_servo/hook/ament_prefix_path.sh

@@ -1,0 +1,10 @@
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/uninstall.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/logitech_controller_uninstall.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/controller_node.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/test.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/edit_cache.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/rebuild_cache.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/list_install_components.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/install.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/install/local.dir
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_controller/CMakeFiles/install/strip.dir

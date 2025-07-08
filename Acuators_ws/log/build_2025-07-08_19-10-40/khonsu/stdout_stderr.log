@@ -1,0 +1,28 @@
+running egg_info
+creating ../../build/khonsu/khonsu.egg-info
+writing ../../build/khonsu/khonsu.egg-info/PKG-INFO
+writing dependency_links to ../../build/khonsu/khonsu.egg-info/dependency_links.txt
+writing requirements to ../../build/khonsu/khonsu.egg-info/requires.txt
+writing top-level names to ../../build/khonsu/khonsu.egg-info/top_level.txt
+writing manifest file '../../build/khonsu/khonsu.egg-info/SOURCES.txt'
+reading manifest file '../../build/khonsu/khonsu.egg-info/SOURCES.txt'
+writing manifest file '../../build/khonsu/khonsu.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build
+creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build/lib
+creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build/lib/khonsu
+copying khonsu/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build/lib/khonsu
+running install
+running install_lib
+creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages/khonsu
+copying /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/build/lib/khonsu/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages/khonsu
+byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages/khonsu/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying package.xml -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu
+creating /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/launch
+copying launch/movingNodes.launch.py -> /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/share/khonsu/launch
+running install_egg_info
+Copying ../../build/khonsu/khonsu.egg-info to /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/khonsu/lib/python3.12/site-packages/khonsu-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/khonsu/install.log'

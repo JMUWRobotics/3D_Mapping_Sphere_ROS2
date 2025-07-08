@@ -1,0 +1,2 @@
+[console_scripts]
+bno_imu_node = bno_imu.bno_imu_node:main

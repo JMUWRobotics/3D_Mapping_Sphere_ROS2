@@ -1,0 +1,2 @@
+[console_scripts]
+waveshare_servo_node = waveshare_servo.waveshare_servo_node:main

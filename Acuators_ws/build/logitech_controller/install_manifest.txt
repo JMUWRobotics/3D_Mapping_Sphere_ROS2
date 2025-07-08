@@ -1,0 +1,16 @@
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/lib/logitech_controller/controller_node
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/ament_index/resource_index/package_run_dependencies/logitech_controller
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/ament_index/resource_index/parent_prefix_path/logitech_controller
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/environment/ament_prefix_path.sh
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/environment/ament_prefix_path.dsv
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/environment/path.sh
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/environment/path.dsv
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/local_setup.bash
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/local_setup.sh
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/local_setup.zsh
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/local_setup.dsv
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.dsv
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/ament_index/resource_index/packages/logitech_controller
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/cmake/logitech_controllerConfig.cmake
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/cmake/logitech_controllerConfig-version.cmake
+/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_controller/share/logitech_controller/package.xml

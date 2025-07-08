@@ -1,0 +1,229 @@
+[0.020s] Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_msgs -DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs
+[0.214s] -- The C compiler identification is GNU 13.3.0
+[0.383s] -- The CXX compiler identification is GNU 13.3.0
+[0.425s] -- Detecting C compiler ABI info
+[0.684s] -- Detecting C compiler ABI info - done
+[0.699s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.699s] -- Detecting C compile features
+[0.700s] -- Detecting C compile features - done
+[0.737s] -- Detecting CXX compiler ABI info
+[1.027s] -- Detecting CXX compiler ABI info - done
+[1.053s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.054s] -- Detecting CXX compile features
+[1.056s] -- Detecting CXX compile features - done
+[1.060s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.482s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.751s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.766s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.857s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.957s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.965s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.593s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[4.764s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.302s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.318s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[6.681s] -- Found PythonExtra: /usr/bin/python3  
+[8.050s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[8.140s] -- Added test 'lint_cmake' to check CMake code style
+[8.158s] -- Added test 'xmllint' to check XML markup files
+[8.172s] -- Configuring done (8.1s)
+[8.300s] -- Generating done (0.1s)
+[8.330s] -- Build files have been written to: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs
+[8.353s] Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/src/logitech_msgs -DCMAKE_INSTALL_PREFIX=/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs
+[8.357s] Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs -- -j4 -l4
+[8.538s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[8.607s] [  2%] Built target ament_cmake_python_copy_logitech_msgs
+[9.157s] running egg_info
+[9.157s] creating logitech_msgs.egg-info
+[9.210s] writing logitech_msgs.egg-info/PKG-INFO
+[9.210s] writing dependency_links to logitech_msgs.egg-info/dependency_links.txt
+[9.211s] writing top-level names to logitech_msgs.egg-info/top_level.txt
+[9.211s] writing manifest file 'logitech_msgs.egg-info/SOURCES.txt'
+[9.361s] reading manifest file 'logitech_msgs.egg-info/SOURCES.txt'
+[9.362s] writing manifest file 'logitech_msgs.egg-info/SOURCES.txt'
+[9.506s] [  2%] Built target ament_cmake_python_build_logitech_msgs_egg
+[9.529s] [  2%] Built target logitech_msgs__rosidl_generator_type_description
+[9.562s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[9.633s] [  8%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[10.756s] [  8%] Built target logitech_msgs__cpp
+[11.154s] [ 11%] [32mBuilding C object CMakeFiles/logitech_msgs__rosidl_generator_c.dir/rosidl_generator_c/logitech_msgs/msg/detail/controller__functions.c.o[0m
+[11.174s] [ 14%] [32mBuilding C object CMakeFiles/logitech_msgs__rosidl_generator_c.dir/rosidl_generator_c/logitech_msgs/msg/detail/controller__description.c.o[0m
+[11.359s] [ 17%] [32mBuilding C object CMakeFiles/logitech_msgs__rosidl_generator_c.dir/rosidl_generator_c/logitech_msgs/msg/detail/controller__type_support.c.o[0m
+[11.440s] [ 20%] [32m[1mLinking C shared library liblogitech_msgs__rosidl_generator_c.so[0m
+[11.550s] [ 20%] Built target logitech_msgs__rosidl_generator_c
+[11.591s] [ 23%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[11.603s] [ 26%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[12.553s] [ 29%] [32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/logitech_msgs/msg/detail/controller__type_support_c.cpp.o[0m
+[13.072s] [ 32%] [32mBuilding C object CMakeFiles/logitech_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/logitech_msgs/msg/detail/controller__type_support.c.o[0m
+[13.200s] [ 35%] [32m[1mLinking C shared library liblogitech_msgs__rosidl_typesupport_introspection_c.so[0m
+[13.315s] [ 35%] Built target logitech_msgs__rosidl_typesupport_introspection_c
+[14.472s] [ 38%] [32m[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[14.679s] [ 38%] Built target logitech_msgs__rosidl_typesupport_fastrtps_c
+[14.713s] [ 41%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[16.104s] [ 44%] [32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/logitech_msgs/msg/detail/dds_fastrtps/controller__type_support.cpp.o[0m
+[18.286s] [ 47%] [32m[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[18.553s] [ 47%] Built target logitech_msgs__rosidl_typesupport_fastrtps_cpp
+[18.583s] [ 50%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[19.617s] [ 52%] [32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/logitech_msgs/msg/detail/controller__type_support.cpp.o[0m
+[21.577s] [ 55%] [32m[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[21.804s] [ 55%] Built target logitech_msgs__rosidl_typesupport_introspection_cpp
+[21.845s] [ 58%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[22.763s] [ 61%] [32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/logitech_msgs/msg/controller__type_support.cpp.o[0m
+[24.190s] [ 64%] [32m[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_cpp.so[0m
+[24.435s] [ 64%] Built target logitech_msgs__rosidl_typesupport_cpp
+[24.498s] [ 67%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[25.795s] [ 70%] [32mBuilding CXX object CMakeFiles/logitech_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/logitech_msgs/msg/controller__type_support.cpp.o[0m
+[26.034s] [ 73%] [32m[1mLinking CXX shared library liblogitech_msgs__rosidl_typesupport_c.so[0m
+[26.202s] [ 73%] Built target logitech_msgs__rosidl_typesupport_c
+[26.300s] [ 73%] Built target logitech_msgs
+[26.456s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[27.531s] [ 76%] Built target logitech_msgs__py
+[27.588s] [ 79%] [32mBuilding C object CMakeFiles/logitech_msgs__rosidl_generator_py.dir/rosidl_generator_py/logitech_msgs/msg/_controller_s.c.o[0m
+[27.947s] [ 82%] [32m[1mLinking C shared library liblogitech_msgs__rosidl_generator_py.so[0m
+[28.044s] [ 82%] Built target logitech_msgs__rosidl_generator_py
+[28.096s] [ 85%] [32mBuilding C object CMakeFiles/logitech_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[28.341s] [ 88%] [32m[1mLinking C shared module rosidl_generator_py/logitech_msgs/logitech_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[28.411s] [ 88%] Built target logitech_msgs_s__rosidl_typesupport_fastrtps_c
+[28.486s] [ 91%] [32mBuilding C object CMakeFiles/logitech_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[28.744s] [ 94%] [32m[1mLinking C shared module rosidl_generator_py/logitech_msgs/logitech_msgs_s__rosidl_typesupport_c.so[0m
+[28.826s] [ 94%] Built target logitech_msgs_s__rosidl_typesupport_c
+[28.883s] [ 97%] [32mBuilding C object CMakeFiles/logitech_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[29.096s] [100%] [32m[1mLinking C shared module rosidl_generator_py/logitech_msgs/logitech_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[29.171s] [100%] Built target logitech_msgs_s__rosidl_typesupport_introspection_c
+[29.196s] Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs -- -j4 -l4
+[29.223s] Invoking command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs
+[29.254s] -- Install configuration: ""
+[29.254s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/ament_index/resource_index/rosidl_interfaces/logitech_msgs
+[29.255s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/msg/Controller.json
+[29.256s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs
+[29.257s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg
+[29.258s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_generator_c__visibility_control.h
+[29.258s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail
+[29.258s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__description.c
+[29.258s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__functions.h
+[29.259s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__functions.c
+[29.260s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.h
+[29.261s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.c
+[29.261s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__struct.h
+[29.261s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/controller.h
+[29.261s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/library_path.sh
+[29.261s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/library_path.dsv
+[29.263s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_generator_c.so
+[29.264s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_generator_c.so" to ""
+[29.265s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs
+[29.265s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg
+[29.265s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[29.265s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail
+[29.267s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__rosidl_typesupport_fastrtps_c.h
+[29.267s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_fastrtps_c.so
+[29.267s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[29.267s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs
+[29.267s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg
+[29.268s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail
+[29.269s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__rosidl_typesupport_introspection_c.h
+[29.270s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.c
+[29.270s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[29.272s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_introspection_c.so
+[29.272s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_introspection_c.so" to ""
+[29.272s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_c.so
+[29.272s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_c.so" to ""
+[29.272s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs
+[29.272s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg
+[29.272s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail
+[29.273s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__struct.hpp
+[29.273s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.hpp
+[29.273s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__traits.hpp
+[29.273s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__builder.hpp
+[29.273s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[29.273s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/controller.hpp
+[29.273s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs
+[29.273s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg
+[29.273s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail
+[29.274s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/dds_fastrtps
+[29.275s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__rosidl_typesupport_fastrtps_cpp.hpp
+[29.277s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[29.278s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_fastrtps_cpp.so
+[29.278s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[29.280s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs
+[29.280s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg
+[29.281s] -- Up-to-date: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail
+[29.281s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__rosidl_typesupport_introspection_cpp.hpp
+[29.281s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/include/logitech_msgs/logitech_msgs/msg/detail/controller__type_support.cpp
+[29.282s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_introspection_cpp.so
+[29.282s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[29.283s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_cpp.so
+[29.283s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_typesupport_cpp.so" to ""
+[29.283s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/pythonpath.sh
+[29.283s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/pythonpath.dsv
+[29.283s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info
+[29.283s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[29.283s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[29.283s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info/top_level.txt
+[29.283s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[29.284s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs
+[29.284s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[29.284s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_introspection_c.so
+[29.284s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_c.so
+[29.284s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_fastrtps_c.so
+[29.284s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/__init__.py
+[29.285s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_c.c
+[29.285s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/_logitech_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[29.285s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg
+[29.285s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/_controller.py
+[29.285s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/_controller_s.c
+[29.285s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/__init__.py
+[29.377s] Listing '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs'...
+[29.378s] Compiling '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/__init__.py'...
+[29.378s] Listing '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg'...
+[29.378s] Compiling '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/__init__.py'...
+[29.378s] Compiling '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/msg/_controller.py'...
+[29.396s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_fastrtps_c.so
+[29.397s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+[29.397s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_introspection_c.so
+[29.402s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+[29.414s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_c.so
+[29.414s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/python3.12/site-packages/logitech_msgs/logitech_msgs_s__rosidl_typesupport_c.so" to ""
+[29.414s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_generator_py.so
+[29.414s] -- Set non-toolchain portion of runtime path of "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/lib/liblogitech_msgs__rosidl_generator_py.so" to ""
+[29.414s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/msg/Controller.idl
+[29.415s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/msg/Controller.msg
+[29.415s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/ament_index/resource_index/package_run_dependencies/logitech_msgs
+[29.415s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/ament_index/resource_index/parent_prefix_path/logitech_msgs
+[29.415s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/ament_prefix_path.sh
+[29.416s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/ament_prefix_path.dsv
+[29.416s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/path.sh
+[29.416s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/environment/path.dsv
+[29.416s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/local_setup.bash
+[29.416s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/local_setup.sh
+[29.417s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/local_setup.zsh
+[29.417s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/local_setup.dsv
+[29.417s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.dsv
+[29.417s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/ament_index/resource_index/packages/logitech_msgs
+[29.417s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_cExport.cmake
+[29.417s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_cExport-noconfig.cmake
+[29.418s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[29.418s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[29.418s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_introspection_cExport.cmake
+[29.418s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[29.418s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_cExport.cmake
+[29.418s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[29.418s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_cppExport.cmake
+[29.419s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[29.419s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[29.419s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[29.419s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[29.419s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_cppExport.cmake
+[29.419s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[29.419s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_pyExport.cmake
+[29.419s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/export_logitech_msgs__rosidl_generator_pyExport-noconfig.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/rosidl_cmake-extras.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgsConfig.cmake
+[29.420s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/cmake/logitech_msgsConfig-version.cmake
+[29.421s] -- Installing: /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/install/logitech_msgs/share/logitech_msgs/package.xml
+[29.424s] Invoked command in '/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs

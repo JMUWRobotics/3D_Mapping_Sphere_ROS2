@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "logitech_msgs__py",
+		"source" : "/home/maro/3D_Mapping_Sphere_ROS2/Acuators_ws/build/logitech_msgs/logitech_msgs__py"
+	}
+}

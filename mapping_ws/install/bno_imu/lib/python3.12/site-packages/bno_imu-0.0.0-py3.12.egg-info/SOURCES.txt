@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/bno_imu/bno_imu.egg-info/PKG-INFO
+../../build/bno_imu/bno_imu.egg-info/SOURCES.txt
+../../build/bno_imu/bno_imu.egg-info/dependency_links.txt
+../../build/bno_imu/bno_imu.egg-info/entry_points.txt
+../../build/bno_imu/bno_imu.egg-info/requires.txt
+../../build/bno_imu/bno_imu.egg-info/top_level.txt
+../../build/bno_imu/bno_imu.egg-info/zip-safe
+bno_imu/__init__.py
+bno_imu/bno_imu_node.py
+launch/bno08x_imu_launch.py
+resource/bno_imu
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

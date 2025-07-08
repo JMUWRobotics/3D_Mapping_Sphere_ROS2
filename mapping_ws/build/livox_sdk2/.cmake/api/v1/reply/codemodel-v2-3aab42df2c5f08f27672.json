@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-3c1f1a07b4c8d9aeeed8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "livox_sdk2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "livox_lidar_sdk_shared::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-livox_lidar_sdk_shared-9c5ade6858f614a41794.json",
+					"name" : "livox_lidar_sdk_shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "livox_lidar_sdk_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-livox_lidar_sdk_static-942658576dca8ca067db.json",
+					"name" : "livox_lidar_sdk_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "livox_sdk2_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-livox_sdk2_uninstall-e2427964e015b7e59b2f.json",
+					"name" : "livox_sdk2_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c21cbfb485f027eb31c3.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/livox_sdk2",
+		"source" : "/home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/src/Livox-SDK2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

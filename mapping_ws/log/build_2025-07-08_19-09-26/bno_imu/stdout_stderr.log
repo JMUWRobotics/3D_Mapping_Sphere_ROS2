@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/bno_imu/bno_imu.egg-info
+writing ../../build/bno_imu/bno_imu.egg-info/PKG-INFO
+writing dependency_links to ../../build/bno_imu/bno_imu.egg-info/dependency_links.txt
+writing entry points to ../../build/bno_imu/bno_imu.egg-info/entry_points.txt
+writing requirements to ../../build/bno_imu/bno_imu.egg-info/requires.txt
+writing top-level names to ../../build/bno_imu/bno_imu.egg-info/top_level.txt
+writing manifest file '../../build/bno_imu/bno_imu.egg-info/SOURCES.txt'
+reading manifest file '../../build/bno_imu/bno_imu.egg-info/SOURCES.txt'
+writing manifest file '../../build/bno_imu/bno_imu.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/bno_imu/build
+creating /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/bno_imu/build/lib
+creating /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/bno_imu/build/lib/bno_imu
+copying bno_imu/bno_imu_node.py -> /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/bno_imu/build/lib/bno_imu
+copying bno_imu/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/bno_imu/build/lib/bno_imu
+running install
+running install_lib
+creating /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/lib/python3.12/site-packages/bno_imu
+copying /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/bno_imu/build/lib/bno_imu/bno_imu_node.py -> /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/lib/python3.12/site-packages/bno_imu
+copying /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/bno_imu/build/lib/bno_imu/__init__.py -> /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/lib/python3.12/site-packages/bno_imu
+byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/lib/python3.12/site-packages/bno_imu/bno_imu_node.py to bno_imu_node.cpython-312.pyc
+byte-compiling /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/lib/python3.12/site-packages/bno_imu/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/share/ament_index
+creating /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/share/ament_index/resource_index
+creating /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/share/ament_index/resource_index/packages
+copying resource/bno_imu -> /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/share/ament_index/resource_index/packages
+copying package.xml -> /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/share/bno_imu
+creating /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/share/bno_imu/launch
+copying launch/bno08x_imu_launch.py -> /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/share/bno_imu/launch
+running install_egg_info
+Copying ../../build/bno_imu/bno_imu.egg-info to /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/lib/python3.12/site-packages/bno_imu-0.0.0-py3.12.egg-info
+running install_scripts
+Installing bno_imu_node script to /home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/install/bno_imu/lib/bno_imu
+writing list of installed files to '/home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/bno_imu/install.log'

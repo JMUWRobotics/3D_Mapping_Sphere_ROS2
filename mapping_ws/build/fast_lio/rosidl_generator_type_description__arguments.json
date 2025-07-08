@@ -1,0 +1,7 @@
+{
+  "package_name": "fast_lio",
+  "output_dir": "/home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/fast_lio/rosidl_generator_type_description/fast_lio",
+  "idl_tuples": [
+    "/home/maro/3D_Mapping_Sphere_ROS2/mapping_ws/build/fast_lio/rosidl_adapter/fast_lio:msg/Pose6D.idl"
+  ]
+}
