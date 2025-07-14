@@ -1,4 +1,0 @@
-source;share/servo_pwm_node/local_setup.bash
-source;share/servo_pwm_node/local_setup.dsv
-source;share/servo_pwm_node/local_setup.sh
-source;share/servo_pwm_node/local_setup.zsh
