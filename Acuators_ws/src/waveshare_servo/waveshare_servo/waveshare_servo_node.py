@@ -107,6 +107,12 @@ class WaveshareServoNode(Node):
             # Calculate error
             error = self.target_pitch - self.pitch
             
+            # Add deadband to prevent movement for small errors
+            if abs(error) < 3.0:  # 3 degree deadband
+                error = 0.0
+                # Reset integral error when in deadband to prevent windup
+                self.integral_error = 0.0
+            
             # Proportional term
             proportional = self.kp * error
             
@@ -143,7 +149,7 @@ class WaveshareServoNode(Node):
         """Send speed command to servo"""
         try:
             # Invert the speed command if control direction is wrong
-            inverted_speed = -speed  # Try this if the servo responds backwards
+            inverted_speed = - speed  # if the servo responds backwards
             
             sts_comm_result, sts_error = self.packetHandler.WriteSpec(
                 self.STS_ID, inverted_speed, self.STS_MOVING_ACC  # Use inverted_speed instead of speed
@@ -161,13 +167,14 @@ class WaveshareServoNode(Node):
         """Manual controller input - adds to PID control instead of overriding"""
         raw_input = max(-100, min(100, msg.motor_value))
         
-        # Store manual input for use in PID loop
-        self.manual_speed_offset = (raw_input * 40) if abs(raw_input) > 5 else 0
+        # Store manual input for use in PID loop - flip the direction
+        self.manual_speed_offset = -(raw_input * 40) if abs(raw_input) > 5 else 0
         
         if abs(raw_input) > 5:
             self.get_logger().info(f"Manual input: {raw_input}, offset: {self.manual_speed_offset}")
 
     def destroy_node(self):
+        self.send_servo_command(0)
         self.portHandler.closePort()
         self.get_logger().info("Closed port and exiting node")
         super().destroy_node()

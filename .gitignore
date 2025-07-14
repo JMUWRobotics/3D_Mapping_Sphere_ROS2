@@ -12,6 +12,6 @@ Manuscript/Manuscript.blg
 mapping_ws/log
 mapping_ws/build
 mapping_ws/install
-Actuator_ws/log
-Actuator_ws/build
-Actuator_ws/install
+Acuators_ws/log
+Acuators_ws/build
+Acuators_ws/install

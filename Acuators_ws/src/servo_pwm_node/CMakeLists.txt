@@ -9,7 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(logitech_msgs REQUIRED)
-
+find_package(sensor_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -22,17 +22,18 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-add_executable(servo_pwm_node src/servo_pwm_node.cpp)
 
+add_executable(servo_pwm_node src/servo_pwm_node.cpp)
 ament_target_dependencies(servo_pwm_node
   rclcpp
   logitech_msgs
+  sensor_msgs
 )
 
 target_link_libraries(servo_pwm_node wiringPi)
 
 install(TARGETS
   servo_pwm_node
-  DESTINATION lib/${PROJECT_NAME}
-)
+  DESTINATION lib/${PROJECT_NAME})
+
 ament_package()
