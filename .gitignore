@@ -1,3 +1,14 @@
+Manuscript/Manuscript.aux
+Manuscript/Manuscript.fdb_latexmk
+Manuscript/Manuscript.fls
+Manuscript/Manuscript.log
+Manuscript/IEEEtran_HOWTO.pdf
+Manuscript/Manuscript.synctex.gz
+Manuscript/pics
+Manuscript/Manuscript.bbl
+Manuscript/Manuscript.blg
+.vscode/settings.json
+
 mapping_ws/log
 mapping_ws/build
 mapping_ws/install
