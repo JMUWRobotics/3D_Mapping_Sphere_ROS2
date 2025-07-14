@@ -4,3 +4,5 @@ logitech_msgs.egg-info/PKG-INFO
 logitech_msgs.egg-info/SOURCES.txt
 logitech_msgs.egg-info/dependency_links.txt
 logitech_msgs.egg-info/top_level.txt
+logitech_msgs/msg/__init__.py
+logitech_msgs/msg/_controller.py

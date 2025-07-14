@@ -99,43 +99,45 @@ class WaveshareServoNode(Node):
         self.pitch = math.degrees(math.atan2(accel_x, accel_z))
 
     def pid_control_loop(self):
-        """PID control loop for balance control"""
-        if not self.manual_control:
-            current_time = time.time()
-            dt = current_time - self.previous_time
+        """PID control loop for balance control with optional manual offset"""
+        current_time = time.time()
+        dt = current_time - self.previous_time
+        
+        if dt > 0:  # Avoid division by zero
+            # Calculate error
+            error = self.target_pitch - self.pitch
             
-            if dt > 0:  # Avoid division by zero
-                # Calculate error (negative target because robot is upside down)
-                error = self.target_pitch - self.pitch  # -17.5 - self.pitch
-                
-                # Proportional term
-                proportional = self.kp * error
-                
-                # Integral term
-                self.integral_error += error * dt
-                integral = self.ki * self.integral_error
-                
-                # Derivative term
-                derivative = self.kd * (error - self.previous_error) / dt
-                
-                # PID output
-                pid_output = proportional + integral + derivative
-                
-                # Limit output to servo speed range
-                speed_command = max(-self.max_speed, min(self.max_speed, pid_output))
-                
-                # Send command to servo
-                self.send_servo_command(int(speed_command))
-                
-                # Update previous values
-                self.previous_error = error
-                self.previous_time = current_time
-                
-                # Log PID values (reduce frequency for readability)
-                if int(current_time * 10) % 10 == 0:  # Log every 1 second
-                    self.get_logger().info(
-                        f"Pitch: {self.pitch:.2f}°, Error: {error:.2f}°, PID: {pid_output:.0f}, Speed: {speed_command:.0f}"
-                    )
+            # Proportional term
+            proportional = self.kp * error
+            
+            # Integral term
+            self.integral_error += error * dt
+            integral = self.ki * self.integral_error
+            
+            # Derivative term
+            derivative = self.kd * (error - self.previous_error) / dt
+            
+            # PID output
+            pid_output = proportional + integral + derivative
+            
+            # Add manual control offset to PID output
+            total_command = pid_output + getattr(self, 'manual_speed_offset', 0)
+            
+            # Limit output to servo speed range
+            speed_command = max(-self.max_speed, min(self.max_speed, total_command))
+            
+            # Send command to servo
+            self.send_servo_command(int(speed_command))
+            
+            # Update previous values
+            self.previous_error = error
+            self.previous_time = current_time
+            
+            # Log PID values (reduce frequency for readability)
+            if int(current_time * 10) % 10 == 0:  # Log every 1 second
+                self.get_logger().info(
+                    f"Pitch: {self.pitch:.2f}°, Error: {error:.2f}°, PID: {pid_output:.0f}, Speed: {speed_command:.0f}"
+                )
 
     def send_servo_command(self, speed):
         """Send speed command to servo"""
@@ -156,25 +158,14 @@ class WaveshareServoNode(Node):
             self.get_logger().error(f"Exception while writing to servo: {str(e)}")
 
     def controller_callback(self, msg):
-        """Manual controller input - can override PID or set target"""
+        """Manual controller input - adds to PID control instead of overriding"""
         raw_input = max(-100, min(100, msg.motor_value))
         
-        # If controller input is significant, switch to manual mode
+        # Store manual input for use in PID loop
+        self.manual_speed_offset = (raw_input * 40) if abs(raw_input) > 5 else 0
+        
         if abs(raw_input) > 5:
-            self.manual_control = True
-            speed_val = abs(raw_input) * -40
-            direction = 0 if raw_input >= 0 else 1
-            self.send_servo_command(speed_val if direction == 0 else -speed_val)
-            self.get_logger().info(f"Manual mode - Speed: {speed_val}")
-        else:
-            # Switch back to automatic PID control
-            if self.manual_control:
-                self.get_logger().info("Switching to PID control")
-                # Reset PID state when switching back
-                self.integral_error = 0.0
-                self.previous_error = 0.0
-                self.previous_time = time.time()
-            self.manual_control = False
+            self.get_logger().info(f"Manual input: {raw_input}, offset: {self.manual_speed_offset}")
 
     def destroy_node(self):
         self.portHandler.closePort()
