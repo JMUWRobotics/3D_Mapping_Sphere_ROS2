@@ -15,3 +15,7 @@ mapping_ws/install
 Actuator_ws/log
 Actuator_ws/build
 Actuator_ws/install
+.DS_Store
+Actuators_ws/.DS_Store
+Actuators_ws/src/.DS_Store
+Actuators_ws/src/logitech_controller/.DS_Store

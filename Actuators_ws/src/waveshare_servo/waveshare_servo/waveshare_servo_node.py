@@ -23,12 +23,12 @@ class WaveshareServoNode(Node):
         self.pitch = 0.0
         
         # PID Controller parameters
-        self.kp = 50.0    # Proportional gain (tune this)
-        self.ki = 0.1     # Integral gain (tune this)
-        self.kd = 10.0    # Derivative gain (tune this)
+        self.kp = 50.0    # Proportional gain 
+        self.ki = 0.1     # Integral gain 
+        self.kd = 10.0    # Derivative gain 
         
         # PID state variables
-        self.target_pitch = -17.5  # Target angle (negative because robot is upside down)
+        self.target_pitch = -17.5  # Target angle 
         self.previous_error = 0.0
         self.integral_error = 0.0
         self.previous_time = time.time()
@@ -88,14 +88,7 @@ class WaveshareServoNode(Node):
         accel_y = msg.linear_acceleration.y
         accel_z = msg.linear_acceleration.z
         
-        # Try different pitch calculation (inverted or different axis)
-        # Option 1: Invert the pitch
-        #self.pitch = -math.degrees(math.atan2(accel_x, math.sqrt(accel_y*accel_y + accel_z*accel_z)))
-        
-        # Option 2: Use Y-axis instead of X-axis
-        #self.pitch = math.degrees(math.atan2(accel_y, math.sqrt(accel_x*accel_x + accel_z*accel_z)))
-        
-        # Option 3: Use Z-axis as reference
+        #  Z-axis as reference
         self.pitch = math.degrees(math.atan2(accel_x, accel_z))
 
     def pid_control_loop(self):
@@ -103,7 +96,7 @@ class WaveshareServoNode(Node):
         current_time = time.time()
         dt = current_time - self.previous_time
         
-        if dt > 0:  # Avoid division by zero
+        if dt > 0:  
             # Calculate error
             error = self.target_pitch - self.pitch
             
@@ -139,7 +132,7 @@ class WaveshareServoNode(Node):
             self.previous_error = error
             self.previous_time = current_time
             
-            # Log PID values (reduce frequency for readability)
+            # Log PID values 
             if int(current_time * 10) % 10 == 0:  # Log every 1 second
                 self.get_logger().info(
                     f"Pitch: {self.pitch:.2f}°, Error: {error:.2f}°, PID: {pid_output:.0f}, Speed: {speed_command:.0f}"
@@ -148,8 +141,8 @@ class WaveshareServoNode(Node):
     def send_servo_command(self, speed):
         """Send speed command to servo"""
         try:
-            # Invert the speed command if control direction is wrong
-            inverted_speed = - speed  # if the servo responds backwards
+            
+            inverted_speed = - speed  
             
             sts_comm_result, sts_error = self.packetHandler.WriteSpec(
                 self.STS_ID, inverted_speed, self.STS_MOVING_ACC  # Use inverted_speed instead of speed

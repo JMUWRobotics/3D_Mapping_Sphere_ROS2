@@ -3,6 +3,48 @@
   title  = {DAEDALUS-descent and exploration in deep autonomy of lava underground structures},
   year   = {2021}
 }
+@inproceedings{DeltaFilter,
+  author    = {Arzberger, Fabian and Wiecha, Fabian and Zevering, Jasper and Rothe, Julian and Borrmann, Dorit and Montenegro, Sergio and Nüchter, Andreas},
+  booktitle = {2023 European Conference on Mobile Robots (ECMR)},
+  doi       = {10.1109/ECMR59166.2023.10256359},
+  keywords  = {Location awareness;Global navigation satellite system;Simultaneous localization and mapping;Uncertainty;Tracking;Pose estimation;Sensor fusion},
+  number    = {},
+  pages     = {1-8},
+  title     = {Delta Filter - Robust Visual-Inertial Pose Estimation in Real-Time: A Multi-Trajectory Filter on a Spherical Mobile Mapping System},
+  volume    = {},
+  year      = {2023}
+}
+
+@misc{dlio,
+  archiveprefix = {arXiv},
+  author        = {Kenny Chen and Ryan Nemiroff and Brett T. Lopez},
+  eprint        = {2203.03749},
+  primaryclass  = {cs.RO},
+  title         = {Direct LiDAR-Inertial Odometry: Lightweight LIO with Continuous-Time Motion Correction},
+  url           = {https://arxiv.org/abs/2203.03749},
+  year          = {2023}
+}
+
+@misc{fastlio2,
+  archiveprefix = {arXiv},
+  author        = {Wei Xu and Yixi Cai and Dongjiao He and Jiarong Lin and Fu Zhang},
+  eprint        = {2107.06829},
+  primaryclass  = {cs.RO},
+  title         = {FAST-LIO2: Fast Direct LiDAR-inertial Odometry},
+  url           = {https://arxiv.org/abs/2107.06829},
+  year          = {2021}
+}
+
+@misc{fastlivo2,
+  archiveprefix = {arXiv},
+  author        = {Chunran Zheng and Wei Xu and Zuhao Zou and Tong Hua and Chongjian Yuan and Dongjiao He and Bingyang Zhou and Zheng Liu and Jiarong Lin and Fangcheng Zhu and Yunfan Ren and Rong Wang and Fanle Meng and Fu Zhang},
+  eprint        = {2408.14035},
+  primaryclass  = {cs.RO},
+  title         = {FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry},
+  url           = {https://arxiv.org/abs/2408.14035},
+  year          = {2024}
+}
+
 @article{Kalman_filter_sphere,
   abstract = {Spherical mobile mapping systems are not thoroughly studied in terms of inertial pose estimation filtering. The underlying inherent rolling motion introduces high angular velocities and aggressive system dynamics around all principal axes. This motion profile also needs different modeling compared to state-of-the-art competitors, which heavily focus on more rotationally-restricted systems such as UAV, handheld, or cars. In this work we compare our previously proposed “Delta-filter”, which was heavily motivated by the sensors inability to provide covariance estimations, with a Kalman-filter design using a covariance model. Both filters fuse two 6-DoF pose estimators with a motion model in real-time, however the designs are theoretically suitable for an arbitrary number of estimators. We evaluate the trajectories against ground truth pose measurement from an OptiTrack™ motion capturing system. Furthermore, as our spherical systems are equipped with laser-scanners, we evaluate the resulting point clouds against ground truth maps available from a Riegl VZ400 terrestrial laser-scanner (TLS). Our source code and datasets can be found on github (Arzberger, 2023).},
   author   = {Fabian Arzberger and Tim Schubert and Fabian Wiecha and Jasper Zevering and Julian Rothe and Dorit Borrmann and Sergio Montenegro and Andreas Nüchter},
@@ -29,6 +71,15 @@
   year    = {2012}
 }
 
+@inbook{luna,
+  author = {Zevering, Jasper and Bredenbeck, Anton and Arzberger, Fabian and Borrmann, Dorit and Nüchter, Andreas},
+  doi    = {10.1007/978-3-030-71151-1_8},
+  isbn   = {978-3-030-71150-4},
+  month  = {03},
+  pages  = {85-94},
+  title  = {L.U.N.A. - A Laser-Mapping Unidirectional Navigation Actuator},
+  year   = {2021}
+}
 @unpublished{novelsphere,
   abstract = {Abstract The authors propose a complete software and hardware framework for a novel spherical robot to cope with exploration in harsh and unknown environments. The proposed robot is driven by a heavy pendulum covered by a fully enclosed spherical shell, which is strongly protected, amphibious, anti-overturn and has a long-battery-life. Algorithms for location and perception, planning and motion control are comprehensively designed. On the one hand, the authors fully consider the kinematic model of a spherical robot, propose a positioning algorithm that fuses data from inertial measurement units, motor encoder and Global Navigation Satellite System, improve global path planning algorithm based on Hybrid A* and design an instruction planning controller based on model predictive control (MPC). On the other hand, the dynamic model is built, linear MPC and robust servo linear quadratic regulator algorithm is improved, and a speed controller and a direction controller are designed. In addition, based on the pose and motion characteristics of a spherical robot, a visual obstacle perception algorithm and an electronic image stabilisation algorithm are designed. Finally, the authors build physical systems to verify the effectiveness of the above algorithms through experiments.},
   author   = {Ren, Wei and Wang, You and Liu, Haoxiang and Jin, Song and Wang, Yixu and Liu, Yifan and Zhang, Ziang and Hu, Tao and Li, Guang},
@@ -43,7 +94,6 @@
   volume   = {5},
   year     = {2023}
 }
-
 @article{pendulum_sphere,
   author    = {Kolbari, Hamidreza and Ahmadi, Alireza and Bahrami, Mohsen and Janati, Farzam},
   booktitle = {2018 6th RSI International Conference on Robotics and Mechatronics (IcRoM)},
@@ -55,7 +105,6 @@
   volume    = {},
   year      = {2018}
 }
-
 @inproceedings{roboball,
   author    = {Oevermann, Micah and Pravecek, Derek and Jibrail, Garrett and Jangale, Rishi and Ambrose, Robert O.},
   booktitle = {2024 IEEE International Conference on Robotics and Automation (ICRA)},
@@ -67,7 +116,14 @@
   volume    = {},
   year      = {2024}
 }
-
+@inproceedings{rod_sphere,
+  author = {Zevering, Jasper and Borrmann, Dorit and Bredenbeck, Anton and Nuchter, Andreas},
+  doi    = {10.1109/IROS47612.2022.9981887},
+  month  = {10},
+  pages  = {5656-5663},
+  title  = {The concept of rod-driven locomotion for spherical lunar exploration robots},
+  year   = {2022}
+}
 @book{sphere_Fabi_1,
   abstract = {Spherical robots are a format that has not been thoroughly explored for the application of mobile mapping. In contrast to other designs, it provides some unique advantages. Among those is a spherical shell that protects internal sensors and actuators from possible harsh environments, as well as an inherent rotation for locomotion that enables measurements in all directions. Mobile mapping always requires a high-precise pose knowledge to obtain consistent and correct environment maps. This is typically done by a combination of external reference sensors such as Global Navigation Satellite System (GNSS) measurements and inertial measurements or by coarsely estimating the pose using inertial measurement units (IMUs) and post processing the data by registering the different measurements to each other. In indoor environments, the GNSS reference is not an option. Hence many mobile mapping applications turn to the second option. An advantage of indoor environments is that human-made environments usually have a certain structure, such as parallel and perpendicular planes. We propose a registration procedure that exploits this structure by minimizing the distance of measured points to a corresponding plane. Further, we evaluate the procedure on a simulated dataset of an ideal corridor and on an experimentally acquired dataset with different motion profiles. We show that we nearly reproduce the ground truth for the simulated dataset and improve the average point-to-point distance to a reference scan in the experimental dataset. The presented algorithms are required to work completely autonomously.},
   author   = {Fabian Arzberger and Anton Bredenbeck and Jasper Zevering and Dorit Borrmann and Andreas Nüchter},
@@ -80,4 +136,14 @@
   url      = {https://www.sciencedirect.com/science/article/pii/S2667393221000041},
   volume   = {1},
   year     = {2021}
+}
+@article{Sphero,
+  author  = {Akella, Prithvi and O'Reilly, Oliver and Sreenath, Koushil},
+  doi     = {10.1115/1.4042296},
+  journal = {Journal of Mechanisms and Robotics},
+  month   = {12},
+  pages   = {},
+  title   = {Controlling the Locomotion of Spherical Robots or Why BB-8 Works},
+  volume  = {11},
+  year    = {2018}
 }
