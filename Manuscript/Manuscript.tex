@@ -7,7 +7,7 @@
 \usepackage{float}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
-\usepackage[draft]{graphicx}
+\usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{booktabs}
@@ -93,23 +93,23 @@ To address these issues, Arzberger et al. \cite{Kalman_filter_sphere,sphere_Fabi
 Their Delta Filter is a lightweight, real-time, multi-trajectory pose estimation method that fuses unreliable trajectories, such as those from IMUs and stereo visual-inertial odometry (VIO), into a more robust estimate, without requiring explicit sensor uncertainty modeling. 
 The filter operates on pose changes ("deltas"), uses a probabilistic weighting scheme for translation estimation, and applies rotational interpolation via spherical linear interpolation (Slerp). 
 A follow-up Kalman Filter design extended this approach by incorporating covariance-aware models, enhancing pose estimation accuracy during rapid and complex motion.
-Despite these advances, most current spherical SLAM systems still lack precise onboard actuation for controlled repositioning beyond rolling, limiting their effectiveness in tightly constrained environments. 
+% Despite these advances, most current spherical SLAM systems still lack precise onboard actuation for controlled repositioning beyond rolling, limiting their effectiveness in tightly constrained environments. 
 While recent studies (e.g. \cite{Kalman_filter_sphere}) have compared their results with state-of-the-art SLAM systems such as DLIO\cite{dlio} and FAST-LIO2\cite{fastlio2}, the field continues to evolve rapidly. 
 More recent SLAM algorithms (e.g., FAST-LIVO2\cite{fastlivo2}), advanced LiDARs like the MID-360 and RoboSense Airy, and modern microprocessors such as the Raspberry Pi 5 with PCIe support and Gigabit Ethernet are pushing the boundaries of what is possible. 
 In this context, we introduce our first prototype, the Non-actuated Sphere, which leverages the processing power of the Raspberry Pi 5 16GB RAM model. 
-This design enables offline SLAM on a compact spherical platform, while also extending battery life through improved power efficiency and reducing overall system cost.
+This design enables real-time SLAM on a compact spherical platform,  offering improved power efficiency, extended battery life, and reduced overall system cost.
 \subsection{Spherical locomotion}
 
 \label{sec:state-of-the-art}
 
 Spherical locomotion has attracted significant research interest in recent years, driven by the pursuit of optimal mobility mechanisms. 
-Although spherical robots may appear mechanically simple, a wide variety of locomotion strategies have been developed—and continue to emerge. 
+Although spherical robots may appear mechanically simple, a wide variety of locomotion strategies have been developed—and continue to emerge—requiring sophisticated control systems to manage the complex dynamics of rolling locomotion and internal mass distribution.
 One of the most well-known approaches is the Internal Driving Unit (IDU), or differential drive, used in commercial robots like the Sphero Bolt+ and BB-8. 
 Akella et al.\cite{Sphero} analyzed BB-8’s internal wheel-driven system and demonstrated that effective control could be achieved using only two actuators. 
-However, they highlighted a key limitation: the robot’s geometry inherently restricts it to rolling motion, preventing controlled sliding and reducing effectiveness on inclined or uneven terrain.
+However, they highlighted a key limitation: the robot’s geometry prevents controlled sliding and reduces effectiveness on inclined or uneven terrain.
 In contrast, Zevering et al.~\cite{luna} introduced L.U.N.A., a spherical robot designed for autonomous 3D mapping in lunar caves. 
 Rather than using wheels or rods, L.U.N.A. relies on internal flywheels to generate motion via the IBCOAM method. 
-This approach enables a compact form factor and protects internal electronics—advantages particularly well suited to harsh and remote terrain. 
+This approach enables a compact form factor and protects internal electronics, providing advantages particularly well suited to harsh and remote terrain. 
 The robot demonstrated reliable motion on soft surfaces such as sand and rubber. 
 However, limitations remain, including vibrational instability caused by unbalanced flywheels, reduced performance on inclined low-friction surfaces, and pose estimation errors due to unsynchronized sensor data.
 In a following study by Zevering et al.~\cite{rod_sphere} proposed a rod-driven spherical robot, also targeting lunar cave exploration. 
@@ -125,13 +125,14 @@ These were addressed using a Linear Quadratic Regulator (LQR) for steering and a
 In contrast, \cite{novelsphere} and \cite{pendulum_sphere} adopted PID-based stabilization strategies to enhance motion control and responsiveness. 
 RoboBall’s experiments further revealed that internal pressure and shell deformation significantly affect dynamic behavior—especially due to the presence of a ``dead zone'' where balance control becomes unstable during motion.
 Taken together, these pendulum-based locomotion strategies highlight the value of combining mechanical simplicity with robust control to enable adaptive movement in unpredictable environments. 
-While a variety of innovative locomotion methods have been proposed for spherical robots, including flywheel-, rod-, and pendulum-driven systems, most have been explored in isolation from modern SLAM techniques or have not been tested with an actuation mechanism. 
-Although these designs demonstrate promising mobility across complex terrains, few have been evaluated in conjunction with advanced LiDAR-inertial odometry under real-world motion dynamics. 
+While a variety of innovative locomotion methods have been proposed for spherical robots, including flywheel-, rod-, and pendulum-driven systems, few have been evaluated in conjunction with advanced LiDAR-inertial odometry algorithms under real-world motion dynamics.
 This paper addresses this gap by introducing our second prototype, a pendulum-driven spherical robot designed to achieve both robust locomotion and accurate, real-time mapping performance within the constraints of a compact platform.
 
 \section{Hardware and Design}
 \label{sec:hardwaredesing}
-\subsection{Non-Actuated Sphere}
+
+This section describes the hardware design and structural implementation of two spherical robots developed for 3D mapping: the Non-actuated Sphere and the Actuated Sphere.
+ \subsection{Non-Actuated Sphere}
 
 The non-actuated sphere was modeled using CAD software, drawing inspiration from~\cite{Kalman_filter_sphere} design. 
 Its structure consists of two flat discs stacked vertically and secured with pillar screws, maintaining a gap of approximately \SI{28}{\milli\meter} between them. 
@@ -140,12 +141,12 @@ To enhance structural integrity and safety, fillets were applied to the edges of
 Each disc has a uniform thickness of \SI{3}{\milli\meter}.
 Two fabrication methods were used to produce the discs: 3D printing with PLA and laser cutting with acrylic. 
 %Both materials demonstrated sufficient durability during initial testing.
-The below list summarizes the components used in the non-actuated sphere and its location within the sphere:
+Table~\ref{tab:hardware_components_non_actuated} summarizes the components used in the non-actuated sphere and its location within the sphere.
 
 \begin{table}
 \centering
 \caption{Hardware Components and Their Placement Inside the Sphere}
-\label{tab:hardware_components}
+\label{tab:hardware_components_non_actuated}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \toprule
 \textbf{Layer} & \textbf{Components} \\
@@ -196,10 +197,10 @@ Unlike the non-actuated version, this sphere features an internal actuation syst
 At its core, a Waveshare Smart Continuous Servo (model ST3215) is mounted to control forward and backward motion by dynamically shifting the internal center of mass in the direction of travel. 
 A second PWM-controlled servo enables left and right movement via pendulum displacement along the lateral axis.
 The structural components were fabricated using PLA filament and 3D-printed in three separate pieces, which are then assembled into the complete sphere.
-The system dynamics involve key parameters including the robot’s horizontal position \( x \), the spinning angle of the shell \( \phi \), the swinging angle of the counter-weight mass \( \alpha \), and the input torque of the primary motor \( \tau \). 
+The system dynamics as shown in Fig.~\ref{fig:2d-model2} involve key parameters including the robot’s horizontal position \( x \), the spinning angle of the shell \( \phi \), the swinging angle of the counter-weight mass \( \alpha \), and the input torque of the primary motor \( \tau \). 
 Associated physical properties include the shell mass \( m_1 \), inner driver mass \( m_2 \), counter-weight mass \( m_3 \), gravitational acceleration \( g \), and the length of the connecting rod \( l \). 
 %All of this is taken into consideration when designing the sphere and its control system.
-The internal hardware components are organized as follows:
+The internal hardware components are organized according to their position within the sphere, as detailed in Table~\ref{tab:hardware_components_actuated}.
 
 \begin{figure}
 \begin{subfigure}{0.4\columnwidth}
@@ -229,7 +230,7 @@ The internal hardware components are organized as follows:
 \begin{table}
 \centering
 \caption{Hardware Components and Their Placement Inside the Sphere}
-\label{tab:hardware_components}
+\label{tab:hardware_components_actuated}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \toprule
 \textbf{Position} & \textbf{Components} \\
@@ -266,7 +267,7 @@ The following LiDAR-Inertial Odometry (LIO) frameworks were evaluated and integr
 
 Some packages needed modification to meet the constraints and processing capabilities of the Raspberry Pi 5 and ROS2 Jazzy.
 The source code is available in our GitHub repository~\cite{githubsphere}.
-All mapping computations are performed online entirely onboard.
+All mapping computations are performed onboard in real-time.
 %Resulting maps are stored in ros bag format for later evaluation and comparison against ground truth data.
 
 \subsection{Actuator System (Actuated Sphere Only)}
@@ -354,7 +355,7 @@ The results are summarized in Table~\ref{tab:point_cloud_error}.
 \midrule
 Fast-LIO2 & 1.99 & 4.43 & 9.60 & 10.73 & 8.91 & 9.96 & 13.09 & 14.64 & 26.76 & 30.47 \\
 DLIO & - & 88.01 & - & 13.71 & - & 13.26 & - & 19.08 & - & 42.36 \\
-Fast-LIVO2 & 16.36 & 46.39 & 12.05 & 12.93 & 11.33 & 12.58 & 16.54 & 18.04 & 37.33 & 41.04 \\
+Fast-LIVO2(LIO Mode) & 16.36 & 46.39 & 12.05 & 12.93 & 11.33 & 12.58 & 16.54 & 18.04 & 37.33 & 41.04 \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
@@ -385,7 +386,7 @@ Some of the SLAM algorithms exhibited small drift and bending over time, which w
     \caption{Fast-LIO2}\label{fig:lio_drift}
 \end{subfigure}
 \hfill
-\caption{Encountered Drifts in the point cloud (actuated sphere).}
+\caption{Encountered Drifts in the point cloud.}
 \label{fig:drift}
 \end{figure}
 \begin{figure}
@@ -404,7 +405,6 @@ Some of the SLAM algorithms exhibited small drift and bending over time, which w
 \caption{Yellow: ground truth, purple: Mentioned Algorithm}
 \label{fig:bending}
 \end{figure}
-
 \begin{figure*}
 \centering
 % First row - 5 subfigures
