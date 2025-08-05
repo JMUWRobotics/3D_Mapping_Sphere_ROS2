@@ -37,7 +37,13 @@ marawan.khalil@stud-mail.uni-wuerzburg.de, \{fabian.arzberger, andreas.nuechter\
 \maketitle
 
 \begin{abstract}
-Spherical robots offer unique advantages for mapping applications in hazardous or confined environments, thanks to their protective shells and omnidirectional mobility. This work presents two complementary spherical mapping systems: a lightweight, non-actuated design and an actuated variant featuring internal pendulum-driven locomotion. Both systems are equipped with modern LiDAR sensors and run advanced SLAM algorithms on resource-constrained hardware. A comparative evaluation highlights distinct performance characteristics: the non-actuated sphere achieves higher mapping accuracy, while the actuated system provides denser point clouds and shows potential for autonomous navigation. These results lay the groundwork for deploying spherical robots in challenging environments such as underground infrastructure or planetary surfaces, where traditional robotic platforms often face operational constraints.
+Spherical robots offer unique advantages for mapping applications in hazardous or confined environments, thanks to their protective shells and omnidirectional mobility. 
+This work presents two complementary spherical mapping systems: a lightweight, non-actuated design and an actuated variant featuring internal pendulum-driven locomotion. 
+Both systems are equipped with a Livox Mid-360 solid-state LiDAR sensor and run Lidar-Inertial Odometry (LIO) algorithms on resource-constrained hardware. 
+We asses the mapping accuracy of these systems by comparing the resulting 3D point-clouds from the LIO algorithms to a ground truth map.
+The results indicate that state-of-the-art LIO algorithms struggle with the high dynamic motions due to the spherical locomotion, leading to globally inconsistent maps and sometimes unrecoverable drift.
+%A comparative evaluation highlights distinct performance characteristics: the non-actuated sphere achieves higher mapping accuracy, while the actuated system provides denser point clouds and shows potential for autonomous navigation. 
+%These results lay the groundwork for deploying spherical robots in challenging environments such as underground infrastructure or planetary surfaces, where traditional robotic platforms often face operational constraints.
 \end{abstract}
 
 \begin{IEEEkeywords}
