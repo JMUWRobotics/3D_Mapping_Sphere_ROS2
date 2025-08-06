@@ -321,6 +321,38 @@ We used 3DTK~\cite{3dtk} to process the resulting point clouds, which were evalu
 
 \end{figure}
 
+\begin{figure}[t]
+\centering
+\begin{subfigure}{0.48\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/eagle_view/riegl_top.png}
+        \caption{Resulted Riegl Map}
+        \label{fig:riegl_top}\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/eagle_view/act_livo_to.png}
+        \caption{Actuated Fast-LIVO2}
+        \label{fig:act_livo_top}
+\end{subfigure}
+
+\begin{subfigure}{0.48\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/eagle_view/act_lio_top.png}
+        \caption{Actuated Fast-LIO2}
+        \label{fig:act_fast_lio_top}\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/eagle_view/non_lio_top.png}
+        \caption{Non-actuated Fast-LIO2}
+        \label{fig:non_act_fast_lio_top}
+\end{subfigure}
+
+\caption{Cross Section of resulted maps(Height gradient).}
+
+\end{figure}
+
 \subsubsection{Point cloud error}
 The point cloud error represents the root of the mean squared point-to-point errors (RMSE).
 \begin{equation}
@@ -346,16 +378,16 @@ The results are summarized in Table~\ref{tab:point_cloud_error}.
 \begin{threeparttable}
 \caption{Statistical Analysis of Point Cloud Mapping Accuracy}
 \label{tab:point_cloud_error}
-\begin{tabular}{l|cc|cc|cc|cc|cc}
+\begin{tabular}{l|cc|cc|cc|cc|cc|cc}
 \toprule
-& \multicolumn{2}{c|}{\textbf{Points}} & \multicolumn{2}{c|}{\textbf{Mean}} & \multicolumn{2}{c|}{\textbf{Std Dev}} & \multicolumn{2}{c|}{\textbf{RMSE}} & \multicolumn{2}{c}{\textbf{P95}} \\
-& \multicolumn{2}{c|}{\textbf{($\times 10^6$)}} & \multicolumn{2}{c|}{\textbf{(cm)}} & \multicolumn{2}{c|}{\textbf{(cm)}} & \multicolumn{2}{c|}{\textbf{(cm)}} & \multicolumn{2}{c}{\textbf{(cm)}} \\
-\cmidrule(r){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(l){10-11}
-\textbf{Algorithm} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} \\
+& \multicolumn{2}{c|}{\textbf{Points}} & \multicolumn{2}{c|}{\textbf{Mean}} & \multicolumn{2}{c|}{\textbf{Std Dev}} & \multicolumn{2}{c|}{\textbf{RMSE}} & \multicolumn{2}{c|}{\textbf{P95}} & \multicolumn{2}{c}{\textbf{P90}} \\
+& \multicolumn{2}{c|}{\textbf{($\times 10^6$)}} & \multicolumn{2}{c|}{\textbf{(cm)}} & \multicolumn{2}{c|}{\textbf{(cm)}} & \multicolumn{2}{c|}{\textbf{(cm)}} & \multicolumn{2}{c|}{\textbf{(cm)}} & \multicolumn{2}{c}{\textbf{(cm)}} \\
+\cmidrule(r){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(l){10-11} \cmidrule(l){12-13}
+\textbf{Algorithm} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} \\
 \midrule
-Fast-LIO2 & 1.99 & 4.43 & 9.60 & 10.73 & 8.91 & 9.96 & 13.09 & 14.64 & 26.76 & 30.47 \\
-DLIO & - & 88.01 & - & 13.71 & - & 13.26 & - & 19.08 & - & 42.36 \\
-Fast-LIVO2(LIO Mode) & 16.36 & 46.39 & 12.05 & 12.93 & 11.33 & 12.58 & 16.54 & 18.04 & 37.33 & 41.04 \\
+Fast-LIO2 & 1.99 & 4.43 & 9.60 & 10.73 & 8.91 & 9.96 & 13.09 & 14.64 & 26.76 & 30.47 & 18.58 & 22.57 \\
+Fast-LIVO2(LIO Mode) & 16.36 & 46.39 & 12.05 & 12.93 & 11.33 & 12.58 & 16.54 & 18.04 & 37.33 & 41.04 & 26.48 & 31.63\\
+DLIO & - & 88.01 & - & 13.71 & - & 13.26 & - & 19.08 & - & 42.36 & - & 34.70\\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
@@ -394,15 +426,15 @@ Some of the SLAM algorithms exhibited small drift and bending over time, which w
 \begin{subfigure}{0.48\columnwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/drifts_bending/dlio_bending.png}
-    \caption{actuated sphere map using DLIO}\label{fig:dlio_bending}
+    \caption{Act. sphere map(DLIO)}\label{fig:dlio_bending}
     \end{subfigure}
 \begin{subfigure}{0.48\columnwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/drifts_bending/livo_actuated_bending.png}
-    \caption{actuated sphere map using Fast-LIVO2}\label{fig:livo_bending}
+    \caption{Act. sphere map(Fast-LIVO2)}\label{fig:livo_bending}
 \end{subfigure}
 \hfill
-\caption{Yellow: ground truth, purple: Mentioned Algorithm}
+\caption{longitudinal section Comparison, Yellow: ground truth, purple: Mentioned Algorithm}
 \label{fig:bending}
 \end{figure}
 \begin{figure*}
@@ -468,6 +500,12 @@ Some of the SLAM algorithms exhibited small drift and bending over time, which w
     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_livo.png}
     \caption{Act. Fast-LIVO2}
     \label{fig:hist_act_livo}
+\end{subfigure}
+\begin{subfigure}{0.16\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/histogram_results/hsv.png}
+    \caption{Color Mapping}
+    \label{fig:hsv}
 \end{subfigure}
 \caption{Point Cloud Results and Error Distribution Analysis. A fly through video of the point clouds can be found at \url{https://youtu.be/1b0d2g3k4e8}. The first row shows the point clouds generated by comparing RIEGL map with each algorithm, while the second row displays the corresponding error distribution histograms.}
 \label{fig:combined_results}
