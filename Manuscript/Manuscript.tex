@@ -1,7 +1,5 @@
 \documentclass[a4paper, conference]{IEEEtran}
 \IEEEoverridecommandlockouts
-% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
-%Template version as of 6/27/2024
 
 \usepackage{cite}
 \usepackage{float}
@@ -43,8 +41,8 @@ marawansalah002@gmail.com \{fabian.arzberger|andreas.nuechter\}@uni-wuerzburg.de
 Spherical robots offer unique advantages for mapping applications in hazardous or confined environments, thanks to their protective shells and omnidirectional mobility. 
 This work presents two complementary spherical mapping systems: a lightweight, non-actuated design and an actuated variant featuring internal pendulum-driven locomotion. 
 Both systems are equipped with a Livox Mid-360 solid-state LiDAR sensor and run Lidar-Inertial Odometry (LIO) algorithms on resource-constrained hardware. 
-We asses the mapping accuracy of these systems by comparing the resulting 3D point-clouds from the LIO algorithms to a ground truth map.
-The results indicate that the performance of state-of-the-art LIO algorithms deteriorates due to the high dynamic movement introduced by the spherical locomotion, leading to globally inconsistent maps and sometimes unrecoverable drift.
+We assess the mapping accuracy of these systems by comparing the resulting 3D point-clouds from the LIO algorithms to a ground truth map.
+The results indicate that the performance of state-of-the-art LIO algorithms deteriorate due to the high dynamic movement introduced by the spherical locomotion, leading to globally inconsistent maps and sometimes unrecoverable drift.
 %A comparative evaluation highlights distinct performance characteristics: the non-actuated sphere achieves higher mapping accuracy, while the actuated system provides denser point-clouds and shows potential for autonomous navigation. 
 %These results lay the groundwork for deploying spherical robots in challenging environments such as underground infrastructure or planetary surfaces, where traditional robotic platforms often face operational constraints.
 \end{abstract}
@@ -62,17 +60,17 @@ Their spherical design enables them to access environments that are difficult or
 The sealed outer shell of a spherical robot provides full protection against dust, hazardous chemicals, liquids, and external impacts. 
 Recent research has focused on developing more robust motion mechanisms \cite{roboball,novelsphere,pendulum_sphere} and incorporating technologies like LiDAR for 3D mapping, further expanding their capabilities in complex and unpredictable environments\cite{Kalman_filter_sphere,DAEDALUS,sphere_Fabi_1}.
 This research focuses on the development and evaluation of two custom-built spherical robots (see~\ref{fig:twospheres}) equipped with LiDAR-based SLAM systems. 
-Both systems integrate Fast-LIO2\cite{fastlio2}, Fast-LIVO2\cite{fastlivo2}, and DLIO\cite{dlio}, which are state-of-the-art LiDAR-inertial odometry algorithms.
+Both systems integrate FAST-LIO2\cite{fastlio2}, FAST-LIVO2\cite{fastlivo2}, and DLIO\cite{dlio}, which are state-of-the-art LiDAR-inertial odometry algorithms.
 In the next section, we review recent advancements in spherical robot design and the latest developments in SLAM for spherical platforms, with a particular emphasis on LiDAR-inertial methods. 
-In \ref{sec:hardwaredesing}, we give a description of the hardware implementation of the two spherical robots. 
+In \ref{sec:hardwaredesing}, we provide a description of the hardware implementation of the two spherical robots. 
 Subsequently, we describe the software integration, as well as the motion control mechanisms used for the actuated sphere. 
-Finally, we provide a comprehensive evaluation of the mapping accuracy by comparing the maps of the proposed systems with a ground truth map available from high precise terrestrial laser scanning (TLS). 
+Finally, we provide a comprehensive evaluation of the mapping accuracy by comparing the maps of the proposed systems with a ground truth map obtained using high-precision terrestrial laser scanning (TLS). 
 
 \begin{figure}[t]
 \centerline{\includegraphics[width=\columnwidth]{pics/two_spheres.jpg}}
 \caption{(Left:) \SI{20}{\centi\meter} diameter actuated sphere.
 (Right:) \SI{16}{\centi\meter} diameter non-actuated sphere.
-A video where both spheres are moving can be found at \url{https://youtu.be/1b0d2g3k4e8}.}
+A video where both spheres are moving is available at \url{https://youtube.com/shorts/lxTF85HK-zY}.}
 \vspace{-15pt}
 \label{fig:twospheres}
 \end{figure}
@@ -82,15 +80,16 @@ A video where both spheres are moving can be found at \url{https://youtu.be/1b0d
 Spherical Simultaneous Localization and Mapping (SLAM) is an emerging area within mobile robotics, offering promising solutions for robust mapping in constrained or hazardous environments. 
 Unlike traditional platforms, spherical robots encapsulate their sensors within a protective shell and rely on rolling locomotion. 
 This unique configuration introduces both opportunities and significant challenges for SLAM algorithms. 
-One of the earliest spherical SLAM prototypes was L.U.N.A. \cite{luna} , which employed a 2D LiDAR and IMU inside a rolling spherical shell. 
+One of the earliest spherical SLAM prototypes was L.U.N.A. \cite{luna}, which employed a 2D LiDAR and IMU inside a rolling spherical shell. 
 The design validated the feasibility of spherical SLAM. 
 It also featured actuation through internal flywheels, using an IBCOAM (Impulse by Conservation of Angular Momentum) mechanism.
 A major milestone in this field was the DAEDALUS project \cite{DAEDALUS}, funded by the European Space Agency, which proposed a fully enclosed spherical robot for the autonomous exploration of lunar lava tubes. 
-The robot is suggested to be equipped with LiDAR and internal actuators, and its design focused on resilience to lunar regolith and harsh environmental conditions.
-A core challenge in spherical SLAM is the aggressive and non-centered rotation induced by rolling locomotion. 
+The robot was proposed to be equipped with LiDAR and internal actuators, and its design focused on resilience to lunar regolith and harsh environmental conditions.
+A core challenge in spherical SLAM is the aggressive and off-centered rotation induced by rolling locomotion. 
 These motions produce high angular velocities and dynamic behavior across all principal axes. 
 This significantly degrades pose estimation accuracy and leads to error accumulation in the map. 
-This problem is further compounded by the absence of magnetometer usage—often intentionally excluded due to the unreliability of magnetic field data in planetary environments, which leads to uncorrected yaw drift in IMU-based odometry, especially during prolonged navigation.
+This problem is further compounded by the absence of magnetometer use—often intentionally excluded due to the unreliability of magnetic field data in planetary environments.
+This leads to uncorrected yaw drift in IMU-based odometry, especially during prolonged navigation.
 To address these issues, Arzberger et al. \cite{Kalman_filter_sphere,sphere_Fabi_1,DeltaFilter} introduced specialized filtering techniques for spherical systems. 
 Their Delta Filter is a lightweight, real-time, multi-trajectory pose estimation method that fuses unreliable trajectories, such as those from IMUs and stereo visual-inertial odometry (VIO), into a more robust estimate, without requiring explicit sensor uncertainty modeling. 
 The filter operates on pose changes ("deltas"), uses a probabilistic weighting scheme for translation estimation, and applies rotational interpolation via spherical linear interpolation (Slerp). 
@@ -98,8 +97,8 @@ A follow-up Kalman Filter design extended this approach by incorporating covaria
 % Despite these advances, most current spherical SLAM systems still lack precise onboard actuation for controlled repositioning beyond rolling, limiting their effectiveness in tightly constrained environments. 
 While recent studies (e.g. \cite{Kalman_filter_sphere}) have compared their results with state-of-the-art SLAM systems such as DLIO\cite{dlio} and FAST-LIO2\cite{fastlio2}, the field continues to evolve rapidly. 
 More recent SLAM algorithms (e.g., FAST-LIVO2\cite{fastlivo2}), advanced LiDARs like the MID-360 and RoboSense Airy, and modern microprocessors such as the Raspberry Pi 5 with PCIe support and Gigabit Ethernet are pushing the boundaries of what is possible. 
-In this context, we introduce our first prototype, the Non-actuated Sphere, which leverages the processing power of the Raspberry Pi 5 16GB RAM model. 
-This design enables real-time SLAM on a compact spherical platform,  offering improved power efficiency, extended battery life, and reduced overall system cost.
+In this context, we introduce our first prototype, the non-actuated sphere, which leverages the processing power of the Raspberry Pi 5 16GB RAM model. 
+This design enables real-time SLAM on a compact spherical platform, offering improved power efficiency, extended battery life, and reduced overall system cost.
 
 \subsection{Spherical locomotion}\label{sec:state-of-the-art}
 Spherical locomotion has attracted significant research interest in recent years, driven by the pursuit of optimal mobility mechanisms. 
@@ -112,17 +111,17 @@ Rather than using wheels or rods, L.U.N.A. relies on internal flywheels to gener
 This approach enables a compact form factor and protects internal electronics, providing advantages particularly well suited to harsh and remote terrain. 
 The robot demonstrated reliable motion on soft surfaces such as sand and rubber. 
 However, limitations remain, including vibrational instability caused by unbalanced flywheels, reduced performance on inclined low-friction surfaces, and pose estimation errors due to unsynchronized sensor data.
-In a following study by Zevering et al.~\cite{rod_sphere} proposed a rod-driven spherical robot, also targeting lunar cave exploration. 
+In a following study, Zevering et al.~\cite{rod_sphere} proposed a rod-driven spherical robot, also targeting lunar cave exploration. 
 This design uses external linear actuators to push against the environment to induce motion. 
 While it improves adaptability to rugged terrain and sharp obstacles, it introduces new challenges, such as oscillatory behavior from fixed-speed actuators, limited effectiveness on slopes, and the need for higher-power actuation when traversing dusty or soft ground.
 Beyond differential and flywheel-based designs, several researchers have explored pendulum-driven locomotion due to its mechanical simplicity, energy efficiency, and natural stability. 
-Oevermann et al.~\cite{roboball}, Ren et al.~\cite{novelsphere}, and  Kolbari et al.~\cite{pendulum_sphere} developed spherical robots that use an internal heavy pendulum as the primary driving mechanism. 
+Oevermann et al.~\cite{roboball}, Ren et al.~\cite{novelsphere}, and Kolbari et al.~\cite{pendulum_sphere} developed spherical robots that use an internal heavy pendulum as the primary driving mechanism. 
 While their configurations differ in terms of shell design and target applications, they share a common reliance on pendulum-based locomotion and have demonstrated robust movement across a variety of terrains.
 A notable example is RoboBall~\cite{roboball}, which features a novel soft pressurized shell and a two-degree-of-freedom internal pendulum. 
 This robot successfully navigates gravel, grass, steep inclines, and even floats and maneuvers on water. 
-However, the deformable shell introduces complex dynamic behaviors. 
-These were addressed using a Linear Quadratic Regulator (LQR) for steering and a model-based proportional controller for driving. 
-In contrast, \cite{novelsphere} and \cite{pendulum_sphere} adopted PID-based stabilization strategies to enhance motion control and responsiveness. 
+However, the deformable shell introduces complex dynamic behavior. 
+The researchers addressed this using a Linear Quadratic Regulator (LQR) for steering and a model-based proportional controller for driving. 
+In contrast, Ren et al. \cite{novelsphere} and Kolbari et al. \cite{pendulum_sphere} adopted PID-based stabilization strategies to enhance motion control and responsiveness. 
 RoboBall’s experiments further revealed that internal pressure and shell deformation significantly affect dynamic behavior—especially due to the presence of a ``dead zone'' where balance control becomes unstable during motion.
 Taken together, these pendulum-based locomotion strategies highlight the value of combining mechanical simplicity with robust control to enable adaptive movement in unpredictable environments. 
 While a variety of innovative locomotion methods have been proposed for spherical robots, including flywheel-, rod-, and pendulum-driven systems, few have been evaluated in conjunction with advanced LiDAR-inertial odometry algorithms under real-world motion dynamics.
@@ -139,7 +138,7 @@ To enhance structural integrity and safety, fillets were applied to the edges of
 Each disc has a uniform thickness of \SI{3}{\milli\meter}.
 Two fabrication methods were used to produce the discs: 3D printing with PLA and laser cutting with acrylic. 
 %Both materials demonstrated sufficient durability during initial testing.
-Table~\ref{tab:hardware_components_non_actuated} summarizes the components used in the non-actuated sphere and its location within the sphere.
+Table~\ref{tab:hardware_components_non_actuated} summarizes the components used in the non-actuated sphere and their locations within the sphere.
 \begin{figure}
 \centering
 \begin{subfigure}{0.4\columnwidth}
@@ -176,7 +175,7 @@ Bottom & Voltage regulators \\
 \end{tabularx}
 \vspace{-1em}
 \end{table}
-The Livox Mid-360 is connected to the Raspberry Pi via Ethernet, while the BNO-085 IMU communicates using the I2C interface. 
+The Livox Mid-360 is connected to the Raspberry Pi via Ethernet, while the BNO-085 IMU communicates through the I2C interface. 
 The sphere is designed to be lightweight, with a total weight of approximately \SI{1}{\kilo\gram}, including the battery and all internal components. 
 The sphere's diameter is \SI{16}{\centi\meter}. 
 It is designed to be rolled manually by foot or hand.
@@ -189,8 +188,8 @@ As described in Section~\ref{sec:state-of-the-art}, the design was inspired by t
 Unlike the non-actuated version, this sphere features an internal actuation system. 
 At its core, a Waveshare Smart Continuous Servo (model ST3215) is mounted to control forward and backward motion by dynamically shifting the internal center of mass in the direction of travel. 
 A second PWM-controlled servo enables left and right movement via pendulum displacement along the lateral axis.
-The structural components were fabricated using PLA filament and 3D-printed in three separate pieces, which are then assembled into the complete sphere.
-The system dynamics as shown in Fig.~\ref{fig:2d-model2} involve key parameters including the robot’s horizontal position \( x \), the spinning angle of the shell \( \phi \), the swinging angle of the counter-weight mass \( \alpha \), and the input torque of the primary motor \( \tau \). 
+The structural components were fabricated using PLA filament and 3D-printed in three separate pieces, which were then assembled into the complete sphere.
+The system dynamics shown in Fig.~\ref{fig:2d-model2} involve key parameters including the robot’s horizontal position \( x \), the spinning angle of the shell \( \phi \), the swinging angle of the counter-weight mass \( \alpha \), and the input torque of the primary motor \( \tau \). 
 Associated physical properties include the shell mass \( m_1 \), inner driver mass \( m_2 \), counter-weight mass \( m_3 \), gravitational acceleration \( g \), and the length of the connecting rod \( l \). 
 %All of this is taken into consideration when designing the sphere and its control system.
 The internal hardware components are organized according to their position within the sphere, as detailed in Table~\ref{tab:hardware_components_actuated}.
@@ -209,8 +208,8 @@ The internal hardware components are organized according to their position withi
     \label{fig:2d-model2}
 \end{subfigure}
 \caption{Schematic model and design of the actuated sphere.
-The sphere uses a servo motor to actuate itself by pendulum-driven locomotion.
-A second servo can shift the center of mass laterally by moving the battery to enable curved trajectories.}
+The sphere uses a servo motor for actuation through pendulum-driven locomotion.
+A second servo shifts the center of mass laterally by moving the battery to enable curved trajectories.}
 \label{fig:cad-design2}
 \end{figure}
 \begin{figure*}
@@ -243,8 +242,8 @@ Top    & Livox Mid-360 LiDAR \\
 \end{table}
 
 \section{Software and Control System}
-As shown in the system state diagram Fig.~\ref{fig:sphere_system}, both the actuated and non-actuated spheres follow the same state transitions, with the exception of the control subsystem, which is unique to the actuated variant. 
-All software components are deployed on Ubuntu 24.04.2 LTS ARM and ROS 2 Jazzy.
+As shown in the system state diagram in Fig.~\ref{fig:sphere_system}, both the actuated and non-actuated spheres follow the same state transitions, with the exception of the control subsystem, which is unique to the actuated variant. 
+All software components are deployed on Ubuntu 24.04.2 LTS ARM and ROS2 Jazzy.
 
 \subsection{Mapping System}
 Both spheres incorporate a real-time mapping system. 
@@ -260,11 +259,11 @@ All mapping computations are performed onboard in real-time.
 %Resulting maps are stored in ros bag format for later evaluation and comparison against ground truth data.
 
 \subsection{Actuator System (Actuated Sphere Only)}
-The actuated sphere features an internal movement control system, operated using a  Logitech F710 controller. 
+The actuated sphere features an internal movement control system, operated using a Logitech F710 controller. 
 The controller's two joysticks are mapped to distinct control tasks:
 \begin{itemize}
     \item \textbf{Servo control:} One joystick provides input to the continuous rotation servo. 
-    These inputs are scaled and passed through a discrete Proportional-Integral-Derivative (PID) controller to regulate pitch by minimizing the error between a desired target angle and the current angle measured by the IMU.
+    These inputs are scaled and passed through a discrete Proportional-Integral-Derivative (PID) controller to regulate pitch by minimizing the error between the desired target angle and the current angle measured by the IMU.
     \item \textbf{Mass shifting:} The second joystick adjusts the angle of an internal weight to shift the center of mass left or right, enabling directional control of the sphere's rolling behavior.
 \end{itemize}
 This control strategy allows for fine-grained movement and stabilization, combining feedback-based servo control with physical mass displacement for maneuvering.
@@ -280,11 +279,11 @@ All experiments were conducted in a controlled indoor environment within the Com
 \subsection{Evaluation Setup}
 The evaluation consisted of mapping selected indoor areas—specifically, a corridor, a hall, and the upper floor—using both the non-actuated and actuated spherical robots. 
 For the non-actuated sphere, the robot was manually moved by hand and by foot. 
-Each mapping run used one of three SLAM algorithms: Fast-LIO2, DLIO, and Fast-LIVO2 (LIO mode). 
+Each mapping run used one of three SLAM algorithms: FAST-LIO2, DLIO, and FAST-LIVO2 (LIO mode). 
 The experiment was repeated three times—once for each algorithm—under the same environmental conditions. 
 The same procedure was carried out with the actuated sphere, with the key difference being that it was moved using a controller rather than manually. 
 Again, each of the three SLAM algorithms was executed along similar paths within the same locations. 
-We used 3DTK~\cite{3dtk} to process the resulting point-clouds, which were evaluated by comparing them against ground-truth data obtained using a Riegl VZ-400 terrestrial laser scanner (TLS) as shown in Fig.~\ref{fig:riegl}.
+We used 3DTK~\cite{3dtk} to process the resulting point-clouds, which were evaluated by comparing them against ground truth data obtained using a Riegl VZ-400 terrestrial laser scanner (TLS) as shown in Fig.~\ref{fig:riegl}.
 \begin{figure}[t]
 \centering
 \begin{subfigure}{0.495\columnwidth}
@@ -308,37 +307,37 @@ We used 3DTK~\cite{3dtk} to process the resulting point-clouds, which were evalu
 \begin{subfigure}{0.492\columnwidth}
         \centering
         \includegraphics[width=\textwidth]{pics/eagle_view/riegl_top.png}
-        \caption{Resulted Riegl Map}
+        \caption{Riegl Map Result}
         \label{fig:riegl_top}\end{subfigure}
 \hfill
 \begin{subfigure}{0.492\columnwidth}
         \centering
         \includegraphics[width=\textwidth]{pics/eagle_view/act_livo_to.png}
-        \caption{Actuated Fast-LIVO2}
+        \caption{Actuated FAST-LIVO2}
         \label{fig:act_livo_top}
 \end{subfigure}\vspace{2mm}
 \begin{subfigure}{0.492\columnwidth}
         \centering
         \includegraphics[width=\textwidth]{pics/eagle_view/act_lio_top.png}
-        \caption{Actuated Fast-LIO2}
+        \caption{Actuated FAST-LIO2}
         \label{fig:act_fast_lio_top}\end{subfigure}
 \hfill
 \begin{subfigure}{0.492\columnwidth}
         \centering
         \includegraphics[width=\textwidth]{pics/eagle_view/non_lio_top.png}
-        \caption{Non-actuated Fast-LIO2}
+        \caption{Non-actuated FAST-LIO2}
         \label{fig:non_act_fast_lio_top}
 \end{subfigure}
-\caption{Birds-eye view of a cross section of resulting point-clouds (color indicates height where red means higher).}\vspace{-1mm}
+\caption{Bird's-eye view of a cross section of resulting point-clouds (color indicates height where red means higher).}\vspace{-1mm}
 \end{figure}
 
 \subsubsection{Point-Cloud Error}
-The point-cloud error represents the root of the mean squared point-to-point errors (RMSE).
+The point-cloud error is calculated as the root mean square error (RMSE)
 \begin{equation}
     RMSE = \sqrt{\frac{1}{N} \sum_{i=1}^{N} |p_i - q_i|^2}
 \end{equation}
-where \( p_i \) and \( q_i \) are the corresponding points in the model and data point-clouds, and \( N\) is the number of corresponding points. 
-The RMSE is a measure of the average distance between the points in the two point-clouds, providing an indication of the mapping accuracy.
+where \( p_i \) and \( q_i \) are the corresponding points in the model and data point-clouds, and \( N \) is the number of corresponding points. 
+The RMSE measures the average distance between corresponding points in the two point clouds, providing an indication of the mapping accuracy.
 % \subsubsection{Steady-state error}
 
 % The steady-state error is defined as the difference between the desired and actual position of the sphere after the system has reached steady state. Since the target angle is constant, it is calculated as follows:
@@ -363,31 +362,31 @@ Table~\ref{tab:point_cloud_error} summarizes the results.
 \cmidrule(r){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(l){10-11} \cmidrule(l){12-13}
 \textbf{Algorithm} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} \\
 \midrule
-Fast-LIO2 & 1.99 & 4.43 & \bf{9.60} & 10.73 & 8.91 & 9.96 & \bf{13.09} & 14.64 & \bf{26.76} & 30.47 & \bf{18.58} & 22.57 \\
-Fast-LIVO2(LIO Mode) & 16.36 & 46.39 & \bf{12.05} & 12.93 & 11.33 & 12.58 & \bf{16.54} & 18.04 & \bf{37.33} & 41.04 & \bf{26.48} & 31.63\\
+FAST-LIO2 & 1.99 & 4.43 & \bf{9.60} & 10.73 & 8.91 & 9.96 & \bf{13.09} & 14.64 & \bf{26.76} & 30.47 & \bf{18.58} & 22.57 \\
+FAST-LIVO2(LIO Mode) & 16.36 & 46.39 & \bf{12.05} & 12.93 & 11.33 & 12.58 & \bf{16.54} & 18.04 & \bf{37.33} & 41.04 & \bf{26.48} & 31.63\\
 DLIO & - & 88.01 & - & \bf{13.71} & - & 13.26 & - & \bf{19.08} & - & \bf{42.36} & - & \bf{34.70}\\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
     \item (-) denotes that the algorithm failed.
-    \item[1] Reffers to the point-to-point errors to ground truth.
-    \item[2] Reffers to the percent of points having point-to-point errors to ground truth smaller than the given value. 
+    \item[1] Refers to the point-to-point errors to ground truth.
+    \item[2] Refers to the percent of points having point-to-point errors to ground truth smaller than the given value. 
 \end{tablenotes}
 \end{threeparttable}
 \end{table*}
 The statistical analysis reveals significant differences in mapping performance across configurations. 
-The non-actuated sphere with Fast-LIO2 achieved the lowest mean error (\SI{9.60}{\meter}) and RMSE (\SI{13.09}{\meter}), indicating superior accuracy. 
-This is unexpected since the motion of the non-actuated sphere is goverend by larger rotations around all principal axes and more aggressive dynamics.
-We account the overall better mapping performance of the non-actuated sphere to its smaller shell radius and missing locomotion mechansim structure.
-Thus, we were able to place to laser-scanner closer to the center of the sphere.
-%However, the actuated sphere generally captured more data points, with DLIO collecting 88.01 million points compared to 1.99 million for non-actuated Fast-LIO2. 
+The non-actuated sphere with FAST-LIO2 achieved the lowest mean error (\SI{9.60}{\centi\meter}) and RMSE (\SI{13.09}{\centi\meter}), indicating superior accuracy. 
+This is unexpected since the motion of the non-actuated sphere is governed by larger rotations around all principal axes and more aggressive dynamics.
+We attribute the overall better mapping performance of the non-actuated sphere to its smaller shell radius and missing locomotion mechanism structure.
+Thus, we were able to place the laser-scanner closer to the center of the sphere.
+%However, the actuated sphere generally captured more data points, with DLIO collecting 88.01 million points compared to 1.99 million for non-actuated FAST-LIO2. 
 %All configurations showed highly significant results (p < 0.001), confirming systematic measurement patterns rather than random noise. 
 
 \subsubsection{Drift and Bending}
 The LIO algorithms exhibited small drift and bending over time, which is particularly noticeable in Fig.~\ref{fig:bending}. 
-We couldn't get a good map out of DLIO from the non-actuated sphere as shown in Fig.~\ref{fig:dlio_drift}.
+We were unable to obtain a satisfactory map using DLIO from the non-actuated sphere as shown in Fig.~\ref{fig:dlio_drift}.
 Furthermore, sometimes the algorithms drifted without recovering after a fast motion, as shown in Fig.~\ref{fig:lio_drift}. 
-We account this to the underlying motion models used in the LIO algorithms, which were designed for more conventional systems.
+We attribute this to the underlying motion models used in the LIO algorithms, which were designed for more conventional systems.
 
 \begin{figure}
 \centering
@@ -399,7 +398,7 @@ We account this to the underlying motion models used in the LIO algorithms, whic
 \begin{subfigure}{0.49\columnwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/drifts_bending/lio_drifts.png}
-    \caption{Fast-LIO2 point-cloud}\label{fig:lio_drift}
+    \caption{FAST-LIO2 point-cloud}\label{fig:lio_drift}
 \end{subfigure}
 \caption{Example failed cases from the non-actuated sphere where the LIO algorithm could not recover due to fast angular motion.
 This results in huge drift and inconsistent mapping.}\vspace{-3mm}
@@ -415,11 +414,11 @@ This results in huge drift and inconsistent mapping.}\vspace{-3mm}
 \begin{subfigure}{0.49\columnwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/drifts_bending/livo_actuated_bending.png}
-    \caption{Fast-LIVO2 point-cloud}\label{fig:livo_bending}
+    \caption{FAST-LIVO2 point-cloud}\label{fig:livo_bending}
 \end{subfigure}
 \caption{Cross section comparison. 
-Yellow: Ground-truth, Magenta: Mentioned algorithm.
-The red boxes indicate noticable bending of the ground plane.}\vspace{-1mm}
+Yellow: Ground truth, Magenta: Mentioned algorithm.
+The red boxes indicate noticeable bending of the ground plane.}\vspace{-1mm}
 \label{fig:bending}
 \end{figure}
 \begin{figure*}
@@ -455,21 +454,21 @@ The red boxes indicate noticable bending of the ground plane.}\vspace{-1mm}
 \begin{subfigure}{0.19\textwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_non_actuated_lio.png}
-    \caption{Non-Act. Fast-LIO2}
+    \caption{Non-Act. FAST-LIO2}
     \label{fig:hist_non_lio}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.19\textwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_non_actuated_livo.png}
-    \caption{Non-Act. Fast-LIVO2}
+    \caption{Non-Act. FAST-LIVO2}
     \label{fig:hist_non_livo}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.19\textwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_lio.png}
-    \caption{Act. Fast-LIO2}
+    \caption{Act. FAST-LIO2}
     \label{fig:hist_act_lio}
 \end{subfigure}
 \hfill
@@ -483,7 +482,7 @@ The red boxes indicate noticable bending of the ground plane.}\vspace{-1mm}
 \begin{subfigure}{0.19\textwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_livo.png}
-    \caption{Act. Fast-LIVO2}
+    \caption{Act. FAST-LIVO2}
     \label{fig:hist_act_livo}
 \end{subfigure}\vspace{2mm}
 \begin{subfigure}{0.16\textwidth}
@@ -492,8 +491,8 @@ The red boxes indicate noticable bending of the ground plane.}\vspace{-1mm}
     \caption{Color Mapping}
     \label{fig:hsv}
 \end{subfigure}
-\caption{Point-cloud Results and Error Distribution Analysis. A fly through video of the point-clouds can be found at \url{https://youtu.be/1b0d2g3k4e8}. 
-The first row shows the point-clouds generated by comparing RIEGL map with each algorithm, while the second row displays the corresponding error distribution histograms.}\vspace{-2mm}
+\caption{Point-cloud Results and Error Distribution Analysis. A fly through video of the point-clouds is available at \url{https://youtu.be/Ere4UjPg-gk}. 
+The first row shows the point-clouds generated by comparing the RIEGL map with each algorithm, while the second row displays the corresponding error distribution histograms.}\vspace{-2mm}
 \label{fig:combined_results}
 \end{figure*}
 
@@ -503,14 +502,14 @@ In this paper, we presented the design and evaluation of two spherical robots fo
 The self-actuated sphere uses a pendulum-based locomotion mechanism, enabling controlled movement and stabilization in addition to mapping capabilities.
 This is, to the best of our knowledge, the first prototype of a self-actuated spherical robot performing online LIO.   
 The mapping accuracy of both systems were evaluated in a controlled indoor environment using ground truth point-clouds. 
-The non-actuated sphere using Fast-LIO2 surprisingly achieved the lowest mean error and RMSE among all configurations.
-We account this to the placement of the LiDAR sensor, which is closer to the center compared to the actuated sphere.
-All tested algorithms produce bent point-clouds, and sometimes unrecoverable drift due to the rotationaly aggressive motion of the system.  
+The non-actuated sphere using FAST-LIO2 surprisingly achieved the lowest mean error and RMSE among all configurations.
+We attribute this to the placement of the LiDAR sensor, which is closer to the center compared to the actuated sphere.
+All tested algorithms produce bent point-clouds, and sometimes unrecoverable drift due to the rotationally aggressive motion of the system.  
 %The actuated sphere showed strong potential for enhanced mobility and stability, marking a step forward in enabling more autonomous behaviors. 
 %These results highlight the feasibility and promise of spherical robots for 3D mapping and real-time SLAM on resource-constrained platforms such as the Raspberry Pi 5.
 %Only limited algorithmic configurations were explored in this work. 
-In future work, we plan to encorporate motion models into the LIO algorithms that reflect the motion of the sphere better.
-Furhtermore, we want to explore alternative actuation mechanisms.
+In future work, we plan to incorporate motion models into the LIO algorithms that reflect the motion of the sphere better.
+Furthermore, we want to explore alternative actuation mechanisms.
 %The actuated sphere, in particular, can be developed further for autonomous navigation and exploration tasks, leveraging its enhanced locomotion capabilities. 
 %Additionally, integrating higher-resolution LiDAR sensors—such as the Robosense Airy—could improve mapping quality without increasing sphere's form factor. 
 %Pose estimation accuracy was not directly addressed in this paper, as establishing accurate ground truth trajectories would require a separate measurement setup, which was beyond the scope of this study.
