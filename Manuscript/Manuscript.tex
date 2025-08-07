@@ -27,15 +27,14 @@
 
 \title{Design and Evaluation of Two Spherical Systems for Mobile 3D Mapping*\\
 
-\thanks{*We acknowledge funding from the Elite Network Bavaria (ENB). 
-Germany for providing funds for the academic program ``Satellite Technology''.}
+\thanks{*We acknowledge funding from the Elite Network Bavaria (ENB) 
+for providing funds for the academic program ``Satellite Technology -- Advanced Space Systems''.}
 }
 
 \author{\IEEEauthorblockN{Marawan Khalil, Fabian Arzberger, and Andreas Nüchter}
-\IEEEauthorblockA{\textit{Computer Science XVII – Robotics} \\
-\textit{Julius-Maximilians-University}\\
-Würzburg, Germany \\
-marawan.khalil@stud-mail.uni-wuerzburg.de, \{fabian.arzberger, andreas.nuechter\}@uni-wuerzburg.de}
+\IEEEauthorblockA{\textit{Computer Science XVII -- Robotics} \\
+\textit{Julius-Maximilians-Universität Würzburg}, Germany \\
+marawansalah002@gmail.com \{fabian.arzberger|andreas.nuechter\}@uni-wuerzburg.de}
 }
 
 \maketitle
@@ -141,22 +140,6 @@ Each disc has a uniform thickness of \SI{3}{\milli\meter}.
 Two fabrication methods were used to produce the discs: 3D printing with PLA and laser cutting with acrylic. 
 %Both materials demonstrated sufficient durability during initial testing.
 Table~\ref{tab:hardware_components_non_actuated} summarizes the components used in the non-actuated sphere and its location within the sphere.
-\begin{table}
-\centering
-\caption{Hardware components and placement in the sphere}
-\label{tab:hardware_components_non_actuated}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\toprule
-\textbf{Layer} & \textbf{Components} \\
-\midrule
-Top    & Livox Mid-360 LiDAR, BNO-085 IMU \\
-Middle & Raspberry Pi 5 (16 GB, 256 GB SSD, cooling fan) \\
-       & 2200 mAh 3S LiPo battery \\
-Bottom & Voltage regulators \\
-\bottomrule
-\end{tabularx}
-\vspace{-1em}
-\end{table}
 \begin{figure}
 \centering
 \begin{subfigure}{0.4\columnwidth}
@@ -174,9 +157,25 @@ Bottom & Voltage regulators \\
 \end{subfigure}
 \caption{Schematic model and design of the non-actuated sphere.
 It must be pushed manually.}
-\vspace{-10pt}
+%\vspace{-4mm}
 \label{fig:cad-design1}
 \end{figure}
+\begin{table}
+\centering
+\caption{Hardware components and placement in the sphere}
+\label{tab:hardware_components_non_actuated}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\toprule
+\textbf{Layer} & \textbf{Components} \\
+\midrule
+Top    & Livox Mid-360 LiDAR, BNO-085 IMU \\
+Middle & Raspberry Pi 5 (16 GB, 256 GB SSD, cooling fan) \\
+       & 2200 mAh 3S LiPo battery \\
+Bottom & Voltage regulators \\
+\bottomrule
+\end{tabularx}
+\vspace{-1em}
+\end{table}
 The Livox Mid-360 is connected to the Raspberry Pi via Ethernet, while the BNO-085 IMU communicates using the I2C interface. 
 The sphere is designed to be lightweight, with a total weight of approximately \SI{1}{\kilo\gram}, including the battery and all internal components. 
 The sphere's diameter is \SI{16}{\centi\meter}. 
