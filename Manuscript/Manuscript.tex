@@ -32,11 +32,11 @@ for providing funds for the academic program ``Satellite Technology -- Advanced 
 \author{
 \IEEEauthorblockN{
 Marawan Khalil\IEEEauthorrefmark{1}\IEEEauthorrefmark{2},
-Fabian Arzberger\IEEEauthorrefmark{2},
-Andreas Nüchter\IEEEauthorrefmark{2}
+Fabian Arzberger\IEEEauthorrefmark{1},
+Andreas Nüchter\IEEEauthorrefmark{1}
 }
-\IEEEauthorblockA{\IEEEauthorrefmark{1}Faculty of MET -- CSEN Department, German University in Cairo, Egypt}
-\IEEEauthorblockA{\IEEEauthorrefmark{2}Computer Science XVII -- Robotics, Julius-Maximilians-Universität Würzburg, Germany\\
+\IEEEauthorblockA{\IEEEauthorrefmark{1}Computer Science XVII -- Robotics, Julius-Maximilians-Universität Würzburg, Germany}
+\IEEEauthorblockA{\IEEEauthorrefmark{2}Faculty of MET -- CSEN Department, German University in Cairo, Egypt\\
 marawansalah002@gmail.com, fabian.arzberger@uni-wuerzburg.de, andreas.nuechter@uni-wuerzburg.de}
 }
 
@@ -45,7 +45,7 @@ marawansalah002@gmail.com, fabian.arzberger@uni-wuerzburg.de, andreas.nuechter@u
 \begin{abstract}
 Spherical robots offer unique advantages for mapping applications in hazardous or confined environments, thanks to their protective shells and omnidirectional mobility. 
 This work presents two complementary spherical mapping systems: a lightweight, non-actuated design and an actuated variant featuring internal pendulum-driven locomotion. 
-Both systems are equipped with a Livox Mid-360 solid-state LiDAR sensor and run Lidar-Inertial Odometry (LIO) algorithms on resource-constrained hardware. 
+Both systems are equipped with a Livox Mid-360 solid-state LiDAR sensor and run LiDAR-Inertial Odometry (LIO) algorithms on resource-constrained hardware. 
 We assess the mapping accuracy of these systems by comparing the resulting 3D point-clouds from the LIO algorithms to a ground truth map.
 The results indicate that the performance of state-of-the-art LIO algorithms deteriorates due to the high dynamic movement introduced by the spherical locomotion, leading to globally inconsistent maps and sometimes unrecoverable drift.
 %A comparative evaluation highlights distinct performance characteristics: the non-actuated sphere achieves higher mapping accuracy, while the actuated system provides denser point-clouds and shows potential for autonomous navigation. 
@@ -53,7 +53,7 @@ The results indicate that the performance of state-of-the-art LIO algorithms det
 \end{abstract}
 
 \begin{IEEEkeywords}
-Spherical Robots, Mobile Mapping, Actuation Mechanisms, LiDAR, Lidar-Inertial Odometry, SLAM.
+Spherical Robots, Mobile Mapping, Actuation Mechanisms, LiDAR, LiDAR-Inertial Odometry, SLAM.
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -98,7 +98,7 @@ This leads to uncorrected yaw drift in IMU-based odometry, especially during pro
 To address these issues, Arzberger et al. \cite{Kalman_filter_sphere,sphere_Fabi_1,DeltaFilter} introduced specialized filtering techniques for spherical systems. 
 Their Delta Filter is a lightweight, real-time, multi-trajectory pose estimation method that fuses unreliable trajectories, such as those from IMUs and stereo visual-inertial odometry (VIO), into a more robust estimate, without requiring explicit sensor uncertainty modeling. 
 The filter operates on pose changes ("deltas"), uses a probabilistic weighting scheme for translation estimation, and applies rotational interpolation via spherical linear interpolation (Slerp). 
-A follow-up Kalman Filter design extended this approach by incorporating covariance-aware models, enhancing pose estimation accuracy during rapid and complex motion.
+A follow-up Kalman Filter design extended this approach by incorporating a covariance-aware model, enhancing pose estimation accuracy during rapid and complex motion.
 % Despite these advances, most current spherical SLAM systems still lack precise onboard actuation for controlled repositioning beyond rolling, limiting their effectiveness in tightly constrained environments. 
 While recent studies (e.g. \cite{Kalman_filter_sphere}) have compared their results with state-of-the-art SLAM systems such as DLIO\cite{dlio} and FAST-LIO2\cite{fastlio2}, the field continues to evolve rapidly. 
 More recent SLAM algorithms (e.g., FAST-LIVO2 \cite{fastlivo2}), advanced LiDAR sensors like the MID-360 and RoboSense Airy, and modern single-board computers such as the Raspberry Pi 5 with PCIe support and Gigabit Ethernet are pushing the boundaries of what is possible. 
@@ -126,7 +126,7 @@ A notable example is RoboBall~\cite{roboball}, which features a novel soft press
 This robot successfully navigates gravel, grass, steep inclines, and even floats and maneuvers on water. 
 However, the deformable shell introduces complex dynamic behavior. 
 The researchers addressed this using a Linear Quadratic Regulator (LQR) for steering and a model-based proportional controller for driving. 
-In contrast, Ren et al. \cite{novelsphere} and Kolbari et al. \cite{pendulum_sphere} adopted PID-based stabilization strategies to enhance motion control and responsiveness. 
+Ren et al. \cite{novelsphere} experimented with both robust servo LQR (RSLQR) and PID-based stabilization strategies to enhance motion control and responsiveness, whereas Kolbari et al. \cite{pendulum_sphere} adopted only PID control for stabilization. 
 RoboBall’s experiments further revealed that internal pressure and shell deformation significantly affect dynamic behavior—especially due to the presence of a ``dead zone'' where balance control becomes unstable during motion.
 Taken together, these pendulum-based locomotion strategies highlight the value of combining mechanical simplicity with robust control to enable adaptive movement in unpredictable environments. 
 While a variety of innovative locomotion methods have been proposed for spherical robots, including flywheel-, rod-, and pendulum-driven systems, few have been evaluated in conjunction with advanced LiDAR-inertial odometry algorithms under real-world motion dynamics.
