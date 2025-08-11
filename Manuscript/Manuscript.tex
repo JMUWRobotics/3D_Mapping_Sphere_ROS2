@@ -218,12 +218,6 @@ The sphere uses a servo motor for actuation through pendulum-driven locomotion.
 A second servo shifts the center of mass laterally by moving the battery to enable curved trajectories.}
 \label{fig:cad-design2}
 \end{figure}
-\begin{figure*}
-    \centering
-    \includegraphics[width=1\linewidth]{pics/Khonsu_diagram.pdf} 
-    \caption{State chart of the Sphere System showing the control and mapping subsystems.}
-    \label{fig:sphere_system}
-\end{figure*}
 \begin{table}
 \centering
 \caption{Hardware components and placement in the sphere}
@@ -244,8 +238,15 @@ Top    & Livox Mid-360 LiDAR \\
        & Pi Camera V3 (12 MP) \\
 \bottomrule
 \end{tabularx}
-\vspace{-2mm}
+\vspace{-4mm}
 \end{table}
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=1\linewidth]{pics/Khonsu_diagram.pdf} 
+    \caption{State chart of the Sphere System showing the control and mapping subsystems.}
+    \label{fig:sphere_system}
+\end{figure*}
 
 \section{Software and Control System}
 As shown in the system state diagram in Fig.~\ref{fig:sphere_system}, both the actuated and non-actuated spheres follow the same state transitions, with the exception of the control subsystem, which is unique to the actuated variant. 
