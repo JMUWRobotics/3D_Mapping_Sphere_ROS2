@@ -24,7 +24,7 @@ private:
     output.motor_value = static_cast<int>(msg->axes[1] * 100.0);
 
     // Right stick X-axis (-1 to 1) -> servop (-90 to 90)
-    output.servop = static_cast<int>(95 + (msg->axes[3] * -30.0));
+    output.servop = static_cast<int>(95 + (msg->axes[2] * -30.0));
 
     // Button mapping
     if (msg->buttons[4])      // LB

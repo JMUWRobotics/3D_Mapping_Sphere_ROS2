@@ -147,7 +147,6 @@ Taken together, these pendulum-based locomotion strategies highlight the value o
 While a variety of innovative locomotion methods have been proposed for spherical robots, including flywheel-, rod-, and pendulum-driven systems, few have been evaluated in conjunction with advanced LiDAR-inertial odometry algorithms under real-world motion dynamics, as briefly discussed in Section~\ref{ch:introduction}.
 This paper addresses this gap by introducing our second prototype, a pendulum-driven spherical robot designed to achieve both robust locomotion and accurate, real-time mapping performance within the constraints of a compact platform.
 
-
 \chapter{Fundamentals and Theoretical Background}
 \section{Inertial Measurement Unit (IMU)}
 
@@ -238,12 +237,19 @@ This bearing allows smooth sliding along the inner shell surface while accommoda
 
 
 \subsubsection{pendulum-driven Mechanism}
+A pendulum-driven spherical robot is a type of \textit{barycentric sphere robot} that relies on shifting its internal center of mass for locomotion. 
+The robot consists of a spherical shell, a central shaft, an internal pendulum, and typically two motors (or a dual-axis torque motor), as illustrated in Fig.~XX. 
+The pendulum, mounted near the inner surface of the shell, is connected to the center of the sphere and actuated by a motor or high-precision servo. 
+By swinging the pendulum to the left or right, the robot shifts its center of mass, causing the shell to roll laterally. 
+Meanwhile, the dual-axis torque motor governs forward and backward motion by controlling the pendulum’s orientation in the sagittal plane. 
+This design provides a relatively simple and energy-efficient method of achieving mobility, though its torque is limited by the pendulum’s displacement and gravitational force.\cite{pendulum_sphere,Pendulum_Driven_Spherical_Robot,roboball}
+
 
 \subsection{Conservation of Angular Momentum}
 Instead of moving the center of mass for the rolling motion, the motion of this sphere is achieved by using reaction wheel. 
 We will focus on the flywheel-driven mechanism, which is a specific implementation of the conservation of angular momentum principle.\cite{Aminata}
 \subsubsection{Flywheel-driven}
-he flywheel mechanism in spherical robots operates on the principle of conservation of angular momentum (COAM), where a rapidly spinning internal rotor generates torque to drive motion. By accelerating, decelerating, or reorienting the flywheel, reaction torques are imparted to the spherical shell, enabling controlled movement.
+The flywheel mechanism in spherical robots operates on the principle of conservation of angular momentum (COAM), where a rapidly spinning internal rotor generates torque to drive motion. By accelerating, decelerating, or reorienting the flywheel, reaction torques are imparted to the spherical shell, enabling controlled movement.
 More advanced implementations use Control Moment Gyroscopes (CMGs), in which a high-speed flywheel mounted on a gimbal produces torque in an orthogonal axis when rotated, thus amplifying output power.
 One of examples that follow this mecahnism is L.U.N.A\cite{luna} via the Impulse by Conservation of Angular Momentum (IBCOAM) method.
 
@@ -266,8 +272,16 @@ One of examples that follow this mecahnism is L.U.N.A\cite{luna} via the Impulse
 Compared to barycenter-offset systems, flywheel-based designs are not limited by the internal center of mass and can achieve higher torques, improved agility, and even holonomic motion with multi-axis configurations.
 However, these systems introduce challenges such as precession-induced instability, nonlinear dynamics, and high energy demands, requiring sophisticated control strategies for stable and precise operation.\cite{flywheel_hamaster_explanation}
 
-\subsection{Rod-driven}
-
+\subsection{Rod-Driven Mechanism}
+The rod-driven mechanism for spherical robots generates locomotion by extending and retracting internal rods positioned within the sphere. 
+There are two primary ways in which these rods can initiate rotation. 
+The first is the \textit{pushing approach}, where rods on the side opposite to the intended rolling direction extend outward to make contact with the ground. 
+By exerting force against the surface, they generate a reaction torque that propels the sphere in the desired direction. 
+The second method is the \textit{leverage approach}, in which the weight of the rods themselves is used to shift the robot’s center of mass. 
+When extended without contacting the ground, the displaced weight creates torque that induces rotation. 
+In practice, a combination of pushing and leverage is often employed, where the rods provide both active ground interaction and passive weight shifting, resulting in more efficient and controllable locomotion. 
+However, experiments have shown several challenges: on soft or sandy surfaces the mechanism struggles to generate enough torque due to actuator limitations, while on solid ground poorly chosen extension angles can lead to unstable or oscillatory motion. 
+Moreover, leverage alone often fails to move the robot effectively, and even combined push-and-leverage control may cause stalling or uncontrolled rolling, requiring manual intervention. \cite{rod_sphere}
 
 
 
@@ -345,7 +359,29 @@ where $u[k]$ represents the control signal (e.g., the servo motor command) at th
 
 In practice, the discrete controller enables real-time implementation on microcontrollers and embedded systems. Enhancements such as introducing a deadband around the setpoint can suppress small oscillations, while resetting the integral term within this region helps prevent windup. Moreover, manual control inputs may be superimposed on the PID output, and the resulting command is constrained within actuator limits to ensure safe and stable operation. Compared to the continuous formulation, the discrete PID explicitly accounts for sampling and computational constraints, making it more suitable for digital hardware implementations
 
-\subsection{Linear Quadratic Regulator (LQR) Control}
+\subsection{Linear Quadratic Regulator (LQR)}
+
+The \textit{Linear Quadratic Regulator} (LQR) is considered one of optimal control theory, particularly notable for its analytical tractability in stabilizing linear time-invariant systems with a quadratic cost functional. For a system modeled in state-space form as
+\[
+\dot{\mathbf{x}} = \mathbf{A} \mathbf{x} + \mathbf{B} \mathbf{u},
+\]
+the infinite-horizon cost to be minimized is taken as
+\[
+J = \int_{0}^{\infty} \left( \mathbf{x}^{T} \mathbf{Q} \, \mathbf{x} + \mathbf{u}^{T} \mathbf{R} \, \mathbf{u} \right) \, dt,
+\]
+where \(\mathbf{Q} = \mathbf{Q}^{T} \succeq 0\) and \(\mathbf{R} = \mathbf{R}^{T} \succ 0\) are the state and control weight matrices \cite{underactuatedLQR}.
+
+By assuming the optimal cost-to-go function \(J^*(\mathbf{x})\) is quadratic, \(J^*(\mathbf{x}) = \mathbf{x}^T \mathbf{S} \mathbf{x}\), and substituting this into the Hamilton–Jacobi–Bellman condition, one derives an algebraic Riccati equation:
+\[
+\mathbf{A}^T \mathbf{S} + \mathbf{S} \mathbf{A} - \mathbf{S} \mathbf{B} \mathbf{R}^{-1} \mathbf{B}^T \mathbf{S} + \mathbf{Q} = \mathbf{0}.
+\]
+The solution \(\mathbf{S}\) subsequently yields the optimal state-feedback law
+\[
+\mathbf{u}^*(\mathbf{x}) = -\mathbf{R}^{-1} \mathbf{B}^T \mathbf{S} \, \mathbf{x} = -\mathbf{K} \mathbf{x},
+\]
+where \(\mathbf{K} = \mathbf{R}^{-1} \mathbf{B}^T \mathbf{S}\) is the gain matrix \cite{underactuatedLQR}.
+
+LQR's appeal lies in its closed-form solution, robustness guarantees, and minimal reliance on computational resources, making it especially valuable as a baseline controller in robotic systems. Recent studies have shown that actuated spherical robots increasingly adopt LQR-based control rather than classical PID approaches, since LQR can explicitly handle multi-variable state coupling and achieve smoother stabilization. This researches highlights LQR’s suitability for nonlinear robotic platforms where traditional PID controllers face some limitations\cite{novelsphere}.
 
 
 
