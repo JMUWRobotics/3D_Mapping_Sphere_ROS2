@@ -40,15 +40,38 @@
 
 \generatetitle
 
-\cleardoublepage
+\cleardoublepage    
 
-\begin{prefacesection}{Zusammenfassung}
-Die vorliegende Arbeit \dots
+\begin{prefacesection}{Acknowledgements}
+I would like to thank God for granting me good health, strength, and blessings to complete this work.
+I am deeply grateful to my family for their continuous support and encouragement throughout my academic journey.
+I would also like to express my sincere gratitude to my supervisor, Prof. Dr. Andreas Nüchter, for giving me the opportunity to work on this exciting project, for his invaluable guidance and constructive feedback, and for providing the necessary resources and facilities to conduct this research.
+I am especially thankful to Fabian Arzberger for his assistance, inspiring discussions, and the valuable time we spent together working on research development and improvements.
+I would also like to thank Dr. Michael Blieber for his generous technical advice and support whenever I needed guidance.
+I am grateful to my friends and colleagues at the Robotics Department for their encouragement and camaraderie.
+Finally, I would like to thank my friends from Cairo and Würzburg for their unwavering support and friendship.
 \end{prefacesection}
 
+\newpage
+
+\begin{prefacesection}{Abstract}
+Spherical robots offer unique advantages for mapping applications in hazardous or confined environments unlike traditional wheeled or legged robots, thanks to their protective shells and omnidirectional mobility. 
+This work presents two complementary spherical mapping systems: a lightweight, non-actuated design and an actuated variant featuring internal pendulum-driven locomotion. 
+Both systems are equipped with a Livox Mid-360 solid-state LiDAR sensor and run LiDAR-Inertial Odometry (LIO) algorithms in real-time on resource-constrained hardware (Raspberry Pi 5). 
+We assess the mapping accuracy of these systems by comparing the resulting 3D point-clouds from the LIO algorithms to a ground truth map from a high-precision terrestrial laser scanner.
+% The results indicate that the performance of state-of-the-art LIO algorithms deteriorates due to the high dynamic movement introduced by the spherical locomotion, leading to globally inconsistent maps and sometimes unrecoverable drift.
+A comparative evaluation highlights distinct performance characteristics: the non-actuated sphere achieves higher mapping accuracy, while the actuated system provides denser point-clouds and shows potential for autonomous navigation. 
+Furthermore, the performance of state-of-the-art LIO algorithms deteriorates due to the high dynamic movement introduced by the spherical locomotion, leading to globally inconsistent maps and sometimes unrecoverable drift.
+%These results lay the groundwork for deploying spherical robots in challenging environments such as underground infrastructure or planetary surfaces, where traditional robotic platforms often face operational constraints. \dots
+\end{prefacesection}
 \cleardoublepage
 \tableofcontents
 
+\thispagestyle{empty}
+\listoffigures
+\listoftables
+\newpage
+\pagenumbering{arabic}
 
 \startTextChapters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -69,18 +92,26 @@ Both systems integrate FAST-LIO2\cite{fastlio2}, FAST-LIVO2\cite{fastlivo2}, and
 The primary contribution of this work is the comparative analysis of these algorithms' performance on spherical platforms and their validation against terrestrial laser scanning ground truth data.
 This evaluation provides insights into the practical applicability of different SLAM approaches for spherical robots and establishes benchmarks for future developments in this emerging field.
 
-\begin{figure}[ht]
-\centerline{\includegraphics[width=\columnwidth]{pics/two_spheres.jpg}}
+\begin{figure}[h]
+\centerline{\includegraphics[width=0.8\columnwidth]{pics/two_spheres.jpg}}
 \caption{(Left:) \SI{20}{\centi\meter} diameter actuated sphere.
 (Right:) \SI{16}{\centi\meter} diameter non-actuated sphere.
 A video where both spheres are moving is available at \url{https://youtube.com/shorts/lxTF85HK-zY}.}
-\vspace{-15pt}
+
 \label{fig:twospheres}
 \end{figure}
 
+\begin{figure}[h]
+\centerline{\includegraphics[width=0.8\columnwidth]{pics/marosphere_pic2.jpg}}
+\caption{Actuated Sphere being tested and evaluated in Computer Science Building.}
+\label{fig:test}
+\end{figure}
+
+
 \section{Outline}
-In the next section, we review recent SLAM developments for spherical platforms, with emphasis on LiDAR-inertial methods, followed by advancements in spherical robot design.
-In Section \ref{sec:hardwaredesing}, we provide a description of the hardware implementation of the two spherical robots. 
+In the next Chapter, we review recent SLAM developments for spherical platforms, with emphasis on LiDAR-inertial methods, followed by advancements in spherical robot design.
+In Chapter~\ref{ch:fundamentals}, we provide an overview of the fundamental concepts and technologies that relates to our work, including Inertial Measurement Units (IMUs), LiDAR technology, spherical robot types, and an introduction to SLAM algorithms.
+In Chapter~\ref{ch:hardwaredesign}, we provide a description of the hardware implementation of the two spherical robots. 
 Subsequently, we describe the software integration, as well as the motion control mechanisms used for the actuated sphere. 
 Finally, we provide a comprehensive evaluation of the mapping accuracy by comparing the maps of the proposed systems with a ground truth map obtained using high-precision terrestrial laser scanning (TLS). 
 
@@ -104,11 +135,38 @@ This significantly degrades pose estimation accuracy and leads to error accumula
 This problem is further compounded by the absence of magnetometer use—often intentionally excluded due to the unreliability of magnetic field data in planetary environments.
 This leads to uncorrected yaw drift in IMU-based odometry, especially during prolonged navigation.
 
+\begin{figure}[h]
+    \centering
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{pics/luna.png}
+    \label{fig:luna_flywheel}
+    \caption{L.U.N.A. robot with internal flywheel actuation}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.8\textwidth]{pics/DAEDALUS.png}
+    \label{fig:daedalus}
+    \caption{DAEDALUS robot for lunar exploration\cite{esa_lunar_cave_explorer}}
+\end{subfigure}
+\label{fig:spherical_robots}
+\caption{Spherical robots concepts}
+\end{figure}
+
+
 To address these issues, Arzberger et al. \cite{Kalman_filter_sphere,sphere_Fabi_1,DeltaFilter} introduced specialized filtering techniques for spherical systems. 
 Their Delta Filter is a lightweight, real-time, multi-trajectory pose estimation method that fuses unreliable trajectories, such as those from IMUs and stereo visual-inertial odometry (VIO), into a more robust estimate, without requiring explicit sensor uncertainty modeling. 
 The filter operates on pose changes ("deltas"), uses a probabilistic weighting scheme for translation estimation, and applies rotational interpolation via spherical linear interpolation (Slerp). 
 A follow-up Kalman Filter design extended this approach by incorporating a covariance-aware model, enhancing pose estimation accuracy during rapid and complex motion.
 % Despite these advances, most current spherical SLAM systems still lack precise onboard actuation for controlled repositioning beyond rolling, limiting their effectiveness in tightly constrained environments. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{pics/delta_kalman_robots.jpg}
+    \label{fig:delta_kalman_robots}
+    \caption{(Left:) A sphere platform featuring a 'Hesai Pandar-XT32'\cite{Kalman_filter_sphere}. (Right:) A 'Livox Mid-100' Spherical platform from \cite{DeltaFilter}}
+\end{figure}
 
 While recent studies (e.g. \cite{Kalman_filter_sphere}) have compared their results with state-of-the-art SLAM systems such as DLIO\cite{dlio} and FAST-LIO2\cite{fastlio2}, the field continues to evolve rapidly. 
 More recent SLAM algorithms (e.g., FAST-LIVO2 \cite{fastlivo2}), advanced LiDAR sensors like the MID-360 and RoboSense Airy, and modern single-board computers such as the Raspberry Pi 5 with PCIe support and Gigabit Ethernet are pushing the boundaries of what is possible. 
@@ -148,6 +206,7 @@ While a variety of innovative locomotion methods have been proposed for spherica
 This paper addresses this gap by introducing our second prototype, a pendulum-driven spherical robot designed to achieve both robust locomotion and accurate, real-time mapping performance within the constraints of a compact platform.
 
 \chapter{Fundamentals and Theoretical Background}
+\label{ch:fundamentals}
 \section{Inertial Measurement Unit (IMU)}
 
 An Inertial Measurement Unit (IMU) is an electronic device—either electromechanical or solid-state—that measures the specific force, angular rate, and, in some cases, the magnetic field of the object or body to which it is attached.
@@ -199,6 +258,32 @@ Despite their usefulness, magnetometers also present certain limitations. Their 
 These disturbances, commonly referred to as \textit{soft-iron} and \textit{hard-iron} effects, can significantly reduce measurement accuracy. Consequently, proper calibration techniques, such as ellipsoid fitting or offset compensation, are necessary to ensure reliable heading estimation~\cite{vectornav_mems_operation}.
 
 \section{LiDAR Technology}
+Light Detection and Ranging (LiDAR) is a transformative sensing technology that enables accurate 3D perception of the environment. 
+Unlike traditional cameras, which passively capture reflected light, LiDAR actively emits laser pulses and measures the time-of-flight of the returned signals. 
+By repeating this process thousands of times per second, LiDAR builds dense point clouds that capture both the geometry and scale of the surrounding environment~\cite{neon_lidar_basics}.
+
+Several LiDAR principles are commonly used:
+\subsection*{Range-Finding LiDAR}
+The most fundamental form, range finders, emit laser pulses and measure the time difference between emission and reception. 
+This allows accurate distance measurements with high spatial resolution, particularly effective for small-scale targets due to the short laser wavelength compared to radar~\cite{bleier_advanced_sensory_systems}.  
+
+\subsection*{Differential Absorption LiDAR (DIAL)}
+DIAL systems measure atmospheric composition by exploiting the absorption characteristics of gases. 
+Two laser beams are used: one at a wavelength corresponding to the absorption peak of a target gas (\textit{on-line}), and another at a nearby non-absorbing wavelength (\textit{off-line}). 
+The ratio of the returned signals reveals the presence and concentration of the gas~\cite{bleier_advanced_sensory_systems}.  
+
+\subsection*{Doppler LiDAR}
+Doppler LiDAR utilizes the frequency shift (Doppler effect) of the returned signal to measure the velocity of moving particles such as aerosols. 
+This technique is widely used for wind profiling, turbulence detection, and monitoring hazardous atmospheric conditions around launch sites~\cite{bleier_advanced_sensory_systems}.  
+
+\subsection{Hybrid Solid-State LiDAR Technology}
+Recent advancements in LiDAR move away from traditional mechanical spinning sensors toward solid-state and hybrid designs. 
+These approaches reduce moving parts, improve robustness, and enable compact form factors suitable for mobile robots and drones. 
+Instead of relying on repetitive scan lines, some hybrid LiDARs employ non-repetitive scanning patterns that gradually fill in the environment with dense coverage over time. 
+This results in rich point clouds while maintaining lower cost and power consumption compared to high-end mechanical systems~\cite{globalgps_lidar_types,govcomm_compared}.  
+
+An example of such technology is the \textbf{Livox Mid-360}, a hybrid solid-state LiDAR optimized for robotics and SLAM. 
+It offers a full \(360^\circ\) horizontal field of view and employs a non-repetitive scanning pattern, making it highly effective for real-time mapping and obstacle avoidance in autonomous systems. Its balance of compact size, robustness, and dense perception capability makes it a suitable choice for research and mobile robotic applications~\cite{livox_mid360_docs}.
 
 \section{Spherical Robot Types}
 \label{sec:spherical-robot-types}
@@ -241,7 +326,7 @@ A pendulum-driven spherical robot is a type of \textit{barycentric sphere robot}
 The robot consists of a spherical shell, a central shaft, an internal pendulum, and typically two motors (or a dual-axis torque motor), as illustrated in Fig.~XX. 
 The pendulum, mounted near the inner surface of the shell, is connected to the center of the sphere and actuated by a motor or high-precision servo. 
 By swinging the pendulum to the left or right, the robot shifts its center of mass, causing the shell to roll laterally. 
-Meanwhile, the dual-axis torque motor governs forward and backward motion by controlling the pendulum’s orientation in the sagittal plane. 
+Meanwhile, the dual-axis torque motor controls forward and backward motion by controlling the pendulum’s orientation. 
 This design provides a relatively simple and energy-efficient method of achieving mobility, though its torque is limited by the pendulum’s displacement and gravitational force.\cite{pendulum_sphere,Pendulum_Driven_Spherical_Robot,roboball}
 
 
@@ -254,18 +339,15 @@ More advanced implementations use Control Moment Gyroscopes (CMGs), in which a h
 One of examples that follow this mecahnism is L.U.N.A\cite{luna} via the Impulse by Conservation of Angular Momentum (IBCOAM) method.
 
 \begin{figure}[ht]
+        \centering
+
 \begin{subfigure}{0.48\textwidth}
+
     \centering
     \includegraphics[width=0.9\textwidth]{pics/flywheel_2D_top.jpg}
     \label{fig:flywheel_2D_top}
 \end{subfigure}
-\hfill
-\begin{subfigure}{0.48\textwidth}
-    \centering
-    \includegraphics[width=0.9\textwidth]{pics/luna.png}
-    \label{fig:luna_flywheel}
-\end{subfigure}
-\caption{Flywheel-based spherical robot actuation. (Left) shows a simplified 2D top view of one example of flywheel mechanism, where the flywheel's angular momentum is used to generate torque for movement.~\cite{SpheriDrive} (Right) shows the L.U.N.A. spherical robot, which uses an internal flywheel to achieve controlled motion in a compact form factor.}
+\caption{Flywheel-based simplified 2D top view of one example of flywheel mechanism, where the flywheel's angular momentum is used to generate torque for movement.~\cite{SpheriDrive}}
 \label{fig:flywheel_sphere}
 \end{figure}
 
@@ -285,7 +367,71 @@ Moreover, leverage alone often fails to move the robot effectively, and even com
 
 
 
-\section{SLAM Basics (Inertial Odometry, Visual-Inertial Odometry, etc.)}
+\section{Introduction about SLAM}
+Simultaneous Localization and Mapping (SLAM) addresses the problem of enabling a robot to navigate in an unknown environment while building a consistent map of that environment.
+A robot typically starts at an initial position and moves through an environment with uncertain motion dynamics. 
+Over time, this uncertainty grows, making it increasingly difficult for the robot to accurately estimate its pose in global coordinates. 
+
+To overcome this challenge, the robot relies on its onboard sensors---such as cameras, LiDAR, radar, and IMU---which are inherently affected by noise. 
+Using these noisy measurements, the robot incrementally builds a representation of the environment (a map) while simultaneously estimating its position relative to that map in real time \cite{slam_problem}. 
+
+Researchers have developed a variety of SLAM algorithms to address this problem with improved accuracy, robustness, and computational efficiency.
+Among the widely studied methods are \textit{Visual-Inertial Odometry (VIO)}, \textit{LiDAR-Inertial Odometry (LIO)}, and their hybrid variant \textit{Visual-LiDAR-Inertial Odometry (VLIO)}. 
+These approaches form the foundation of many modern SLAM systems.
+\subsection{Visual-Inertial Odometry (VIO)}
+VIO fuses visual data (from monocular, stereo, or RGB-D cameras) with inertial data from an IMU. 
+The visual input provides rich environmental features, while the IMU provides high-frequency motion estimates~\cite{inertiallabs_vio_revolution,Survey_odometry}.
+
+Some of its advantages include:
+\begin{itemize}
+    \item Works well in texture-rich environments.
+    \item IMU compensates for fast motions and reduces scale ambiguity in monocular systems.
+    \item More lightweight than LiDAR-based methods.
+\end{itemize}
+
+However, VIO also has some limitations:
+\begin{itemize}
+    \item Struggles in low-light or feature-poor environments.
+    \item Sensitive to camera calibration and rolling-shutter effects.
+    \item Drift can accumulate without loop closure.
+\end{itemize}
+
+\subsection{LiDAR-Inertial Odometry (LIO)}
+LIO integrates LiDAR scans with IMU measurements. LiDAR provides highly accurate geometric information about the surroundings, while the IMU contributes motion constraints.
+By combining these two sources of information, LIO can estimate the robot's pose more accurately and robustly, even in challenging environments~\cite{lee2024_lidar_odometry_survey,fastlio2}.
+
+Some of its advantages include:
+\begin{itemize}
+    \item Good performance in environments with poor lighting or visual features.
+    \item Provides accurate 3D geometry and range data.
+    \item Less sensitive to environmental changes compared to vision-based methods.
+\end{itemize}
+
+However, LIO also has some limitations:
+\begin{itemize}
+    \item LiDAR sensors are expensive and power-hungry.
+    \item Struggles in featureless areas (e.g., tunnels with uniform walls).
+    \item Lower spatial resolution compared to cameras.
+\end{itemize}
+
+\subsection{LiDAR-Inertial-Visual Odometry (LIVO)}
+LIVO combines the strengths from VIO and LIO by integrating data from both vision and LiDAR, together with IMU.
+Visual features improve robustness in environments where LiDAR degeneracy occurs, while LiDAR provides reliable geometry where vision fails (e.g., in poor lighting)~\cite{yuan2024sr,fastlivo2}.
+
+Some of its advantages include:
+\begin{itemize}
+    \item Strong robustness by exploiting complementary sensor modalities.
+    \item Reduced degeneracy problems (both visual and LiDAR weaknesses are compensated).
+    \item Often achieves state-of-the-art accuracy in SLAM benchmarks.
+\end{itemize}
+
+However, VLIO also has some limitations:
+\begin{itemize}
+    \item High computational complexity and sensor fusion challenges.
+    \item Requires precise extrinsic calibration among LiDAR, camera, and IMU.
+    \item Higher hardware cost and system integration complexity.
+\end{itemize}
+
 \section{Control Strategies}
 \label{sec:control-strategies}
 Control strategies play a crucial role in various robotic applications and spherical robots are no exception.
@@ -386,7 +532,7 @@ LQR's appeal lies in its closed-form solution, robustness guarantees, and minima
 
 
 \chapter{Hardware Design}
-\label{sec:hardwaredesign}
+\label{ch:hardwaredesign}
 
 This chapter describes the hardware design and structural implementation of two spherical robots developed for 3D mapping: the non-actuated sphere and the actuated sphere.
 
@@ -447,7 +593,7 @@ It must be pushed manually.}
 \end{figure}
 \begin{table}
 \centering
-\caption{Hardware components and placement in the sphere}
+\caption{Hardware components and placement in non-actuated sphere}
 \label{tab:hardware_components_non_actuated}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \toprule
@@ -550,7 +696,7 @@ These include orthographic projections, component placement, and disc dimensions
 
 \begin{table}
 \centering
-\caption{Hardware components and placement in the sphere}
+\caption{Hardware components and placement in the actuated sphere}
 \label{tab:hardware_components_actuated}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \toprule
@@ -615,6 +761,105 @@ The mapping system is implemented with several bash scripts that orchestrate the
 The source code, configuration files, and instructions for building the software are available in our GitHub repository~\cite{githubsphere}.
 All mapping computations are performed onboard in real-time.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{pics/rqt/ros_fast_lio.png}
+    \caption{Mapping System Rqt Graph(FAST-LIO2)}
+    \label{fig:ros_fast_lio}
+\end{figure}
+
+
+
+
+\begin{table}[ht]
+\centering
+\caption{Livox ROS2 Topics}
+\label{tab:Livox_topics}
+\scriptsize  % Even smaller than footnotesize
+\begin{tabularx}{\textwidth}{@{}llXlX@{}}
+\toprule
+\textbf{Topic} & \textbf{Publisher} & \textbf{Subscribers} & \textbf{Type} & \textbf{Description} \\
+\midrule
+\texttt{/livox/imu} & \texttt{livox\_lidar\_publisher} & \texttt{waveshare\_servo\_node} & \texttt{sensor\_msgs/Imu} & IMU data from internal IMU of Livox Mid-360 \\[0.3em]
+\texttt{/livox/points} & \texttt{livox\_lidar\_publisher} & \texttt{laser\_mapping}, \texttt{dlio\_odom\_node} & \texttt{sensor\_msgs/PointCloud2} & Point cloud data from Livox Mid-360 LiDAR \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{FAST-LIO2 ROS2 Topics}
+\label{tab:fast_lio_topics}
+\scriptsize  % Even smaller than footnotesize
+\begin{tabularx}{\textwidth}{@{}llXlX@{}}
+\toprule
+\textbf{Topic} & \textbf{Publisher} & \textbf{Subscribers} & \textbf{Type} & \textbf{Description} \\
+\midrule
+\texttt{/Odometry} & \texttt{laser\_mapping} & rviz or rosbag & \texttt{nav\_msgs/Odometry} & publishes pose (position + orientation) and velocity of the robot \\[0.3em]
+\texttt{/cloud\_registered} & \texttt{laser\_mapping} & rviz or rosbag & \texttt{sensor\_msgs/PointCloud2} & PointCloud data output from FAST-LIO2 \\
+\texttt{/path} & \texttt{laser\_mapping} & rviz or rosbag & \texttt{nav\_msgs/Path} & Visualizes the full trajectory of the robot \\
+\texttt{/tf} & \texttt{laser\_mapping} & rviz or rosbag & \texttt{tf2\_msgs/TFMessage} & Publishes the robot’s pose as a transform between frames (body -\textgreater~ camera\_init) \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{pics/rqt/ros_fast_livo.png}
+    \caption{Mapping System Rqt Graph(FAST-LIVO2)}
+    \label{fig:ros_fast_livo}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{FAST-LIVO2 ROS2 Topics}
+\label{tab:fast_livo_topics}
+\scriptsize  % Even smaller than footnotesize
+\begin{tabularx}{\textwidth}{@{}llXlX@{}}
+\toprule
+\textbf{Topic} & \textbf{Publisher} & \textbf{Subscribers} & \textbf{Type} & \textbf{Description} \\
+\midrule
+\texttt{/Odometry} & \texttt{laserMapping} & rviz or rosbag & \texttt{nav\_msgs/Odometry} & publishes pose (position + orientation) and velocity of the robot \\[0.3em]
+\texttt{/cloud\_registered} & \texttt{laserMapping} & rviz or rosbag & \begin{tabular}{@{}l@{}}\texttt{sensor\_msgs/PointCloud2} \\ \texttt{livox\_ros\_driver2/CustomMsg}\end{tabular}  & PointCloud data output from FAST-LIVO2 \\
+\texttt{/path} & \texttt{laserMapping} & rviz or rosbag & \texttt{nav\_msgs/Path} & Visualizes the full trajectory of the robot \\
+\texttt{/tf} & \texttt{laserMapping} & rviz or rosbag & \texttt{tf2\_msgs/TFMessage} & Publishes the robot’s pose as a transform between frames (aft\_mapped -\textgreater~ camera\_init) \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{pics/rqt/ros_dlio.png}
+    \caption{Mapping System Rqt Graph(DLIO)}
+    \label{fig:ros_dlio}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{DLIO ROS2 Topics}
+\label{tab:dlio_topics}
+\scriptsize  % Even smaller than footnotesize
+\begin{tabularx}{\textwidth}{@{}llXlX@{}}
+\toprule
+\textbf{Topic} & \textbf{Publisher} & \textbf{Subscribers} & \textbf{Type} & \textbf{Description} \\
+\midrule
+\texttt{/dlio/odom\_node/pointcloud/deskewed} & \texttt{dlio\_odom\_node} & rviz or rosbag & \texttt{sensor\_msgs/PointCloud2} & PointCloud data output from DLIO \\[0.3em]
+\texttt{/dlio/odom\_node/path} & \texttt{dlio\_odom\_node} & rviz or rosbag & \texttt{nav\_msgs/Path} & Visualizes the full trajectory of the robot \\
+\texttt{/tf} & \texttt{dlio\_odom\_node} & rviz or rosbag & \texttt{tf2\_msgs/TFMessage} & Publishes the robot’s pose as a transform between frames (odom -\textgreater~base\_link ) \\
+
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
 \section{Actuator System (Actuated Sphere Only)}
 The actuated sphere features an internal movement control system, operated using a Logitech F710 controller. 
 The controller's two joysticks are mapped to distinct control tasks:
@@ -629,15 +874,104 @@ This control strategy allows for fine-grained movement and stabilization, combin
 % \end{equation}
 % where \( u[k] \) is the servo motor command at time step \( k \), \( e[k] \) is the pitch error defined as the difference between the target angle \( \theta_{\text{target}} \) and the current angle \( \theta_{\text{current}} \), and \( K_p \), \( K_i \), \( K_d \) are the proportional, integral, and derivative gains, respectively. The controller runs at a fixed sampling interval \( \Delta t \) and includes a small deadband around the setpoint to reduce oscillations. Within this deadband, the integral term is reset to prevent windup. Additionally, manual control inputs can be superimposed onto the PID output, enabling user intervention without disrupting balance. The resulting command is then limited to a predefined range before being sent to the servo motor, which also considers real-time motor speed and IMU feedback to maintain stable velocity and orientation.
 
-The control system is implemented using three separate ROS2 workspace packages, each responsible for a specific aspect of the control logic:
+The control system is implemented using three separate ROS2 packages but they are in same workspace, each responsible for a specific aspect of the control logic:
 \begin{itemize}
-    \item \texttt{waveshare\_servo\_control}: Implements the PID control logic for the servo motor and manages the mass shifting mechanism.
-    \item \texttt{joystick\_control}: Handles joystick input from the Logitech F710 controller, mapping joystick movements to control commands for servo operation and mass shifting.
-    \item \texttt{pwm\_servo\_control}: Manages PWM signal generation for the servo motor responsible for pendulum control and mass shifting, utilizing WiringPi for rapid GPIO access.
-\end{itemize}
-These packages are integrated through a master ROS package called Khonsu, which enables system activation with a single command.
+    \item \texttt{waveshare\_servo}: Implements the PID control logic for the continuous servo motor and manages forward/backward movement.
+    \item \texttt{logitech\_controller}: Handles joystick input from the Logitech F710 controller, translating joystick movements to control commands for pwm servo and waveshare servo operation and mass shifting.
+    \item \texttt{servo\_pwm\_node}: Manages PWM signal generation for the servo motor using wiringPi with rapid GPIO access which is responsible for pendulum control and mass shifting.
+\end{itemize} 
+These packages are integrated to initialize using a single command from a master ROS package called Khonsu, which enables system activation with a single command.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{pics/rqt/ros_actuator.png}
+    \caption{Actuator System Rqt Graph}
+    \label{fig:ros_actuator}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Actuator System ROS2 Topics}
+\label{tab:actuator_topics}
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}llXlX@{}}
+\toprule
+\textbf{Topic} & \textbf{Publisher} & \textbf{Subscribers} & \textbf{Type} & \textbf{Description} \\
+\midrule
+\texttt{/joy} & \texttt{joy\_node} & \texttt{controlled\_node} & \texttt{sensor\_msgs/Joy} & Joystick input data from Logitech F710 controller \\[0.3em]
+\texttt{/controller} & \texttt{controller\_node} & \texttt{waveshare\_servo\_node}, \texttt{servo\_pwm\_node} & \texttt{geometry\_msgs/Twist} & Control commands for servo motors and mass shifting \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
 
 \chapter{Evaluation and Results}
+\label{sec:evaluation}
+
+In this Chapter, we present the evaluation and results of both spherical robots in terms of their mapping accuracy and stability.
+All experiments were conducted in a controlled indoor environment within the Computer Science building at the University of Würzburg.
+
+\section{Evaluation Setup}
+The evaluation consisted of mapping selected indoor areas—specifically, a corridor, a hall, and the upper floor—using both the non-actuated and actuated spherical robots. 
+For the non-actuated sphere, the robot was manually moved by hand and by foot. 
+Each mapping run used one of three SLAM algorithms: FAST-LIO2, DLIO, and FAST-LIVO2 (LIO mode). 
+The experiment was repeated three times—once for each algorithm—under the same environmental conditions. 
+The same procedure was carried out with the actuated sphere, with the key difference being that it was moved using a controller rather than manually. 
+Again, each of the three SLAM algorithms was executed along similar paths within the same locations. 
+We used 3DTK~\cite{3dtk} to process the resulting point-clouds, which were evaluated by comparing them against ground truth data obtained using a Riegl VZ-400 terrestrial laser scanner (TLS) as shown in Fig.~\ref{fig:riegl}.
+\begin{figure}[t]
+\centering
+\begin{subfigure}{0.495\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/riegl_lr.jpg}
+        \caption{Riegl VZ-400}
+        \label{fig:riegl}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.49\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/groundtruth1.jpg}\vspace{.5mm}
+        \includegraphics[width=\textwidth]{pics/groundtruth2.jpg}
+        \caption{Ground truth point-clouds}
+        \label{fig:sphere_on_the_move}
+\end{subfigure}
+\caption{Evaluation setup, showing the Riegl VZ-400 terrestrial laser scanner (TLS) and the resulting point-cloud used as ground truth in the evaluation.}\vspace{-3mm}
+\end{figure}
+\begin{figure}[t]
+\centering
+\begin{subfigure}{0.492\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/eagle_view/riegl_top.png}
+        \caption{Riegl Map Result}
+        \label{fig:riegl_top}\end{subfigure}
+\hfill
+\begin{subfigure}{0.492\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/eagle_view/act_livo_to.png}
+        \caption{Actuated FAST-LIVO2}
+        \label{fig:act_livo_top}
+\end{subfigure}\vspace{2mm}
+\begin{subfigure}{0.492\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/eagle_view/act_lio_top.png}
+        \caption{Actuated FAST-LIO2}
+        \label{fig:act_fast_lio_top}\end{subfigure}
+\hfill
+\begin{subfigure}{0.492\columnwidth}
+        \centering
+        \includegraphics[width=\textwidth]{pics/eagle_view/non_lio_top.png}
+        \caption{Non-actuated FAST-LIO2}
+        \label{fig:non_act_fast_lio_top}
+\end{subfigure}
+\caption{Bird's-eye view of a cross section of resulting point-clouds (color indicates height where red means higher).}\vspace{-1mm}
+\end{figure}
+
+The error metric used was the point-cloud root mean square error (RMSE).
+\begin{equation}
+    RMSE = \sqrt{\frac{1}{N} \sum_{i=1}^{N} |p_i - q_i|^2}
+\end{equation}
+where \( p_i \) and \( q_i \) are the corresponding points in the model and data point-clouds, and \( N \) is the number of corresponding points. 
+The RMSE measures the average distance between corresponding points in the two point clouds, providing an indication of the mapping accuracy.
 
 \section{Mapping Accuracy}
 We evaluate the point-cloud error for each mapping run using the three SLAM algorithms. 
@@ -681,113 +1015,133 @@ We were unable to obtain a satisfactory map using DLIO from the non-actuated sph
 Furthermore, sometimes the algorithms drifted without recovering after a fast motion, as shown in Fig.~\ref{fig:lio_drift}. 
 We attribute this to the underlying motion models used in the LIO algorithms, which were designed for more conventional systems.
 
-% \begin{figure}
-% \centering
-% \begin{subfigure}{0.49\columnwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/drifts_bending/dlio_drift.png}
-%     \caption{DLIO point-cloud}\label{fig:dlio_drift}
-% \end{subfigure}
-% \begin{subfigure}{0.49\columnwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/drifts_bending/lio_drifts.png}
-%     \caption{FAST-LIO2 point-cloud}\label{fig:lio_drift}
-% \end{subfigure}
-% \caption{Example failed cases from the non-actuated sphere where the LIO algorithm could not recover due to fast angular motion.
-% This results in huge drift and inconsistent mapping.}\vspace{-3mm}
-% \label{fig:drift}
-% \end{figure}
-% \begin{figure}
-% \centering
-% \begin{subfigure}{0.49\columnwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/drifts_bending/dlio_bending.png}
-%     \caption{DLIO point-cloud}\label{fig:dlio_bending}
-%     \end{subfigure}
-% \begin{subfigure}{0.49\columnwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/drifts_bending/livo_actuated_bending.png}
-%     \caption{FAST-LIVO2 point-cloud}\label{fig:livo_bending}
-% \end{subfigure}
-% \caption{Cross section comparison. 
-% Yellow: Ground truth, Magenta: Mentioned algorithm.
-% The red boxes indicate noticeable bending of the ground plane.}\vspace{-1mm}
-% \label{fig:bending}
-% \end{figure}
-% \begin{figure*}
-% \centering
-% % First row - 5 subfigures
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/results_images/non_lio.jpg}
-%     \label{fig:results_non_lio}
-% \end{subfigure}
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_non_actuated_lio.png}
-%     \caption{Non-Act. FAST-LIO2}
-%     \label{fig:hist_non_lio}
-% \end{subfigure}
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/results_images/non_livo.jpg}
-%     \label{fig:results_non_livo}
-% \end{subfigure}
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_non_actuated_livo.png}
-%     \caption{Non-Act. FAST-LIVO2}
-%     \label{fig:hist_non_livo}
-% \end{subfigure}
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/results_images/a_lio.jpg}
-%     \label{fig:results_act_lio}
-% \end{subfigure}
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_lio.png}
-%     \caption{Act. FAST-LIO2}
-%     \label{fig:hist_act_lio}
-% \end{subfigure}
-
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/results_images/a_dlio.jpg}
-%     \label{fig:results_act_dlio}
-% \end{subfigure}
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_dlio.png}
-%     \caption{Act. DLIO}
-%     \label{fig:hist_act_dlio}
-% \end{subfigure}
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/results_images/a_livo.jpg}
-%     \label{fig:results_act_livo}
-% \end{subfigure}
-
-% % Second row - 2 subfigures (centered)
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.49\columnwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/drifts_bending/dlio_drift.png}
+    \caption{DLIO point-cloud}\label{fig:dlio_drift}
+\end{subfigure}
+\begin{subfigure}{0.49\columnwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/drifts_bending/lio_drifts.png}
+    \caption{FAST-LIO2 point-cloud}\label{fig:lio_drift}
+\end{subfigure}
+\caption{Example failed cases from the non-actuated sphere where the LIO algorithm could not recover due to fast angular motion.
+This results in huge drift and inconsistent mapping.}\vspace{-3mm}
+\label{fig:drift}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.49\columnwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/drifts_bending/dlio_bending.png}
+    \caption{DLIO point-cloud}\label{fig:dlio_bending}
+    \end{subfigure}
+\begin{subfigure}{0.49\columnwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/drifts_bending/livo_actuated_bending.png}
+    \caption{FAST-LIVO2 point-cloud}\label{fig:livo_bending}
+\end{subfigure}
+\caption{Cross section comparison. 
+Yellow: Ground truth, Magenta: Mentioned algorithm.
+The red boxes indicate noticeable bending of the ground plane.}\vspace{-1mm}
+\label{fig:bending}
+\end{figure}
 
 
-% \hfill
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_livo.png}
-%     \caption{Act. FAST-LIVO2}
-%     \label{fig:hist_act_livo}
-% \end{subfigure}\vspace{2mm}
-% \begin{subfigure}{0.49\textwidth}
-%     \centering
-%     \includegraphics[width=\textwidth]{pics/histogram_results/hsv.png}
-%     \caption{Color Mapping}
-%     \label{fig:hsv}
-% \end{subfigure}
-% \caption{Point-cloud Results and Error Distribution Analysis. A fly through video of the point-clouds is available at \url{https://youtu.be/Ere4UjPg-gk}. 
-% The first row shows the point-clouds generated by comparing the RIEGL map with each algorithm, while the second row displays the corresponding error distribution histograms.}\vspace{-2mm}
-% \label{fig:combined_results}
-% \end{figure*}
+\begin{figure*}
+\centering
+% First row - 5 subfigures
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/results_images/non_lio.jpg}
+    \label{fig:results_non_lio}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/results_images/non_livo.jpg}
+    \label{fig:results_non_livo}
+\end{subfigure}
+
+% Second row - 2 subfigures (centered)
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_non_actuated_lio.png}
+    \caption{Non-Act. FAST-LIO2}
+    \label{fig:hist_non_lio}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_non_actuated_livo.png}
+    \caption{Non-Act. FAST-LIVO2}
+    \label{fig:hist_non_livo}
+\end{subfigure}
+
+
+
+
+
+
+\begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/histogram_results/hsv.png}
+    \caption{Color Mapping}
+    \label{fig:hsv}
+\end{subfigure}
+\caption{Point-cloud Results and Error Distribution Analysis. A fly through video of the point-clouds is available at \url{https://youtu.be/Ere4UjPg-gk}. 
+The first row shows the point-clouds generated by comparing the RIEGL map with each algorithm, while the second row displays the corresponding error distribution histograms(Part 1).}
+\label{fig:combined_results1}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    %here
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/results_images/a_lio.jpg}
+    \label{fig:results_act_lio}
+\end{subfigure}
+
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_lio.png}
+    \label{fig:hist_act_lio}
+\end{subfigure}
+\label{fig:combined_results2}
+\caption{Act. FAST-LIO2}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\begin{subfigure}{0.29\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/results_images/a_dlio.jpg}
+    \label{fig:results_act_dlio}
+\end{subfigure}
+\begin{subfigure}{0.29\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/results_images/a_livo.jpg}
+    \label{fig:results_act_livo}
+\end{subfigure}
+
+
+\begin{subfigure}{0.29\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_dlio.png}
+    \caption{Act. DLIO}
+    \label{fig:hist_act_dlio}
+\end{subfigure}
+\begin{subfigure}{0.29\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_livo.png}
+    \caption{Act. FAST-LIVO2}
+    \label{fig:hist_act_livo}
+\end{subfigure}\vspace{2mm}
+%tohere
+    \caption{Error Distribution Histograms (Part 2)}
+    \label{fig:combined_results2}
+\end{figure*}
 
 \chapter{Conclusion}
 In this paper, we presented the design and evaluation of two spherical robots for 3D mapping applications: a non-actuated, and a self-actuated sphere. 
@@ -817,14 +1171,14 @@ Overall, this work contributes to the growing field of spherical robots and prov
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.80\textwidth,page=1]{pics/Non_actuated_Sphere_drawing.pdf}
+\includegraphics[width=0.82\textwidth,page=1]{pics/Non_actuated_Sphere_drawing.pdf}
 \caption{Physical design and components}
 \label{fig:system_page1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.80\textwidth,page=2]{pics/Non_actuated_Sphere_drawing.pdf}
+\includegraphics[width=0.82\textwidth,page=2]{pics/Non_actuated_Sphere_drawing.pdf}
 \caption{Orthographic projection of the non-actuated sphere}
 \label{fig:system_page2}
 \end{figure}
@@ -878,6 +1232,13 @@ Overall, this work contributes to the growing field of spherical robots and prov
 \end{figure}
 
 \clearpage
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\textwidth,page=5]{pics/Actuated_Sphere_Drawing2.pdf}
+\caption{Orthographic projection of LiDar }
+\label{fig:act_system_page5}
+\end{figure}
 
 
 
