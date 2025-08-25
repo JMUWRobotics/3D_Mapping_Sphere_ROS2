@@ -107,7 +107,7 @@
 }{ % else -> english
   \RequirePackage[english]{babel}
   \ifthenelse{\value{bstyle} = 1}{
-    \bibliographystyle{plain}
+    \bibliographystyle{unsrt}
   }{
     \bibliographystyle{alpha}
   }

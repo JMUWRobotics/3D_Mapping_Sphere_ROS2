@@ -55,8 +55,11 @@ Finally, I would like to thank my friends from Cairo and Würzburg for their unw
 \newpage
 
 \begin{prefacesection}{Abstract}
-Spherical robots offer unique advantages for mapping applications in hazardous or confined environments unlike traditional wheeled or legged robots, thanks to their protective shells and omnidirectional mobility. 
-This work presents two complementary spherical mapping systems: a lightweight, non-actuated design and an actuated variant featuring internal pendulum-driven locomotion. 
+Spherical robots offer unique advantages for mapping applications in hazardous or confined environments, unlike traditional wheeled or legged robots, thanks to their protective shells and omnidirectional mobility. 
+Recent research has focused on developing more robust motion mechanisms, and some have incorporated technologies like LiDAR for 3D mapping, further expanding their capabilities in complex and unpredictable environments. 
+However, the rapid evolution of LiDAR–inertial algorithms and modern hardware platforms presents new opportunities for spherical SLAM, while the integration of actuation with mapping and localization remains largely unexplored.
+
+To address this, this work presents two complementary spherical mapping systems: a lightweight, non-actuated design and an actuated variant featuring internal pendulum-driven locomotion. 
 Both systems are equipped with a Livox Mid-360 solid-state LiDAR sensor and run LiDAR-Inertial Odometry (LIO) algorithms in real-time on resource-constrained hardware (Raspberry Pi 5). 
 We assess the mapping accuracy of these systems by comparing the resulting 3D point-clouds from the LIO algorithms to a ground truth map from a high-precision terrestrial laser scanner.
 % The results indicate that the performance of state-of-the-art LIO algorithms deteriorates due to the high dynamic movement introduced by the spherical locomotion, leading to globally inconsistent maps and sometimes unrecoverable drift.
@@ -103,14 +106,14 @@ A video where both spheres are moving is available at \url{https://youtube.com/s
 
 \begin{figure}[h]
 \centerline{\includegraphics[width=0.8\columnwidth]{pics/marosphere_pic2.jpg}}
-\caption{Actuated Sphere being tested and evaluated in Computer Science Building.}
+\caption{Actuated Sphere being tested and evaluated in Computer Science building at the University of Würzburg.}
 \label{fig:test}
 \end{figure}
 
 
 \section{Outline}
 In the next Chapter, we review recent SLAM developments for spherical platforms, with emphasis on LiDAR-inertial methods, followed by advancements in spherical robot design.
-In Chapter~\ref{ch:fundamentals}, we provide an overview of the fundamental concepts and technologies that relates to our work, including Inertial Measurement Units (IMUs), LiDAR technology, spherical robot types, and an introduction to SLAM algorithms.
+In Chapter~\ref{ch:fundamentals}, we provide an overview of the fundamental concepts and technologies that relates to our work, including Inertial Measurement Units (IMUs), LiDAR technology, spherical robot types, an introduction to SLAM algorithms and Control Strategies.
 In Chapter~\ref{ch:hardwaredesign}, we provide a description of the hardware implementation of the two spherical robots. 
 Subsequently, we describe the software integration, as well as the motion control mechanisms used for the actuated sphere. 
 Finally, we provide a comprehensive evaluation of the mapping accuracy by comparing the maps of the proposed systems with a ground truth map obtained using high-precision terrestrial laser scanning (TLS). 
@@ -141,14 +144,14 @@ This leads to uncorrected yaw drift in IMU-based odometry, especially during pro
     \centering
     \includegraphics[width=0.9\textwidth]{pics/luna.png}
     \label{fig:luna_flywheel}
-    \caption{L.U.N.A. robot with internal flywheel actuation}
+    \caption{L.U.N.A. robot with internal flywheel actuation~\cite{luna}.}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.48\textwidth}
     \centering
     \includegraphics[width=0.8\textwidth]{pics/DAEDALUS.png}
     \label{fig:daedalus}
-    \caption{DAEDALUS robot for lunar exploration\cite{esa_lunar_cave_explorer}}
+    \caption{DAEDALUS robot for lunar exploration~\cite{esa_lunar_cave_explorer}.}
 \end{subfigure}
 \label{fig:spherical_robots}
 \caption{Spherical robots concepts}
@@ -224,7 +227,7 @@ Micro-Electro-Mechanical Systems (MEMS) technology is commonly used in the produ
 
 An accelerometer in an IMU is a device that measures the linear acceleration of an object along the x, y, and z axes. From acceleration data, velocity and position can be derived by integrating the measured acceleration values over time. MEMS accelerometers measure the forces acting on them, which may arise from motion, gravity, or vibrations.
 
-The accelerometer contains a proof mass connected to its frame via mechanical springs. These springs allow the proof mass to move along a direction known as the sensitivity axis. By monitoring the displacement of the proof mass from its original position, the accelerometer can determine the applied acceleration.
+The accelerometer contains a proof mass connected to its frame via mechanical springs. These springs allow the proof mass to move along a direction known as the sensitivity axis. By monitoring the displacement of the proof mass from its original position, the accelerometer can determine the applied acceleration~\cite{ericco_mems_accel_vibrations}.
 
 This displacement is typically measured using electrical capacitance. The device includes multiple differential capacitors, consisting of stationary electrodes positioned on either side of the proof mass, to accurately detect its movement, as illustrated in Fig.\ref{fig:inside_accel}.
 
@@ -237,7 +240,7 @@ Gyroscopes have a wide range of applications, including automotive rotation dete
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\columnwidth]{pics/inside_gyro.png}
-\caption{Inside a MEMS gyroscope. The small resonating mass shifts in response to angular velocity changes, generating electrical signals.}
+\caption{Inside a MEMS gyroscope. The small resonating mass shifts in response to angular velocity changes, generating electrical signals~\cite{sparkfun_gyroscope}.}
 \label{fig:inside_gyro}
 \end{figure}
 
@@ -367,7 +370,7 @@ Moreover, leverage alone often fails to move the robot effectively, and even com
 
 
 
-\section{Introduction about SLAM}
+\section{Introduction to SLAM}
 Simultaneous Localization and Mapping (SLAM) addresses the problem of enabling a robot to navigate in an unknown environment while building a consistent map of that environment.
 A robot typically starts at an initial position and moves through an environment with uncertain motion dynamics. 
 Over time, this uncertainty grows, making it increasingly difficult for the robot to accurately estimate its pose in global coordinates. 
@@ -761,6 +764,8 @@ The mapping system is implemented with several bash scripts that orchestrate the
 The source code, configuration files, and instructions for building the software are available in our GitHub repository~\cite{githubsphere}.
 All mapping computations are performed onboard in real-time.
 
+Figures~\ref{fig:ros_fast_lio}, \ref{fig:ros_fast_livo}, and \ref{fig:ros_dlio} show the Rqt graphs of the mapping system for each LIO framework, respectively.
+Tables~\ref{tab:Livox_topics}, \ref{tab:fast_lio_topics}, \ref{tab:fast_livo_topics}, and \ref{tab:dlio_topics} summarize the key ROS2 topics used in the mapping system for each framework and Point-Cloud visualization.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{pics/rqt/ros_fast_lio.png}
@@ -830,9 +835,7 @@ All mapping computations are performed onboard in real-time.
 
 
 
-
-
-
+\clearpage
 
 \begin{figure}[H]
     \centering
@@ -880,8 +883,10 @@ The control system is implemented using three separate ROS2 packages but they ar
     \item \texttt{logitech\_controller}: Handles joystick input from the Logitech F710 controller, translating joystick movements to control commands for pwm servo and waveshare servo operation and mass shifting.
     \item \texttt{servo\_pwm\_node}: Manages PWM signal generation for the servo motor using wiringPi with rapid GPIO access which is responsible for pendulum control and mass shifting.
 \end{itemize} 
-These packages are integrated to initialize using a single command from a master ROS package called Khonsu, which enables system activation with a single command.
+These packages are integrated to initialize using a single command from a master ROS package called \texttt{Khonsu}, which enables system activation with a single command.
 
+Figures~\ref{fig:ros_actuator} shows the Rqt graph of the actuator system.
+Table~\ref{tab:actuator_topics} summarizes the key ROS2 topics used in the actuator system.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{pics/rqt/ros_actuator.png}
@@ -973,41 +978,6 @@ The error metric used was the point-cloud root mean square error (RMSE).
 where \( p_i \) and \( q_i \) are the corresponding points in the model and data point-clouds, and \( N \) is the number of corresponding points. 
 The RMSE measures the average distance between corresponding points in the two point clouds, providing an indication of the mapping accuracy.
 
-\section{Mapping Accuracy}
-We evaluate the point-cloud error for each mapping run using the three SLAM algorithms. 
-Table~\ref{tab:point_cloud_error} summarizes the results.
-\begin{sidewaystable}
-\centering
-\begin{threeparttable}
-\caption{Statistical analysis of point-cloud mapping accuracy.}
-\label{tab:point_cloud_error}
-\begin{tabular}{l|cc|cc|cc}
-\toprule
-\textbf{Metric} & \multicolumn{2}{c|}{\textbf{FAST-LIO2}} & \multicolumn{2}{c|}{\textbf{FAST-LIVO2(LIO-Mode)}} & \multicolumn{2}{c}{\textbf{DLIO}} \\
-& \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} \\
-\midrule
-\textbf{Points ($\times 10^6$)} & 1.99 & 4.43 & 16.36 & 46.39 & - & 88.01 \\
-\textbf{Mean$^1$ (cm)} & \bf{9.60} & 10.73 & \bf{12.05} & 12.93 & - & \bf{13.71} \\
-\textbf{Std Dev (cm)} & 8.91 & 9.96 & 11.33 & 12.58 & - & 13.26 \\
-\textbf{RMSE$^1$ (cm)} & \bf{13.09} & 14.64 & \bf{16.54} & 18.04 & - & \bf{19.08} \\
-\textbf{P95$^2$ (cm)} & \bf{26.76} & 30.47 & \bf{37.33} & 41.04 & - & \bf{42.36} \\
-\textbf{P90$^2$ (cm)} & \bf{18.58} & 22.57 & \bf{26.48} & 31.63 & - & \bf{34.70} \\
-\bottomrule
-\end{tabular}
-\begin{tablenotes}
-    \item (-) denotes that the algorithm failed.
-    \item[1] Refers to the point-to-point errors to ground truth.
-    \item[2] Refers to the percent of points having point-to-point errors to ground truth smaller than the given value. 
-\end{tablenotes}
-\end{threeparttable}
-\end{sidewaystable}
-The statistical analysis reveals significant differences in mapping performance across configurations. 
-The non-actuated sphere with FAST-LIO2 achieved the lowest mean error (\SI{9.60}{\centi\meter}) and RMSE (\SI{13.09}{\centi\meter}), indicating superior accuracy. 
-This is unexpected since the motion of the non-actuated sphere is governed by larger rotations around all principal axes and more aggressive dynamics.
-We attribute the overall better mapping performance of the non-actuated sphere to its smaller shell radius and missing locomotion mechanism structure.
-Thus, we were able to place the laser scanner closer to the center of the sphere.
-%However, the actuated sphere generally captured more data points, with DLIO collecting 88.01 million points compared to 1.99 million for non-actuated FAST-LIO2. 
-%All configurations showed highly significant results (p < 0.001), confirming systematic measurement patterns rather than random noise. 
 
 \section{Drift and Bending}
 The LIO algorithms exhibited small drift and bending over time, which is particularly noticeable in Fig.~\ref{fig:bending}. 
@@ -1049,7 +1019,45 @@ The red boxes indicate noticeable bending of the ground plane.}\vspace{-1mm}
 \label{fig:bending}
 \end{figure}
 
+\clearpage
+\section{Mapping Accuracy}
+We evaluate the point-cloud error for each mapping run using the three SLAM algorithms. 
+Table~\ref{tab:point_cloud_error} summarizes the results.
+The statistical analysis reveals significant differences in mapping performance across configurations. 
+The non-actuated sphere with FAST-LIO2 achieved the lowest mean error (\SI{9.60}{\centi\meter}) and RMSE (\SI{13.09}{\centi\meter}), indicating superior accuracy. 
+This is unexpected since the motion of the non-actuated sphere is governed by larger rotations around all principal axes and more aggressive dynamics.
+We attribute the overall better mapping performance of the non-actuated sphere to its smaller shell radius and missing locomotion mechanism structure.
+Thus, we were able to place the laser scanner closer to the center of the sphere.
+%However, the actuated sphere generally captured more data points, with DLIO collecting 88.01 million points compared to 1.99 million for non-actuated FAST-LIO2. 
+%All configurations showed highly significant results (p < 0.001), confirming systematic measurement patterns rather than random noise. 
+\clearpage
 
+\begin{sidewaystable}
+\centering
+\begin{threeparttable}
+\caption{Statistical analysis of point-cloud mapping accuracy.}
+\label{tab:point_cloud_error}
+\begin{tabular}{l|cc|cc|cc}
+\toprule
+\textbf{Metric} & \multicolumn{2}{c|}{\textbf{FAST-LIO2}} & \multicolumn{2}{c|}{\textbf{FAST-LIVO2(LIO-Mode)}} & \multicolumn{2}{c}{\textbf{DLIO}} \\
+& \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} & \textbf{Non-act.} & \textbf{Act.} \\
+\midrule
+\textbf{Points ($\times 10^6$)} & 1.99 & 4.43 & 16.36 & 46.39 & - & 88.01 \\
+\textbf{Mean$^1$ (cm)} & \bf{9.60} & 10.73 & \bf{12.05} & 12.93 & - & \bf{13.71} \\
+\textbf{Std Dev (cm)} & 8.91 & 9.96 & 11.33 & 12.58 & - & 13.26 \\
+\textbf{RMSE$^1$ (cm)} & \bf{13.09} & 14.64 & \bf{16.54} & 18.04 & - & \bf{19.08} \\
+\textbf{P95$^2$ (cm)} & \bf{26.76} & 30.47 & \bf{37.33} & 41.04 & - & \bf{42.36} \\
+\textbf{P90$^2$ (cm)} & \bf{18.58} & 22.57 & \bf{26.48} & 31.63 & - & \bf{34.70} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+    \item (-) denotes that the algorithm failed.
+    \item[1] Refers to the point-to-point errors to ground truth.
+    \item[2] Refers to the percent of points having point-to-point errors to ground truth smaller than the given value. 
+\end{tablenotes}
+\end{threeparttable}
+\end{sidewaystable}
+\clearpage
 \begin{figure*}
 \centering
 % First row - 5 subfigures
@@ -1078,11 +1086,6 @@ The red boxes indicate noticeable bending of the ground plane.}\vspace{-1mm}
     \label{fig:hist_non_livo}
 \end{subfigure}
 
-
-
-
-
-
 \begin{subfigure}{0.3\textwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/histogram_results/hsv.png}
@@ -1090,7 +1093,7 @@ The red boxes indicate noticeable bending of the ground plane.}\vspace{-1mm}
     \label{fig:hsv}
 \end{subfigure}
 \caption{Point-cloud Results and Error Distribution Analysis. A fly through video of the point-clouds is available at \url{https://youtu.be/Ere4UjPg-gk}. 
-The first row shows the point-clouds generated by comparing the RIEGL map with each algorithm, while the second row displays the corresponding error distribution histograms(Part 1).}
+The first row shows the point-clouds generated by comparing the RIEGL map with each algorithm, while the second row displays the corresponding error distribution Analysis(Part 1).}
 \label{fig:combined_results1}
 \end{figure*}
 
@@ -1107,13 +1110,9 @@ The first row shows the point-clouds generated by comparing the RIEGL map with e
     \centering
     \includegraphics[width=\textwidth]{pics/histogram_results/histogram_cond_actuated_lio.png}
     \label{fig:hist_act_lio}
+    \caption{Act. FAST-LIO2}
 \end{subfigure}
-\label{fig:combined_results2}
-\caption{Act. FAST-LIO2}
-\end{figure*}
 
-\begin{figure*}
-\centering
 \begin{subfigure}{0.29\textwidth}
     \centering
     \includegraphics[width=\textwidth]{pics/results_images/a_dlio.jpg}
@@ -1139,7 +1138,7 @@ The first row shows the point-clouds generated by comparing the RIEGL map with e
     \label{fig:hist_act_livo}
 \end{subfigure}\vspace{2mm}
 %tohere
-    \caption{Error Distribution Histograms (Part 2)}
+    \caption{Error Distribution Analysis(Part 2)}
     \label{fig:combined_results2}
 \end{figure*}
 
