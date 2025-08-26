@@ -113,7 +113,7 @@ A video where both spheres are moving is available at \url{https://youtube.com/s
 
 \section{Outline}
 In the next Chapter, we review recent SLAM developments for spherical platforms, with emphasis on LiDAR-inertial methods, followed by advancements in spherical robot design.
-In Chapter~\ref{ch:fundamentals}, we provide an overview of the fundamental concepts and technologies that relates to our work, including Inertial Measurement Units (IMUs), LiDAR technology, spherical robot types, an introduction to SLAM algorithms and Control Strategies.
+In Chapter~\ref{ch:fundamentals}, we provide an overview of the fundamental concepts and technologies that relates to our work, including Inertial Measurement Units (IMUs), LiDAR technology, spherical robot types, an introduction to SLAM and Control Strategies.
 In Chapter~\ref{ch:hardwaredesign}, we provide a description of the hardware implementation of the two spherical robots. 
 Subsequently, we describe the software integration, as well as the motion control mechanisms used for the actuated sphere. 
 Finally, we provide a comprehensive evaluation of the mapping accuracy by comparing the maps of the proposed systems with a ground truth map obtained using high-precision terrestrial laser scanning (TLS). 
@@ -292,12 +292,12 @@ It offers a full \(360^\circ\) horizontal field of view and employs a non-repeti
 \label{sec:spherical-robot-types}
 Spherical robots are well-known for their unique design compared to traditional wheeled or legged robots.
 They have various ways to be designed for locomotion as described in Section~\ref{sec:state-of-the-art}.
-In this section, we will describe the most common types of spherical robots based on their actuation mechanisms which can be broadly categorized into : \textbf{Barycentric} , \textbf{Conservation of Angular Momentum} , \textbf{rod-driven} and \textbf{Shell deformation}.
+In this section, we will describe the most common types of spherical robots based on their actuation mechanisms which can be broadly categorized into : \textbf{Barycentric} , \textbf{Conservation of Angular Momentum} and \textbf{rod-driven}.
 \subsection{Barycentric}
 Barycentric spherical depends on the displacement of the center of mass to achieve rolling motion.
 This is achieved by using internal wheels or other mechanisms to shift the center of mass, allowing the sphere to roll in the desired direction.~\cite{Aminata}
 \subsubsection{Hamester-driven}
-one of the earliest form of barycenter offset locomotion "hamster" design, as it mimics the movement of a hamster running inside a toy sphere. 
+one of the earliest form of Barycentric locomotion "hamster" design, as it mimics the movement of a hamster running inside a toy sphere. 
 In this concept, a small wheeled robot is placed within the shell, and its weight and motion generate the force needed to roll the structure. Different internal vehicles can be used, such as single- or multi-wheeled robots, with four-wheel differential-drive systems offering additional maneuverability and even the ability to turn in place. 
 The design is relatively simple to build and operate, but challenges arise from wheel slippage, friction losses, and instability when the internal robot becomes airborne over uneven surfaces. 
 These issues can lead to loss of traction, reduced momentum, and tracking errors, limiting its effectiveness for tasks requiring precise navigation.~\cite{flywheel_hamaster_explanation}
@@ -314,11 +314,19 @@ This bearing allows smooth sliding along the inner shell surface while accommoda
 \begin{subfigure}{0.48\textwidth}
     \centering
     \includegraphics[width=0.9\textwidth]{pics/spring_2d.png}
-    \caption{Structure of the Rolling Robot. 1. robot body (case), 2. controlling box, 3. driving wheel, 4. steering axis, 5. supporting axis, 6. spring, 7. balance wheel~\cite{old_spring_paper}}
+    \caption{Structure of (Spring-loaded) Robot. 1. robot body (case), 2. controlling box, 3. driving wheel, 4. steering axis, 5. supporting axis, 6. spring, 7. balance wheel}
     \label{fig:spring_2D_top}
 \end{subfigure}
 
-\caption{Spring-loaded spherical robot actuation.}
+\begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=0.9\textwidth]{pics/pendulum_mechanism.png}
+    \caption{Structure of (Pendulum-driven) Robot.}
+    \label{fig:pendulum_2D}
+\end{subfigure}
+
+
+\caption{Various spherical robot actuation mechanisms~\cite{old_spring_paper}.}
 \label{fig:spring_sphere}
 \end{figure}
 
@@ -326,7 +334,7 @@ This bearing allows smooth sliding along the inner shell surface while accommoda
 
 \subsubsection{pendulum-driven Mechanism}
 A pendulum-driven spherical robot is a type of \textit{barycentric sphere robot} that relies on shifting its internal center of mass for locomotion. 
-The robot consists of a spherical shell, a central shaft, an internal pendulum, and typically two motors (or a dual-axis torque motor), as illustrated in Fig.~XX. 
+The robot consists of a spherical shell, a central shaft, an internal pendulum, and typically two motors (or a dual-axis torque motor), as illustrated in Fig.~\ref{fig:pendulum_2D}. 
 The pendulum, mounted near the inner surface of the shell, is connected to the center of the sphere and actuated by a motor or high-precision servo. 
 By swinging the pendulum to the left or right, the robot shifts its center of mass, causing the shell to roll laterally. 
 Meanwhile, the dual-axis torque motor controls forward and backward motion by controlling the pendulum’s orientation. 
@@ -1138,7 +1146,7 @@ The first row shows the point-clouds generated by comparing the RIEGL map with e
     \label{fig:hist_act_livo}
 \end{subfigure}\vspace{2mm}
 %tohere
-    \caption{Error Distribution Analysis(Part 2)}
+    \caption{Point-cloud Results and Error Distribution Analysis(Part 2)}
     \label{fig:combined_results2}
 \end{figure*}
 
