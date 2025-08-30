@@ -1,82 +1,248 @@
-# 3D_Mapping_Sphere_ROS2
+# 3D Mapping Sphere ROS2
 
-## Running the Project
+![System Architecture](Thesis/pics/two_spheres.jpg)
 
-```
-ros2 launch livox_ros_driver2 msg_MID360_launch.py xfer_format:=0
-```
+## Project Overview
 
-```
-ros2 launch fast_lio mapping.launch.py
+This repository contains the complete software stack for two custom-built spherical robots designed for autonomous 3D mapping and navigation. The system is built on **ROS2 Jazzy** running on **Ubuntu 24.04 ARM** platforms, integrating advanced LiDAR-Inertial Odometry (LIO) algorithms with spherical robot control systems.
 
-```
+### Key Features
 
-```
-ros2 launch direct_lidar_inertial_odometry dlio.launch.py rviz:=True pointcloud_topic:=/livox/points   imu_topic:=/livox/imu
-```
+- **Dual Spherical Robot System**: Two independently operating spherical mapping robots
+- **Advanced SLAM Algorithms**: Integration of FAST-LIVO2, Direct LiDAR Inertial Odometry (DLIO), and FAST-LIO
+- **Control Strategy Applied for (Actuated Sphere)**: Applied PID control on the actuated sphere for balanced motion
+- **Real-time 3D Mapping**: High-precision point cloud generation and visualization
+- **ROS2 Native**: Built for ROS2 Jazzy with full compatibility
 
-```
-export ROS_DOMAIN_ID=1
-```
+## System Architecture
 
 ```
-sudo bash -c "source /opt/ros/jazzy/setup.bash && source install/setup.bash && export ROS_DOMAIN_ID=1 && ros2 launch khonsu movingNodes.launch.py"
+3D_Mapping_Sphere_ROS2/
+├── mapping_ws/          # Main mapping workspace
+│   └── src/
+│       ├── FAST-LIVO2-ROS2-MID360-Fisheye/    # Advanced LIVO(LIO Mode) algorithm
+│       ├── direct_lidar_inertial_odometry/      # DLIO implementation
+│       ├── Livox-SDK2/                          # Livox LiDAR SDK
+│       ├── rpg_vikit_ros2_fisheye/             # Vision processing
+│       └── bno_imu/                            # IMU sensor package
+├── Actuators_ws/        # Robot control workspace
+│   └── src/
+│       ├── servo_pwm_node/                     # Servo control
+│       ├── logitech_controller/                # Input device handling
+│       ├── waveshare_servo/                    # Hardware interface
+│       └── khonsu/                             # Robot bootup package
+├── Manuscript/          # Research documentation
+├── Thesis/             # Academic thesis material
+└── README.md
 ```
 
-```
-ros2 launch fast_livo mapping_aviz_metacamedu.launch.py use_rviz:=True
-```
+## Hardware Requirements
 
-## Name
+### Primary Components
 
-Choose a self-explaining name for your project.
+- **LiDAR**: Livox MID-360 360° LiDAR sensor (The mapping system can support other LiDAR types)
+- **IMU**: BNO085 and internal IMU of Livox MID-360
+- **Actuators (Actuated Variant)**: Waveshare smart Servo (ST-3215) servo motors for spherical locomotion and single PWM servo
+- **Controller**: Logitech gamepad for manual control
+- **Compute**: Raspberry Pi 5 (Ubuntu 24.04)
 
-## Description
+### Minimum System Requirements
 
-This Repo contains the project files for custom made 2 Spherical Robots that were designed to work on ROS2 Jazzy and Ubuntu 22.04 ARM.
-
-The purpose of these spheres are made to create a 3d
-
-## Badges
-
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+- **OS**: Ubuntu 24.04 ARM64
+- **ROS**: ROS2 Jazzy
+- **RAM**: 8GB minimum, 16GB recommended
+- **Storage**: 64GB minimum and SSD is highly recommended
+- **Network**: WiFi/Ethernet
 
 ## Installation
 
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Prerequisites
 
-## Usage
+1. **Install ROS2 Jazzy** on Ubuntu 24.04:
 
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+   Follow the [official ROS2 Jazzy installation guide for Ubuntu](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html)
 
-## Support
+2. **Install dependencies**:
 
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+```bash
+sudo apt install -y \
+    cmake \
+    libeigen3-dev \
+    libpcl-dev \
+    libopencv-dev \
+    libfmt-dev \
+    libboost-all-dev \
+    python3-colcon-common-extensions
+```
 
-## Roadmap
+3. **Install Sophus** (required for FAST-LIVO2):
 
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+```bash
+cd ~
+git clone https://github.com/strasdat/Sophus.git -b 1.22.10
+cd Sophus
+mkdir build && cd build && cmake ..
+make
+sudo make install
+```
+
+### Building the Project
+
+1. **Clone and setup workspace**:
+
+```bash
+git clone https://github.com/your-username/3D_Mapping_Sphere_ROS2.git
+cd 3D_Mapping_Sphere_ROS2
+```
+
+2. **Edit the configuration files of each package in mapping workspace with correct IMU and LiDAR topics**
+3. **Build mapping workspace**:
+
+```bash
+cd mapping_ws
+source /opt/ros/jazzy/setup.bash
+colcon build --symlink-install
+source install/setup.bash
+```
+
+3. **Build actuators workspace**:
+
+```bash
+cd ../Actuators_ws
+source /opt/ros/jazzy/setup.bash
+colcon build --symlink-install
+source install/setup.bash
+```
+
+## Quick Start
+
+### 1. Launch LiDAR Driver
+
+```bash
+# Terminal 1 - Start Livox MID-360
+source mapping_ws/install/setup.bash
+ros2 launch livox_ros_driver2 msg_MID360_launch.py xfer_format:=0
+```
+
+### 2. Start SLAM Algorithm
+
+Choose one of the following mapping algorithms:
+
+**Option A: FAST-LIVO2**
+
+```bash
+# Terminal 2 - FAST-LIVO2 (LIO Mode)
+source mapping_ws/install/setup.bash
+ros2 launch fast_livo mapping_aviz_metacamedu.launch.py use_rviz:=true
+```
+
+**Option B: Direct LiDAR Inertial Odometry**
+
+```bash
+# Terminal 2 - DLIO
+source mapping_ws/install/setup.bash
+ros2 launch direct_lidar_inertial_odometry dlio.launch.py \
+    rviz:=true \
+    pointcloud_topic:=/livox/points \
+    imu_topic:=/livox/imu
+```
+
+### 3. Launch Robot Control System (Actuated system)
+
+```bash
+# Terminal 3 - Robot actuation (run as root for GPIO access)
+sudo bash -c "source /opt/ros/jazzy/setup.bash && source install/setup.bash && export ROS_DOMAIN_ID=1 && ros2 launch khonsu movingNodes.launch.py"
+```
+
+## Key ROS2 Topics
+
+### Sensor Data
+
+- `/livox/points` - LiDAR point cloud data
+- `/livox/imu` - IMU sensor data
+
+### SLAM Outputs
+
+- `/cloud_registered` - Registered point cloud map (FAST-LIO2 and FAST-LIVO2)
+- `/dlio/odom_node/pointcloud/deskewed` - Registered point cloud map (DLIO)
+- `/odometry` - Robot pose estimation (FAST-LIO2 and FAST-LIVO2)
+- `/path` - Trajectory visualization
+
+### Robot Control
+
+- `/controller` - Gamepad input after mapping
+- `/joy` - raw joystick input
+
+## Configuration
+
+### LiDAR Configuration
+
+Edit [`mapping_ws/src/Livox-SDK2/samples/livox_lidar_quick_start/mid360_config.json`](mapping_ws/src/Livox-SDK2/samples/livox_lidar_quick_start/mid360_config.json):
+
+```json
+{
+  "MID360": {
+    "lidar_net_info": {
+      "cmd_data_port": 56100,
+      "push_msg_port": 56200,
+      "point_data_port": 56300,
+      "imu_data_port": 56400,
+      "log_data_port": 56500
+    },
+    "host_net_info": [
+      {
+        "lidar_ip": ["192.168.1.12"],
+        "host_ip": "192.168.1.5"
+      }
+    ]
+  }
+}
+```
+
+### FAST-LIVO2 Parameters
+
+Key parameters in [`mapping_ws/src/FAST-LIVO2-ROS2-MID360-Fisheye/config/`](mapping_ws/src/FAST-LIVO2-ROS2-MID360-Fisheye/config/):
+
+- LiDAR extrinsic calibration
+- IMU noise parameters
+- Mapping resolution settings
+- etc...
+
+### FAST-LIO2 Parameters
+
+### DLIO Parameters
+
+## Documentation
+
+- **[FAST-LIO2 Repo ROS2](https://github.com/Ericsii/FAST_LIO_ROS2)**
+- **[FAST-LIVO2 Repo ROS2](https://github.com/Rhymer-Lcy/FAST-LIVO2-ROS2-MID360-Fisheye)**
+- **[DLIO Repo ROS2](https://github.com/vectr-ucla/direct_lidar_inertial_odometry/tree/feature/ros2)**
+- **[Livox SDK2 Documentation](mapping_ws/src/Livox-SDK2/README.md)** - LiDAR integration
+- **[Thesis Document](Thesis/)** - Complete technical documentation
+
+## Research Impact
+
+This work contributes to:
+
+- **Actuated Spherical Robot with SLAM**: Novel Sphere with Actuation and control strategies while doing mobile SLAM
+- **High Accuracy Spherical SLAM**: Real-time mapping with high accuracy that paves the way for autonomous driving
 
 ## Contributing
 
-State if you are open to contributions and what your requirements are for accepting them.
+We welcome contributions! Please:
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/Example`)
+3. **Commit** changes (`git commit -m 'Add Example'`)
+4. **Push** to branch (`git push origin feature/Example`)
+5. **Open** a Pull Request
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## Project Status
 
-## Authors and acknowledgment
+**Active Development** - This project is actively maintained and developed.
 
-Show your appreciation to those who have contributed to the project.
+### Current Version: v1.0.0
 
-## License
+---
 
-For open source projects, say how it is licensed.
-
-## Project status
-
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+For questions, issues, or collaborations, please [open an issue](https://github.com/your-username/3D_Mapping_Sphere_ROS2/issues) or contact the development team.
