@@ -148,7 +148,7 @@ ros2 launch direct_lidar_inertial_odometry dlio.launch.py \
 ```
 
 ### 3. Launch Robot Control System (Actuated system)
-
+I recommend killing the program after the 1st Run then run it again for the pendulum mechanism to work.
 ```bash
 # Terminal 3 - Robot actuation (run as root for GPIO access)
 sudo bash -c "source /opt/ros/jazzy/setup.bash && source install/setup.bash && export ROS_DOMAIN_ID=1 && ros2 launch khonsu movingNodes.launch.py"
